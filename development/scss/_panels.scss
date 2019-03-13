@@ -1,0 +1,573 @@
+/* spacing */
+
+#main-content, #main-wrapper { margin: 0 auto; }
+
+#content-wrapper {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#story-image-side-caption, #story-image-text-display {
+  background-color: $white-base;
+}
+
+.story-content-padding.bg-gray-extra-dark,
+#story-image-side-caption.background-extra-dark,
+#story-image-text-display.background-extra-dark {
+  background: $gray-extra-dark;
+}
+
+.story-content-padding {
+  padding: 80px 100px 80px 100px;
+  min-height: 100%;
+  height: 100%;
+  background: $white-base;
+  @include media-breakpoint-down(lg) { padding: 40px; }
+  @include media-breakpoint-down(md) { padding: 20px; }
+}
+
+/* story-content-padding - t4 - overrides */
+
+.story-content-padding.story-panel-collapse-top { padding-top: 0; }
+
+.story-content-padding.story-panel-collapse-bottom { padding-bottom: 0; }
+
+.story-content-padding.story-panel-collapse-top-bottom { padding-top: 0; padding-bottom: 0; }
+
+/* story-content-padding - custom */
+
+.story-content-padding.equal-box-container { padding: 80px 100px 80px 100px;
+  @include media-breakpoint-down(lg) { padding: 40px; }
+  @include media-breakpoint-down(md) { padding: 35px 20px; }
+}
+
+#story-image-overlay .story-content-padding { background: rgba(0,0,0,0); }
+
+/* background color */
+
+.container-fluid.story-content-padding,
+.equal-box .story-content-padding {
+  background-color: $white-base;
+}
+
+.equal-box.bg-gray-extra-dark .story-content-padding {
+  background-color: $gray-extra-dark;
+}
+
+/* image overlay */
+
+.overlay-relative {
+  position: relative;
+}
+
+.overlay-absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  @include media-breakpoint-down(md) {
+    position: relative;
+    background-color: $gray-extra-dark !important;
+  }
+  .equal-box {
+    @include media-breakpoint-down(md) {
+      background-color: $gray-extra-dark !important;
+    }
+  }
+}
+
+.flex-top-vertically {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    @include media-breakpoint-down(md) {
+      margin: 15px;
+    }
+}
+
+.flex-center-vertically {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    @include media-breakpoint-down(md) {
+      margin: 15px;
+    }
+}
+
+.flex-bottom-vertically {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+    @include media-breakpoint-down(md) {
+      justify-content: flex-start;
+      margin: 15px;
+    }
+}
+
+.overlay-20 { background: rgba(0,0,0,.2); }
+
+.overlay-40 { background: rgba(0,0,0,.4); }
+
+.overlay-60 { background: rgba(0,0,0,.6); }
+
+.overlay-80 { background: rgba(0,0,0,.8); }
+
+@include media-breakpoint-down(xs) {
+  .overlay-20,
+  .overlay-40,
+  .overlay-60,
+  .overlay-80 { background: #272727; }
+}
+
+/* border rule */
+
+.rule-left {
+  padding-left: 50px;
+  border-left: solid 1px darken($gray-light, 5%);
+}
+
+.rule-left-spacing {
+  padding-right: 50px;
+}
+
+.rule-right {
+  padding-right: 50px;
+  border-right: solid 1px darken($gray-light, 5%);
+}
+
+.rule-right-spacing {
+  padding-left: 50px;
+}
+
+.rule-left-small {
+  padding-left: 15px;
+  border-left: solid 1px darken($gray-light, 5%);
+}
+
+.rule-left-small-spacing {
+  padding-right: 15px;
+}
+
+.rule-right-small {
+  padding-right: 15px;
+  border-right: solid 1px darken($gray-light, 5%);
+}
+
+.rule-right-small-spacing {
+  padding-left: 15px;
+}
+
+.rule-top, #introduction .rule-top {
+  margin-top: 20px !important;
+  padding-top: 25px !important;
+  border-top: solid 1px darken($gray-light, 5%);
+  @include media-breakpoint-down(md) {
+    border-top: none;
+  }
+}
+
+.rule-bottom {
+  margin-bottom: 20px !important;
+  padding-bottom: 25px;
+  border-bottom: solid 1px darken($gray-light, 5%);
+}
+
+.rule-left,
+.rule-left-spacing,
+.rule-right,
+.rule-right-spacing,
+.rule-left-small,
+.rule-left-small-spacing,
+.rule-right-small,
+.rule-right-small-spacing {
+  @include media-breakpoint-down(md) {
+    float: left;
+    padding: 0 20px;
+    border: 0;
+  }
+}
+
+.equal-box-container {
+  display: -ms-flex;
+  display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+  @include media-breakpoint-down(sm) { display: block; }
+}
+
+.equal-box-container.background-extra-dark {
+  background: $gray-extra-dark;
+}
+.equal-box-container .equal-box {
+  height: 100%;
+  @include media-breakpoint-down(md) {
+    float: left;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.equal-box-container .rule-left-small.equal-box {
+  @include media-breakpoint-down(sm) {
+    float: left;
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
+/* aside image */
+
+.col-md-3 img { margin: 10px 0 20px; }
+
+/* square images */
+
+.image-object-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* supports ie fix below */
+
+.ie-fix-table .equal-box.pull-right { float: right; }
+
+/* supports ie fix */
+
+.image-object-cover-ie {
+  position: absolute;
+  left: 0;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.image-object-cover-ie img { opacity: 0; }
+
+/* typography */
+
+.caption.small {
+  @include media-breakpoint-down(md) {
+    font-size: 100% !important;
+  }
+}
+
+/* blockquote */
+
+blockquote.blockquote-overlay.display,
+blockquote.blockquote-standard.display {
+  margin: 10px 0 !important;
+  font-family: 'Antenna Bold', sans-serif;
+  font-size: 2.75em;
+  line-height: 1.45;
+}
+
+blockquote.blockquote-overlay.display {
+  @include media-breakpoint-down(md) {
+    font-size: 1.75em;
+  }
+}
+
+blockquote.blockquote-standard.display {
+  font-size: 2.25em;
+  line-height: 1.45;
+  @include media-breakpoint-down(md) {
+      font-size: 1.75em;
+  }
+}
+
+blockquote.blockquote-standard.display.blockquote-sentence-case {
+  font-family: 'Antenna Bold', sans-serif;
+  font-size: 1.45em;
+  line-height: 1.65;
+  letter-spacing: .01em;
+  word-spacing: .125em;
+  text-transform: none;
+  @include media-breakpoint-down(xs) {
+    letter-spacing: 0;
+  }
+}
+
+/* blockquote cite */
+
+body cite.cite-overlay {
+  @include media-breakpoint-down(md) {
+    font-size: .85em;
+    margin-bottom: 15px;
+  }
+}
+
+body cite.cite-overlay,
+body cite.cite-standard {
+  display: block;
+  width: 100%;
+  font-family: 'Antenna Light', sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+body cite.cite-standard {
+  font-size: .85em;
+  @include media-breakpoint-down(md) {
+    font-size: .85em;
+    margin-bottom: 15px !important;
+  }
+}
+
+/* blockquote quote marks */
+
+blockquote.blockquote-overlay span.open-quote,
+blockquote.blockquote-overlay span.close-quote,
+blockquote.blockquote-standard span.open-quote,
+blockquote.blockquote-standard span.close-quote {
+  display: block;
+  margin: 0 0 0 -7px;
+  font-size: 3.25em;
+  line-height: 0;
+}
+
+blockquote.blockquote-standard span.open-quote,
+blockquote.blockquote-standard span.close-quote {
+  margin: 0 0 0 -3px;
+  font-size: 2.75em;
+}
+
+blockquote.blockquote-overlay span.open-quote,
+blockquote.blockquote-standard span.open-quote {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  @include media-breakpoint-down(md) {
+    margin-top: 30px;
+    margin-bottom: 12px;
+  }
+}
+
+blockquote.blockquote-overlay span.close-quote,
+blockquote.blockquote-standard span.close-quote { margin-top: 60px; }
+
+blockquote.blockquote-overlay.display,
+body cite.cite-overlay,
+blockquote.blockquote-overlay span.open-quote,
+blockquote.blockquote-overlay span.close-quote {
+  color: darken($gray-light, 10%) !important;
+  text-shadow: 0 0 20px lighten($bg-overlay, 15%);
+  @include media-breakpoint-down(md) {
+    color: darken($gray-light, 35%) !important;
+  }
+}
+
+/* blockquote colors */
+
+.container-fluid.story-content-padding.bg-gray-extra-dark {
+  background: $gray-extra-dark;
+}
+
+.bg-gray-extra-dark blockquote.blockquote-standard.display,
+.bg-gray-extra-dark cite.cite-standard,
+.bg-gray-extra-dark blockquote.blockquote-standard span.open-quote,
+.bg-gray-extra-dark blockquote.blockquote-standard span.close-quote {
+  color: darken($gray-light, 35%) !important;
+}
+
+/* story - refer */
+
+#story-refer-panel {
+  .refer-image {
+    float: left;
+    width: 25%;
+    @include media-breakpoint-down(sm) { width: 100%; min-width: 100%; }
+  }
+  .refer-image img {
+    margin: 0;
+  }
+  .refer-content {
+    float: left;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 75%;
+    @include media-breakpoint-down(md) { padding: 30px; }
+    @include media-breakpoint-down(sm) { width: 100%; min-width: 100%; }
+  }
+  .refer-long {
+    display: block;
+    width: 75%;
+    @include media-breakpoint-down(md) { display: none; }
+  }
+  .refer-short {
+    display: none;
+    @include media-breakpoint-down(md) { display: block; }
+  }
+}
+
+/* general typography overrides */
+
+.medium { font-size: 1em; }
+
+p.intro, p.body, .leadin, p.caption { display: inline; }
+
+h4.subhead { margin: 20px 0 10px 0; line-height: 1.65; }
+
+p.intro { margin: 0 0 20px 0; line-height: 2; }
+
+p.body { line-height: 1.75; }
+
+.carousel-caption { right: 50%; }
+
+.leadin {
+  font-family: 'Antenna Bold', sans-serif;
+  font-size: .85em;
+  text-transform: uppercase;
+  color: $gray-extra-dark;
+}
+
+h1.number { letter-spacing: -.0525em; line-height: 1; }
+
+cite.cite.small {
+  font-family: 'Antenna', sans-serif;
+  font-size: .675em !important;
+  color: $gray-extra-dark;
+}
+
+#story-wrapper p.caption.display {
+  @include media-breakpoint-down(md) {
+    padding-bottom: 15px !important;
+  }
+}
+
+/* charts */
+
+.chart-col-wrapper {
+  margin: 0;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 50px;
+  }
+}
+
+.chart-col-wrapper h4 { margin: 0 0 10px !important; }
+
+.chart-col-wrapper:last-of-type {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 0;
+  }
+}
+
+.chart-wrapper { width: 100%; }
+
+[class*="c3-line"] {
+  stroke-width: 5px !important;
+}
+
+.c3-ygrid-line line {
+  stroke: red;
+}
+
+.c3-circle {
+  width: 10px !important;
+  height: 10px !important;
+  fill: white !important;
+  stroke: currentColor !important;
+  stroke-width: 2px;
+}
+
+.c3.element {
+  clip: rect(0px, 0px, 0px, 0px);
+}
+
+.c3-chart-arc text {
+  font-family: 'Antenna Bold', sans-serif !important;
+  font-size: 1.35em;
+  font-weight: bold;
+  letter-spacing: -.025em;
+  fill: #fff;
+  text-shadow: 0px 0px 10px rgba(0,0,0,.25);
+}
+
+.c3-xgrid-focus { display: none; }
+
+ul.key {
+    float: left;
+    margin: 0;
+    width: 100%;
+    li {
+      list-style: none;
+    }
+}
+
+ul.key .pull-right {
+
+}
+
+li span.key-box {
+    display: inline-block;
+    float: left;
+    margin: 3px 12px 10px 0;
+    width: 12px !important;
+    height: 12px !important;
+    background-color: red;
+    @include media-breakpoint-down(xs) {
+      margin: 3px 12px 8px 0;
+    }
+}
+
+li span.key-box.one    { background-color: #680013; }
+li span.key-box.two    { background-color: #272727; }
+li span.key-box.three { background-color: #525252; }
+li span.key-box.four   { background-color: #888888; }
+li span.key-box.five    { background-color: #cccccc; }
+
+.chart-date { margin-bottom: 0; }
+
+/* tooltips - populate */
+
+.tooltip-populate {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-populate .tooltip-content {
+  position: absolute;
+  left: 35px;
+  padding: 20px;
+  width: 500px;
+  color: $gray-extra-light;
+  border-radius: 3px;
+  background-color: $bg-overlay-extra-dark;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s ease-out;
+}
+
+.tooltip-populate .tooltip-content.top-left {
+  left: 0;
+  bottom: 60px;
+}
+.tooltip-populate .tooltip-content.top-center {
+  left: -215px;
+  bottom: 60px;
+}
+.tooltip-populate .tooltip-content.top-right {
+  left: -460px;
+  bottom: 60px;
+}
+
+.tooltip-populate:hover { z-index: 10000 !important; }
+
+.tooltip-populate:hover .tooltip-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.bg-gray-extra-dark h3,
+.bg-gray-extra-dark h4,
+.bg-gray-extra-dark p,
+.bg-gray-extra-dark .number,
+.bg-gray-extra-dark .leadin { color: $gray; }
+
+/* CSS - END */

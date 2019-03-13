@@ -1,0 +1,19 @@
+#main-content.canvas-law { margin: 0 !important; padding: 0; }
+
+#main-content .panel { background: none; }
+
+.canvas-law h1.display {
+	font-size: 7em;
+}
+
+@include media-breakpoint-down(md) {
+		.canvas-law h1.display {
+			font-size: 5em;
+		}
+	}
+
+@include media-breakpoint-down(sm) {
+    .canvas-law h1.display {
+    font-size: 4em;
+  }
+}

@@ -1,0 +1,61 @@
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] { background-color: $maroon-dark; color: $white-base; }
+
+.btn-group > .btn, .btn-group > .dropdown-menu, .btn-group > .popover, .cta {
+	font-size: .825em;
+}
+
+.cta, a.btn.cta {
+	margin: 0 0 0 10px;
+	font-family: "Antenna Bold", "museo-sans", "Arial", sans-serif !important;
+	color: $white-base;
+	text-align: left;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: $gray-extra-light;
+	text-decoration: none;
+	text-shadow: none;
+	background-color: $maroon-dark;
+	background-image: none;
+	border-bottom-color: $gray-dark;
+	-moz-transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	outline: none;
+}
+
+.cta:hover, .btn-group .cta:hover,
+.cta:active, .btn-group .cta:active,
+.cta:visited, .btn-group .cta:visited {
+	color: $white-base;
+	background-color: $maroon;
+}
+
+p a.cta { background: none; color: $maroon-dark; }
+
+.buttons-inline { padding: 0; width: 100%; }
+
+.buttons-inline > div {
+	display: inline;
+	float: left;
+	margin: 10px;
+	width: auto;
+	@include media-breakpoint-down(md) {
+		margin: 5px 0;
+		width: 100%; } }
+
+.buttons-inline > div:first-of-type {
+	margin: 10px 10px 10px 0;
+	@include media-breakpoint-down(md) {
+		margin: 5px 0; } }
+
+.canvas-content .buttons-inline .btn.cta {
+	margin-top: 0;
+	@include media-breakpoint-down(md) {
+			width: 100%; } }
+
+/* END - BUTTONS */

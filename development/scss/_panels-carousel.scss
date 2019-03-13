@@ -1,0 +1,388 @@
+/*================================================
+STORY - CAROUSEL - 121017
+================================================*/
+
+@charset "UTF-8";
+/* CSS Document */
+
+.carousel-indicators { display: none; }
+
+.carousel-inner { background: $gray-light; }
+
+.carousel-inner > .item { position: relative; overflow: hidden; }
+
+/* carousel display images */
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img { width: 100%; margin: 0; }
+
+/* hides nav bullets and ol numbers */
+ol.carousel-indicators li { display: none !important; }
+
+/* control arrows */
+.carousel a:link {
+  color: $gray-extra-light;
+}
+
+/* carousel-controls - arrows - position and scale */
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 56.25%; /* 16:9 aspect ratio */
+  width: 66.75%; /* 4:3 aspect ratio */
+  height: 100%;
+}
+
+.carousel-control.left {
+  background-image: none !important;
+  background-image: none !important;
+  opacity: 1;
+}
+
+.carousel-control.right {
+  background-image: none !important;
+  background-image: none !important;
+  opacity: 1;
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev,
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+  top: 50%;
+  display: flex;
+  width: 45px;
+  height: 10%;
+  font-size: 2.35em;
+  line-height: 0;
+  color: $gray-extra-light;
+  text-shadow: 0px 0px 5px rgba(0,0,0,.6);
+  overflow: hidden;
+  @include media-breakpoint-down(md) {
+    font-size: 1.5em;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 1.25em;
+    filter: alpha(opacity=50);
+  }
+}
+
+.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+  left: 10%;
+}
+
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+  right: 10%;
+}
+
+.glyphicon-chevron-left:before, .glyphicon-chevron-right:before {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 45px;
+  height: 100%;
+}
+
+.glyphicon-chevron-right:before {
+  justify-content: flex-end;
+}
+
+/* carousel-caption */
+.carousel-caption {
+  float: left;
+  position: relative;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 100%;
+  height: auto;
+  z-index: 10;
+  padding: 25px 30px 25px !important;
+	text-align: left;
+  color: #fff;
+  text-shadow: none;
+	background-color: $gray-light;
+  .caption-wrapper {
+    position: relative;
+    float: left;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    p.caption {
+      margin: 0 0 5px 0;
+      max-height: 600px;
+    }
+  }
+  h4 {
+    line-height: 1.5;
+    margin: 5px 0 15px 0;
+    color: $gray-extra-dark;
+  }
+	p.caption {
+    float: left;
+		padding: 0;
+    width: 100%;
+    height: auto;
+    max-height: auto;
+    font-size: .925em;
+    line-height: 1.5;
+		color: $gray-extra-dark;
+	}
+	p.caption a {
+		margin: 0 0 0 5px;
+		color: $patina;
+	}
+}
+
+.caption {
+  color: $gray-extra-dark;
+}
+
+.timestamp, .credit {
+  display: block;
+  float: left;
+  margin: 0 0 5px 0;
+  width: 100%;
+  font-family: 'Antenna Bold', sans-serif;
+  font-size: .9em;
+  color: $gray-extra-dark;
+}
+
+.credit {
+  margin: 5px 0 10px 0;
+  font-family: 'Antenna', sans-serif;
+  font-size: .7em;
+  letter-spacing: .015em;
+  color: $gray-extra-dark;
+}
+
+/* caption-fade - indicates more text - js to come */
+
+.full img.caption-fade,
+.sidecaption img.caption-fade,
+#story-image-caption img.caption-fade
+ {
+  display: none;
+}
+
+/*
+.sidecaption img.caption-fade {
+  position: fixed;
+  bottom: -10px;
+  left: 60%;
+  right: 20px;
+  width: 40%;
+}
+*/
+
+/* carousel-side-caption */
+
+.carousel-control.left {
+  left: 0;
+}
+
+.carousel-control.right {
+  right: 0;
+}
+
+.sidecaption .carousel-inner {
+  position: relative;
+  width: 100%;
+  background-color: $gray-extra-light;
+  overflow: hidden;
+}
+
+.sidecaption .carousel-inner > .item:before {
+  padding-top: 37.5%; /* 16:6 Aspect Ratio */
+  @include media-breakpoint-down(md) {
+    padding-top: 0;
+  }
+}
+
+.sidecaption .carousel-inner > .item {
+  background-color: $gray-extra-light;
+}
+
+.sidecaption .carousel-inner > .item > img,
+.sidecaption .carousel-inner > .item > a > img {
+  float: left;
+  margin: 0;
+  width: 60%;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}
+
+.sidecaption .carousel-caption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 60%;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  overflow-y: scroll;
+  @include media-breakpoint-down(md) {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.sidecaption .caption-wrapper {
+  position: relative;
+  top: 0;
+}
+
+.side-caption h4,
+.sidecaption .caption,
+.sidecaption .timestamp,
+.sidecaption .credit {
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+.sidecaption .carousel-caption h4 {
+  font-size: 1.25em;
+}
+
+.sidecaption .carousel-controls-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 30%;
+  left: 0;
+  right: 40%;
+  @include media-breakpoint-down(md) {
+    right: 0;
+  }
+}
+
+.sidecaption .carousel-control {
+  position: absolute;
+  top: 21.875%;
+  bottom: 0;
+  width: 56.25%; /* 16:9 aspect ratio */
+  width: 66.75%; /* 4:3 aspect ratio */
+  height: 100%;
+  @include media-breakpoint-down(md) {
+    top: 0;
+  }
+}
+
+.sidecaption .carousel-control.left[style] {
+  left: 0;
+  height: 100% !important;
+  @include media-breakpoint-down(xs) {
+    height: 250px !important;
+  }
+}
+
+.sidecaption .carousel-control.right[style] {
+  left: 33.4%;
+  right: 0;
+  height: 100% !important;
+  @include media-breakpoint-down(xs) {
+    height: 250px !important;
+  }
+}
+
+.sidecaption .carousel-control .glyphicon-chevron-left, .sidecaption .carousel-control .icon-prev,
+.sidecaption .carousel-control .glyphicon-chevron-right, .sidecaption .carousel-control .icon-next {
+  font-size: 1.5em;
+  @include media-breakpoint-down(xs) {
+    font-size: 1.25em;
+    filter: alpha(opacity=50);
+  }
+}
+
+/* counter */
+
+.counter {
+  position: absolute;
+	right: 0;
+	bottom: 0;
+  padding: 10px;
+  min-width: 60px;
+  height: auto;
+  font-family: 'Antenna', sans-serif;
+  font-size: .85em;
+  letter-spacing: .05em;
+  text-align: center;
+  color: $gray-light;
+  background: $gray-dark;
+  z-index: 10000;
+  @include media-breakpoint-down(xs) {
+    padding: 5px;
+  }
+}
+
+.container-fluid.carousel.slide { padding: 0px; }
+
+/* fade effect on carousel - BETTER SASS */
+
+.carousel-inner {
+  .item {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+    transition: opacity .5s ease-in-out;
+    &:first-of-type {
+      position: relative;
+    }
+  }
+  .active {
+    opacity: 1;
+  }
+}
+
+/* fade effect on carousel - FIX FOR NEWER VERSION OF BS CAROUSEL */
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  Need to override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}

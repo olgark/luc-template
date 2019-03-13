@@ -1,0 +1,256 @@
+/* storyforms-accordion */
+
+#accordion {
+  display: block;
+  margin: 0;
+  padding: 10px 0;
+}
+
+h4.accordion {
+  margin: 16px 0 14px !important;
+  width: 92%;
+  font-family:"Antenna", sans-serif;
+  font-size: .95em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: $gray-extra-dark;
+}
+
+#accordion .accordion:after {
+  float: right;
+  margin-left: 5px;
+  margin-right: -8%;
+  content: '+';
+  font-family: 'Antenna', sans-serif;
+  font-size: 1.35em;
+  color: $gray-extra-dark;
+}
+
+#accordion .active:after {
+  display: inline;
+  margin-right: -8%;
+  content: "-";
+}
+
+.panel {
+   max-height: 0;
+   border-bottom: solid 1px $gray-light;
+   overflow: hidden;
+   transition: max-height 0.5s ease-in-out;
+}
+
+.panel.show {
+   opacity: 1;
+   max-height: 100000px;
+}
+
+.panel p.body {
+  margin: 5px 0 25px 0;
+  padding: 0 0 0 20px;
+  font-size: .975em;
+  line-height: 1.85;
+}
+
+#accordion-nested {
+  display: block;
+  margin: 0;
+}
+
+h4.accordion-nested {
+  margin: 16px 0 14px !important;
+  width: 92%;
+  font-family:"Antenna", sans-serif;
+  font-size: .95em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: $gray-extra-dark;
+}
+
+#accordion-nested .accordion-nested:after {
+  float: right;
+  margin-left: 5px;
+  margin-right: -8%;
+  content: '+';
+  font-family: 'Antenna', sans-serif;
+  font-size: 1.35em;
+  color: $gray-extra-dark;
+}
+
+#accordion-nested .active:after {
+  display: inline;
+  margin-right: -8%;
+  content: "-";
+}
+
+.panel-nested {
+   max-height: 0;
+   border-bottom: solid 1px $gray-light;
+   overflow: hidden;
+   transition: max-height 0.5s ease-in-out;
+}
+
+.panel-nested.show {
+   opacity: 1;
+}
+
+.panel-nested p.body {
+  margin: 5px 0 25px 0;
+  padding: 0 0 0 20px;
+  font-size: .975em;
+  line-height: 1.85;
+}
+
+/* storyforms-accordion */
+
+/* faq styles */
+
+h4.accordion.faq {
+  font-family:"Myriad", sans-serif;
+  text-transform: none;
+  font-weight: 700;
+}
+
+/* faq styles END */
+
+/* get started */
+
+#get-started.panel {
+  float: left;
+  width: 100%;
+}
+
+#get-started #accordion h4 {
+    padding: 16px;
+    background-color: $maroon-extra-dark;
+    display: block;
+    width: auto;
+    box-shadow: none;
+    border-radius: 0 30px 30px 0;
+    margin: 0px !important;
+    font-size: 1em;
+  }
+
+#get-started #accordion h4 span.subhead {
+    margin: 2px 15px 0 10px;
+    font-family: "Arnhem Blond", serif;
+    font-style: italic;
+    font-size: 95%;
+    text-transform: none;
+    @include media-breakpoint-down(md){
+      display: none;
+    }
+  }
+
+#get-started h4.accordion {
+  display: block; width: 98%;
+  color: $white-base;
+  font-family: "Antenna Bold", sans-serif;
+  letter-spacing: 0.025em;
+  font-size: .825em;
+}
+
+#get-started .panel {
+  float: left;
+  width: 100%;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+#get-started .panel.show {
+  background-color: $gray-extra-light;
+  border-radius: 0 30px 0 0!important;
+  margin-top: 10px;
+  border-bottom: 20px solid white;
+  max-height: 10000px;
+}
+
+#get-started .accordion:after {
+  float: right;
+  margin-top: -.35%;
+  margin-left: 5px;
+  margin-right: 0%;
+  content: '+';
+  font-family: 'Antenna', sans-serif;
+  font-size: 1.35em;
+  color: $gray-light;
+}
+
+#get-started .panel p.body {
+  margin: 0 0 10px !important;
+  font-size: .975em;
+  line-height: 1.85;
+  padding: 0 !important;
+}
+
+#get-started .active:after {
+  display: inline;
+  content: "-";
+  margin-right: 0%;
+  margin-top: -.35%;
+}
+
+#get-started .panel {
+  border-bottom: none;
+}
+
+/* module */
+
+#rail h4 {
+  color: $gray-extra-light;
+}
+
+#rail {
+  padding: 2px 16px 4px;
+  background-color: $maroon-extra-dark;
+}
+
+#rail a {
+  display: block;
+  width: 98%;
+  color: $gray-extra-light;
+  font-family: "Antenna", sans-serif;
+  letter-spacing: 0.025em;
+  font-size: .825em;
+}
+
+#rail a:hover {
+  color:$gray-extra-light;
+}
+
+#rail .x {
+  border-bottom: 1px $gray-extra-light solid;
+}
+
+#rail .x.after .accordion:after {
+  float: right;
+  margin-right: -5%;
+  content: '+';
+  font-family: 'Antenna', sans-serif;
+  font-size: 1.35em;
+  color: $gray-extra-light;
+  margin-top: -7%;
+}
+
+#rail .panel {
+  border-bottom: none;
+  background-color: $maroon-extra-dark;
+}
+
+#rail .x.after .active:after {
+  display: inline;
+  content: "-"; }
+
+#rail .x:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.multilevel-linkdiv-0 {
+  max-height: 0;
+  margin: 0;
+}
+
+#rail .panel.show a {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+/* END - CSS */

@@ -1,0 +1,29 @@
+/* fixes social icon bar */
+
+#side-nav-law {
+  position: fixed;
+  top: 24%;
+  left: 0;
+  z-index: 10;
+  -webkit-transform: translateY(-40%);
+  -ms-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 11;
+  padding: 0px 0px 5px 10px;
+}
+
+/* social icons */
+
+#side-nav-law a {
+  padding: 0px 0px 5px 0px;
+  display: block;
+  color: black;
+  transition: all 0.3s ease;
+  font-family: "Antenna";
+  font-size: 80%;
+}
+
+#side-nav-law a:hover {
+  background-color: none;
+  color: $gray-dark;
+}

@@ -1,0 +1,96 @@
+/* interior-nav */
+
+#interior-nav {
+  margin: 0 0 35px;
+  padding: 0;
+  border-radius: 15px 0 0 15px;
+  background-color: lighten($gray, 5%);
+}
+
+.SAC, .CHIL { display:none }
+
+#interior-nav .x {
+  padding: 10px 0 0;
+  border-bottom: none;
+  transition: background-color .3s;
+}
+
+#interior-nav .x:hover {
+  background: darken($gray, 2%);
+}
+
+#interior-nav a {
+  display: block;
+  margin: 0 5%;
+  padding: 0 0 10px;
+  width: 90%;
+  font-family: "Antenna", sans-serif;
+  font-size: .735em;
+  letter-spacing: 0.025em;
+  line-height: 1.45;
+  color: $gray-extra-light;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+  border-color: lighten($gray, 15%);
+  transition: color .3s;
+}
+
+#interior-nav a:hover {
+  color: $white-base;
+}
+
+#interior-nav .x:first-of-type {
+  padding: 12px 0 0;
+  border-radius: 15px 0 0 0;
+}
+
+#interior-nav .x:last-of-type {
+  border-radius: 0 0 0 18px;
+}
+
+#interior-nav .x:last-of-type a {
+  padding: 0 10px 12px 0;
+}
+
+#interior-nav .x:last-of-type a {
+  border: 0;
+}
+
+#interior-nav h4 {
+  margin: 0 !important;
+  width: 100%;
+}
+
+#interior-nav .x.after .accordion:after {
+  float: right;
+  margin-right: -5%;
+  content: '+';
+  font-family: 'Antenna', sans-serif;
+  font-size: 1.35em;
+  color: #e1e1e1;
+  margin-top: -10%;
+}
+
+#interior-nav .panel {
+  border-bottom: none;
+}
+
+#interior-nav  .x.after .active:after {
+  display: inline;
+  content: "-"; }
+
+#interior-nav .x:nth-last-child(1) {
+  border-bottom: none;
+}
+
+.multilevel-linkdiv-0 {
+  max-height: 0;
+  margin: 0;
+}
+
+#interior-nav .panel.show a {
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+/* END - CSS */

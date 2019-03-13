@@ -1,0 +1,37 @@
+/* TABS */
+
+ul.nav.nav-tabs {
+	margin: 20px 0;
+}
+
+.nav-tabs>li {
+	border: none;
+}
+
+.nav-tabs>li>a {
+	padding: 10px 15px 6px;
+	font-family: 'Antenna', sans-serif;
+	font-size: .825em;
+	color: $white-base;
+	text-transform: uppercase;
+	border: none;
+	background: -moz-linear-gradient(top, darken($gray-extra-light,10%) 92%,darken($gray-light,25%) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, darken($gray-extra-light,10%) 92%,darken($gray-light,25%) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, darken($gray-extra-light,10%) 92%,darken($gray-light,25%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darken($gray-extra-light,10%)', endColorstr='darken($gray-light,25%)',GradientType=0 ); /* IE6-9 */
+}
+
+.nav-tabs>li>a:hover {
+	color: $white-base;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+	color: $gray;
+	border: 1px solid $gray-light;
+	border-bottom: $white-base;
+	background: $white-base;
+}
+
+/* CSS - END */

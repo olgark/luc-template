@@ -1,0 +1,46 @@
+/* fixes social icon bar */
+
+#social-icon-bar {
+  position: fixed;
+  top: 38%;
+  left: 0;
+  z-index: 10;
+  -webkit-transform: translateY(-40%);
+  -ms-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 10;
+}
+
+/* social icons */
+
+#social-icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px 14px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-top: solid 1px $gray-extra-light;
+  transition: all 0.3s ease;
+  &:first-of-type {
+    border-top: none;
+  }
+}
+
+#social-icon-bar a:hover { background-color: darken($maroon-dark,5%); }
+
+/* social icons - color */
+
+.facebook { background: #3B5998; color: white; }
+
+.twitter { background: #55ACEE; color: white; }
+
+.google { background: #dd4b39; color: white; }
+
+.linkedin { background: #007bb5; color: white; }
+
+.youtube { background: #bb0000; color: white; }
+
+/* social icons - gray */
+
+.facebook, .twitter, .google, .linkedin, .youtube { background: $gray; border: solid 1px $gray-light; }

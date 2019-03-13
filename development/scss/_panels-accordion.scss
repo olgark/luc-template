@@ -1,0 +1,57 @@
+/* storyforms-accordion */
+
+#accordion {
+  display: block;
+  margin: 0;
+  padding: 10px 0;
+}
+#accordion > h4, #accordion > h4.subhead, #accordion > h4.subhead.subhead-accordion {
+  margin: 0;
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+  width: 100%;
+  font-family:"Antenna", sans-serif;
+  font-size: .95em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: $gray-extra-dark;
+}
+
+#accordion .accordion:after {
+  float: right;
+  margin-top: -5px;
+  margin-left: 5px;
+  margin-right: 0;
+  content: '+';
+  font-family: 'Antenna', sans-serif;
+  font-size: 1.35em;
+  color: $gray-extra-dark;
+}
+
+#accordion .active:after {
+  display: inline;
+  margin-right: 0;
+  content: "-";
+}
+
+.panel {
+   max-height: 0;
+   border-bottom: solid 1px $gray-light;
+   overflow: hidden;
+   transition: max-height 0.5s ease-in-out;
+}
+
+.panel.show {
+   opacity: 1;
+   max-height: 500px;
+}
+
+.panel p.body {
+  float: left;
+  margin: 5px 0 25px 25px;
+  padding: 0;
+  font-size: .975em;
+  line-height: 1.85;
+}
+
+/* END - CSS */

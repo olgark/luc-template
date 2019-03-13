@@ -1,0 +1,13 @@
+/* FRAMEWORK */
+
+body {
+  padding-top: 0; background: rgba(0,0,0,0);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#main-content, #main-wrapper { margin: 50px auto; }
+
+#story-wrapper { background: $gray-light; }

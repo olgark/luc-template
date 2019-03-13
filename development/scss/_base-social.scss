@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+@media all and ( max-width : 1200px ) {
+
+#social-wrapper {
+	float: left !important;
+	margin: 20px 0 0 0;
+	padding: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;
+}
+
+#cta ul#social { float: left !important; }
+
+}
+
+/* CSS - SOCIAL */
+
+#social {
+	float: right !important;
+	margin: 0;
+	padding: 0;
+}
+#social li {
+	float: left;
+	border-radius: 4px;
+	height: 28px;
+	list-style: outside none none;
+	margin: 0 10px 0 0;
+	overflow: hidden;
+	width: 28px;
+	background-color: $gray-dark;
+}
+#social li:first-child {
+  margin-left: 0 !important;
+  margin-right: 10px;
+}
+#social li:last-child {
+  margin-right: 0;
+}
+#social li a {
+  background: url("http://www.luc.edu/media/home/images/social-icons-logos-33-070714.png") no-repeat scroll 0 0 $gray-dark;
+	background-size: 28px;
+  border-radius: 4px;
+  display: block;
+  height: 28px;
+  margin: 0;
+  text-indent: -9999px;
+  width: 28px;
+  opacity: .75;
+}
+#social-icons-only ul.social li {
+  margin-bottom: 0;
+}
+#footer-cta .social li a {
+  margin: 0;
+  padding: 0;
+}
+#footer-cta ul.social {
+  float: right;
+  position: relative;
+  right: -10px;
+}
+.social li a {
+  display: block;
+  margin: 0;
+}
+#social li a:hover {
+  transition: background-color 0.2s ease-in 0s, opacity 0.2s ease-in 0s;
+	-webkit-transition: background-color 0.2s ease-in 0s, opacity 0.2s ease-in 0s;
+	-moz-transition: background-color 0.2s ease-in 0s, opacity 0.2s ease-in 0s;
+	-ms-transition: background-color 0.2s ease-in 0s, opacity 0.2s ease-in 0s; /* IE10 is actually unprefixed */
+	-o-transition: background-color 0.2s ease-in 0s, opacity 0.2s ease-in 0s;
+	transition: background-color 0.2s ease-in 0s, opacity 0.2s ease-in 0s;
+  background-color: $maroon-dark;
+  opacity: 1;
+}
+#social li a.icon-fb {
+  background-position: 0 0;
+}
+#social li a.icon-fb:hover {
+  background-position: 0 0;
+}
+#social li a.icon-tw {
+  background-position: 0 -28px;
+}
+#social li a.icon-tw:hover {
+  background-position: 0 -28px;
+}
+#social li a.icon-yt {
+  background-position: 0 -56px;
+}
+#social li a.icon-yt:hover {
+  background-position: 0 -56px;
+}
+#social li a.icon-fl {
+  background-position: 0 -84px;
+}
+#social li a.icon-fl:hover {
+  background-position: 0 -84px;
+}
+#social li a.icon-li {
+  background-position: 0 -112px;
+}
+#social li a.icon-li:hover {
+  background-position: 0 -112px;
+}
+#social li a.icon-ig {
+  background-position: 0 -140px;
+}
+#social li a.icon-ig:hover {
+  background-position: 0 -140px;
+}
+#social li a.icon-pi {
+  background-position: 0 -168px;
+}
+#social li a.icon-pi:hover {
+  background-position: 0 -168px;
+}
+#social li a.icon-instagram {
+  background-position: 0 -196px;
+}
+#social li a.icon-instagram:hover {
+  background-position: 0 -196px;
+}
+#social li a.icon-google {
+  background-position: 0 -252px;
+}
+#social li a.icon-google:hover {
+  background-position: 0 -252px;
+}
+
+/* END - SOCIAL */

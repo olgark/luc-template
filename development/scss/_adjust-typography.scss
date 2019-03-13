@@ -1,0 +1,239 @@
+body {
+  background: $white-base !important;
+  background-image: none !important;
+}
+
+a {
+  cursor: pointer;
+}
+
+h1,
+h1.primary,
+h3.standalone,
+h4.subhead {
+  font-family: 'Arnhem Bold', 'Georgia', serif !important;
+  text-transform: none;
+}
+
+h1.display {
+  font-size: 4.5em;
+  line-height: 1.1;
+}
+
+h1.number {
+  font-family: 'Arnhem Bold', 'Georgia', serif !important;
+  font-size: 5em;
+  letter-spacing: -0.015em;
+}
+
+.number h1.display {
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  font-family: "Antenna Bold", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+h2.secondary-explainer {
+  font-family: 'Arnhem Blond', serif !important;
+  font-style: italic;
+  font-size: 1.7em;
+  text-transform: none;
+}
+
+h3.standalone {
+  font-size: 1.3em;
+}
+
+h4.module {
+  font-size: 1.35em;
+  line-height: 1.35;
+  font-family: 'Arnhem Blond', 'Georgia', serif !important;
+  margin-top: 0;
+}
+
+h5.subhead {
+  font-size: 0.95em;
+  font-family: "Antenna Bold", sans-serif;
+}
+
+h5.light {
+  font-family: 'Antenna Light', serif !important;
+  opacity: 1 !important;
+}
+
+h5#breadcrumbs.label {
+  font-family: 'Antenna Light', serif !important;
+  font-size: 80% !important;
+  margin-top: 30px;
+}
+
+h5#breadcrumbs.label a {
+  color: $gray-extra-dark;
+}
+
+h5#breadcrumbs.label a {
+  color: $gray;
+}
+
+h6.category.light {
+  font-family: 'Antenna Light', serif !important;
+}
+
+h6.faq {
+  font-family: 'Antenna', serif !important;
+  text-transform: none !important;
+  font-size: 100%;
+}
+
+p.faq a {
+  color: #272727 !important;
+}
+
+p.faq {
+  margin: 0 !important;
+}
+
+p.number {
+  font-family: "Antenna Light", sans-serif;
+}
+
+p.name {
+  font-family: 'Arnhem Bold', 'Georgia', serif !important;
+  font-size: 1.1em;
+}
+
+p span.lead-in {
+  font-family: "Antenna Bold", sans-serif;
+  text-transform: uppercase;
+}
+
+blockquote.outcomes {
+  font-size: 1.65em;
+}
+
+cite.outcomes {
+  font-family: "Antenna Light", sans-serif;
+  text-transform: uppercase;
+  font-size: 90%;
+}
+
+blockquote.small {
+  font-family: "Myriad Pro", sans-serif;
+  font-weight: normal;
+  margin: 0 !important;
+}
+
+blockquote,
+blockquote p {
+  font-family: 'Arnhem Bold', 'Georgia', serif !important;
+}
+
+blockquote,
+blockquote p.light {
+  font-family: 'Arnhem', 'Georgia', serif !important;
+}
+
+a.cta {
+  background-color: transparent;
+  color: $maroon-dark;
+  letter-spacing: 0;
+}
+
+a.cta.small {
+  font-size: 0.725em !important;
+}
+
+a.cta:hover {
+  background-color: transparent;
+  color: $maroon;
+  letter-spacing: 0;
+}
+
+ul {
+  width: 100%;
+  margin: 0 0 20px 30px;
+  float: left;
+}
+
+li span.antenna {
+  font-family: "Antenna", sans-serif;
+  text-transform: uppercase;
+}
+
+.footnote {
+  margin-top: 20px;
+  border-top: 1px solid #e1e1e1;
+}
+
+.alternate {
+  font-family: 'Arnhem', 'Georgia', serif !important;
+}
+
+.section-top {
+  padding-top: 35px;
+  margin-top: 35px;
+  border-top: 1px solid $gray-light;
+}
+
+.spacer-top {
+  padding-top: 35px;
+  margin-top: 35px;
+  border-top: 1px solid $white-base;
+}
+
+.gold-dark {
+  color: $gold-extra-dark !important;
+}
+
+button.btn,
+button.btn.cta {
+  border: 1px solid $maroon-dark;
+  background-color: white;
+  color: $maroon-dark;
+  margin-right: 10px;
+  border-radius: 40px;
+  font-family: "Antenna", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+button.btn.cta:hover,
+button.btn:hover {
+  background-color: $maroon-extra-dark;
+}
+
+p a.cta {
+  background: none;
+  color: #981e4d !important;
+}
+
+.lede-content {
+  background-color: #f1f1f1;
+}
+
+td:nth-child(1) {
+  font-family: "Antenna Bold", sans-serif;
+  text-transform: uppercase;
+}
+
+td {
+  font-family: "Myriad", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 1em;
+}
+
+.story-content-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.large-quote {
+  font-size: 10em;
+  font-family: "Arnhem Black", "Georgia", serif;
+  margin-bottom: -18%;
+  margin-top: -5%;
+}

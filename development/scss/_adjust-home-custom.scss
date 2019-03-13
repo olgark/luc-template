@@ -1,0 +1,264 @@
+/* body */
+#home-carousel-content-cta {
+  position: absolute;
+  bottom: 0;
+  z-index: +5;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(89,89,89,0), rgba(89,89,89,1));
+}
+
+#home-carousel-content-cta.container {
+  width: 100%;
+  max-width: 100%;
+}
+
+#story-refer-panel .refer-image {
+  width: 75%;
+}
+
+.lede-container {
+  background-color: $gray-extra-dark;
+}
+
+h1.home-lede {
+  margin: 15px 0 5px;
+  font-family: 'Arnhem Bold', 'Georgia', serif !important;
+  font-size: 2.75em;
+  line-height: 1.125;
+  letter-spacing: -.015em;
+}
+
+p.body.home-lede {
+  text-align: center;
+  color: $gray-extra-light;
+}
+
+p.body.home-lede a {
+  margin: 12px 0 0;
+  color: $maroon-extra-dark;
+}
+
+h2.home-department {
+  font-family: 'Arnhem Bold', 'Georgia', serif !important;
+  font-size: 2.25em;
+  letter-spacing: -.015em;
+  text-transform: none;
+
+  &:after {
+    content: '…';
+  }
+}
+
+.box .content {
+  padding: 6% 10% 10%;
+}
+
+.box-image {
+  width: 100%;
+  overflow: hidden;
+  padding: 0 0 100%;
+  position: relative;
+  height: 200px;
+  background-size: 100% 100%;
+}
+
+h4.module {
+  /* font-family: 'Antenna Bold', sans-serif !important; */
+  font-family: 'Arnhem Bold', 'Georgia', serif !important;
+  font-size: 1.5em;
+  letter-spacing: -.015em;
+}
+
+#content-wrapper button.btn.module,
+#content-wrapper button.btn.module.cta {
+  margin: 5px 0 0;
+  padding: 7px 12px 5px;
+  font-family: "Antenna", sans-serif;
+  font-size: 0.65em;
+  color: #981e4d;
+  text-transform: uppercase;
+  border: 1px solid #981e4d;
+  border-radius: 40px;
+  background-color: lighten($bg-overlay, 80%) !important;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: lighten($bg-overlay, 65%) !important;
+  }
+}
+
+.center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+  align-items: center;
+}
+
+h4.rail-module {
+  font-family: 'Arnhem Bold', 'Georgia', serif !important;
+  font-size: 1.5em;
+  letter-spacing: -.015em;
+  margin-bottom: 10px;
+}
+
+h4.media-heading {
+  font-family: 'Antenna', sans-serif !important;
+  font-size: 0.9em;
+  color: $gray-extra-dark;
+}
+
+h4.story-heading {
+  font-family: "Arnhem Bold", "Georgia", serif;
+  color: $gray-extra-dark;
+  margin-top: 5px;
+}
+
+h4.story-heading:hover {
+  color: $gray-dark;
+}
+
+#rail-modules {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#help button.btn.btn-secondary {
+  background-color: $gray-extra-light;
+  border: none;
+  border-radius: 0;
+  color: $bg-overlay-extra-dark;
+  font-family: "Antenna Bold", sans-serif;
+  font-size: 0.8em;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  border-top: 5px darken($gold-dark, 3%) solid;
+}
+
+#help .dropdown-toggle::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.4em solid;
+  border-right: 0.4em solid transparent;
+  border-bottom: 0;
+  border-left: 0.4em solid transparent;
+  bottom: 0;
+}
+
+#help .dropdown-menu {
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  text-align: left;
+  list-style: none;
+  background-color: $gray-extra-light;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  z-index: 1000;
+}
+
+#help a.dropdown-item {
+  color: $gray-extra-dark;
+  border-top: 1px white solid;
+  width: 100%;
+  display: block;
+  padding: 10px;
+}
+
+/* calendar */
+div.event-date p,
+span.event-day p {
+  display: block;
+  margin: 0;
+  padding: 8px 2% 6px;
+  width: 96%;
+  min-width: 96%;
+  font-family: 'Antenna Bold' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 0.75em;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  border-radius: 0;
+  background: $maroon-extra-dark;
+  font-size: 70%;
+}
+
+div.event-date p {
+  font-family: 'Antenna' !important;
+  font-weight: normal;
+  font-style: normal;
+  color: $gray-dark;
+  background: $gray-extra-light;
+  font-size: 70%;
+}
+
+.media-container {
+  color: $gray-dark;
+}
+/* story module */
+#story-module .rule-bottom {
+  padding-bottom: 15px;
+}
+
+#luc-get-started {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  border-bottom: 2px $gray-light solid;
+}
+
+#luc-get-started.nav a:visited,  #luc-get-started.nav a:focus {
+  background-color: transparent !important;
+  color: $gray-extra-dark;
+}
+
+#luc-get-started.nav a:hover {
+  color: $gray-dark;
+  background-color: transparent !important;
+}
+
+#luc-get-started  li a {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Antenna Bold";
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 0.05em;
+  color: $gray-extra-dark;
+}
+
+#luc-get-started {
+    width: 100%;
+    text-align: center;
+    > li {
+      float: none;
+      display: inline-block;
+    }
+}
+
+#luc-get-started .navbar .navbar-nav {
+  text-align: center;
+}
+
+/* CSS - END */

@@ -1,0 +1,157 @@
+.module-base a {
+	text-decoration: none;
+	-webkit-transition: color 0.2s ease;
+	-moz-transition: color 0.2s ease;
+	-o-transition: color 0.2s ease;
+	transition: color 0.2s ease;
+}
+
+.grid-row {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.grid-square, .grid-square-bg {
+	box-sizing: border-box;
+	display: inline-block;
+  position: relative;
+  width: 17%;
+  margin: 10px 1%;
+  padding: 1%;
+}
+
+.grid-square-bg.bg-overlay {
+	@include media-breakpoint-up(lg) { display: inline-block; }
+	@include media-breakpoint-down(lg) { display: inline-block; }
+}
+
+.grid-square:after, .grid-square-bg:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.grid-square-content {
+  position: absolute;
+	top: 10%;
+	bottom: 10%;
+	left: 10%;
+	right: 10%;
+	margin: 0;
+	padding: 0;
+}
+
+.grid-square-content span {
+	display: block;
+	margin: 0;
+	padding: 0 0 5px;
+	width: 100%;
+	font-family: $antenna;
+	color: $white;
+	font-size: .675em;
+	line-height: 1.35;
+	text-transform: uppercase;
+	@include media-breakpoint-down(sm) { font-size: .5em; }
+}
+
+.grid-square-content span:nth-child(2) { position: absolute; bottom: 0; left: 0; padding: 0; }
+
+.grid-square ul li { margin: 10px; }
+
+
+/* MODULES - BEGIN */
+
+/* check hovers and create mixins for color variations */
+
+.module-base {
+	margin: 20px 0;
+	padding: 20px;
+	background: $white;
+	@extend %dark-module-base;
+}
+
+%dark-module-base {
+	border: 4px solid $gray-extra-dark;
+	background: $white ;
+}
+
+.announcement {
+	color: $white;
+	border: none;
+	@include border-radius(6px);
+	background-color: $maroon-dark;
+	a {
+		margin: 0;
+		color: $gold;
+		background-color: none;
+		&:hover {
+			color: $gold-light;
+		}
+	}
+	h4.subhead {
+		margin: 0;
+	}
+}
+
+.pano {
+	position: relative;
+	padding-bottom: 40.8333%;
+	padding-top: 0px;
+	height: 0;
+	overflow: hidden;
+	color: $gray-light;
+	a {
+		margin: 0;
+		color: $white;
+		background-color: none;
+		&:hover {
+			color: $gray-extra-light;
+		} /* close hover */
+	} /* close a */
+	h1.display {
+		font-family: Antenna Bold;
+		font-size: 2em;
+		line-height: 1;
+	}
+	h4.subhead {
+		margin: 0;
+		font-family: Antenna Light !important;
+		font-size: 1em;
+		line-height: 1.45;
+		a { 
+			width: 100%;
+			font-family: Antenna Bold;
+			font-size: 80%;
+			color: $gold;
+			text-transform: uppercase;
+				&:hover {
+					color: $gold-light;
+			} /* close hover */
+		} /* close a */
+	}
+	h6 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+		padding: 5px 20px 5px 5px;
+		width: 150px;
+		height: 30px;
+		background-color: rgba($bg-overlay, .8);
+	}
+	h6.category { color: red; }
+}
+
+.pano .overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 15px;
+		height: auto;
+		background-color: rgba($bg-overlay, .8);
+}
+
+/* END - MODULES */

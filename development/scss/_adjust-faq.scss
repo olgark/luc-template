@@ -1,0 +1,70 @@
+/* faq */
+
+#faq { margin: 15px 0 0; }
+
+#faq .panel-heading { padding: 12px 0 10px; }
+
+#faq.panel-group { border: 0 none !important; box-shadow: none; width: 100%;}
+
+#faq.panel-group .panel {
+  float: left;
+  margin: 0;
+  border: 0;
+  width: 100%;
+  border-top: 1px solid $gray-light;
+  border-bottom: 0 none !important;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#faq.panel-group .panel-heading+.panel-collapse>.list-group,
+#faq.panel-group .panel-heading+.panel-collapse>.panel-body {
+  border: 0;
+}
+
+#faq h6{ margin: 0 !important; font-size: .925em; }
+
+#faq h6 a { display: block; width: 98%; color: $gray-extra-dark; }
+
+#faq .panel-body {
+  float: left;
+  margin: 15px 0 30px;
+  padding: 0;
+  width: 100%;
+  box-shadow: none;
+}
+
+#main-content #faq .panel-heading .accordion-toggle span.accordion-icon {
+  float: right;
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+#main-content #faq .panel-heading .accordion-toggle.collapsed span.accordion-icon img {
+  margin: 0;
+  padding: 0;
+  width: 12px;
+  height: 16px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  transition-duration: .25s;
+}
+
+#main-content #faq .panel-heading .accordion-toggle span.accordion-icon img {
+  margin: 0;
+  padding: 0;
+  width: 12px;
+  height: 16px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  transition-duration: .25s;
+}
+
+/* END - CSS */

@@ -1,0 +1,17 @@
+.opacity-slider-wrapper { position: relative; }
+
+.opacity-slider-layer-01, .opacity-slider-layer-02 { width: 100%; height: auto; }
+
+.opacity-slider-layer-01 { position: relative; top: 0; left: 0; background: none; z-index: 10000; opacity: .75; }
+
+.opacity-slider-layer-02 { position: absolute; top: 0; left: 0; background: none; }
+
+.opacity-slider-layer-01 img, .opacity-slider-layer-02 img { margin: 0; }
+
+.opacity-slider-layer-01 img { width: 100%; }
+
+.opacity-slider-layer-02 img { width: 100%; }
+
+#story-opacity-slider-control { width: 100%; }
+
+#story-opacity-slider-control #rangevalue { display: none; }
