@@ -9,13 +9,24 @@
 </head>
 <body>
 <header>
-	@@include('./partials/luc-header.html')
+	@@include('./partials/luc-grid-header.html')
 </header>
-<section id="wrapper">
-	@@include('luc-grid-framework.html') <!-- *** -->
-</section>
+<nav>
+	@@include('./partials/luc-grid-header.html')
+</nav>
+<main>
+	<article>
+		@@include('./partials/typography-headings.html')
+		@@include('./partials/typography-body.html')
+	</article>
+</main>
+<aside>
+	<article>
+		@@include('./partials/typography-body.html')
+	</article>
+</aside>
 <footer>
-	@@include('./partials/luc-footer.html')
+	@@include('./partials/luc-grid-footer.html')
 </footer>
 	<!-- inject:js -->
 	<!-- endinject -->
