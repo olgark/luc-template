@@ -8,15 +8,25 @@
 	<link rel="stylesheet" href="###">
 </head>
 <body>
-<header>
-	@@include('./partials/luc-header.html')
-</header>
-<section id="wrapper">
-	@@include('./partials/main-content-interior.html') <!-- *** -->
-</section>
-<footer>
-	@@include('./partials/luc-footer.html')
-</footer>
+	<header>
+		<!-- @@include('./partials/luc-grid-header.html') -->
+	</header>
+	<nav>
+		<!-- @@include('./partials/luc-grid-header.html') -->
+	</nav>
+	<main>
+		<article>
+			@@include('./partials/main-content-interior.html')
+		</article>
+	</main>
+	<aside>
+		<article>
+			<!-- sidebar content here -->
+		</article>
+	</aside>
+	<footer>
+		<!-- @@include('./partials/luc-grid-footer.html') -->
+	</footer>
 	<!-- inject:js -->
 	<!-- endinject -->
 </body>
