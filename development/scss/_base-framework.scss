@@ -1,6 +1,7 @@
 /* FRAMEWORK */
 
 body {
+  top: 0;
   margin: 0;
   padding-top: 0; background: rgba(0,0,0,0);
   -webkit-background-size: cover;
@@ -9,13 +10,9 @@ body {
   background-size: cover;
 }
 
-#main-content, #main-wrapper { margin: 50px auto; }
+.container-fluid { box-sizing: border-box; width: 100%; }
 
-#story-wrapper { background: $gray-light; }
-
-main, .container-fluid { box-sizing: border-box; width: 100%; }
-
-main article, .container { box-sizing: border-box; margin: 0 auto; width: 70%; }
+.container { box-sizing: border-box; margin: 0 auto; width: 70%; }
 
 #luc-header {
   position: fixed;
