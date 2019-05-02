@@ -1,0 +1,66 @@
+$maroon:			#a02051;
+$gold:				#febe18;
+$gray:				#888888;
+$lake:				#056fa9;
+$patina:			#08bcc1;
+$terracotta:	#aa8761;
+$taupe:				#c7a982;
+$white-base:	#ffffff;
+$bg-overlay:	rgba(0,0,0,.5);
+
+$bg-overlay: $bg-overlay;
+$bg-overlay-dark: rgba($bg-overlay, .6);
+$bg-overlay-extra-dark: rgba($bg-overlay, .8);
+$bg-overlay-light: rgba($bg-overlay, .3);
+$bg-overlay-extra-light: rgba($bg-overlay, .2);
+
+/* MAROON */
+$maroon: lighten($maroon, 3%);
+$maroon-dark: darken($maroon, 5%);
+$maroon-extra-dark: darken($maroon, 15%);
+$maroon-light: lighten($maroon, 20%);
+$maroon-extra-light: lighten($maroon, 35%);
+
+/* GOLD */
+$gold: lighten($gold, 1%);
+$gold-dark: darken($gold, 15%);
+$gold-extra-dark: darken($gold, 30%);
+$gold-light: lighten($gold, 20%);
+
+/* GRAY */
+$gray: lighten($gray, 5%);
+$gray-dark: darken($gray, 25%);
+$gray-extra-dark: darken($gray, 41%);
+$gray-light: lighten($gray, 30%);
+$gray-extra-light: lighten($gray, 36%);
+
+/* LAKE */
+$lake: lighten($lake, 4%);
+$lake-dark: darken($lake, 9%);
+$lake-extra-dark: darken($lake, 18%);
+$lake-light: lighten($lake, 48%);
+$lake-extra-light: hsl(200, 70%, 94%);
+
+/* PATINA */
+$patina: darken($patina, 0%);
+$patina-dark: darken($patina, 15%);
+$patina-extra-dark: darken($patina, 30%);
+$patina-light: hsl(177, 55%, 86%);
+$patina-extra-light: hsl(177, 45%, 94%);
+
+/* TERRACOTTA */
+$terracotta: $terracotta;
+$terracotta-dark: darken($terracotta, 20%);
+$terracotta-extra-dark: darken($terracotta, 35%);
+$terracotta-light: lighten($terracotta, 35%);
+$terracotta-extra-light: hsl(31, 20%, 94%);
+
+/* TAUPE */
+$taupe: $taupe;
+$taupe-dark: darken($taupe, 20%);
+$taupe-extra-dark: darken( $taupe, 32% );
+$taupe-light: lighten( $taupe, 25% );
+$taupe-extra-light: hsl(55, 14%, 94%);
+
+
+$antenna: 'Antenna', sans-serif;

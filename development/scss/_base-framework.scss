@@ -15,3 +15,8 @@ body {
 main, .container-fluid { box-sizing: border-box; width: 100%; }
 
 main article, .container { box-sizing: border-box; margin: 0 auto; width: 70%; }
+
+#luc-header {
+  position: fixed;
+  background: $bg-overlay;
+}
