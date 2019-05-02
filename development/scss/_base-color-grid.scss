@@ -15,8 +15,8 @@
 }
 
 .grid-square-bg.bg-overlay {
-	@include media-breakpoint-up(lg) { display: inline-block; }
-	@include media-breakpoint-down(lg) { display: inline-block; }
+//	@include media-breakpoint-up(lg) { display: inline-block; }
+//	@include media-breakpoint-down(lg) { display: inline-block; }
 }
 
 .grid-square:after, .grid-square-bg:after {
@@ -45,7 +45,7 @@
 	font-size: .675em;
 	line-height: 1.35;
 	text-transform: uppercase;
-	@include media-breakpoint-down(sm) { font-size: .5em; }
+//	@include media-breakpoint-down(sm) { font-size: .5em; }
 }
 
 .grid-square-content span:nth-child(2) { position: absolute; bottom: 0; left: 0; padding: 0; }

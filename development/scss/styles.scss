@@ -1,15 +1,20 @@
 $enable-flex:               true;
 $enable-grid-classes:       true;
 
-@import 'variables';
-// @import 'mixins';
-// @import 'mixins/breakpoints';
+//@import 'variables';
+//@import 'mixins';
+//@import 'mixins/breakpoints';
 @import 'custom-variables';
-@import 'base-normalize';
-@import 'base-reboot';
+//@import 'base-normalize';
+//@import 'base-reboot';
+//@import 'bootstrap-grid';
+//@import 'base-grid';
 @import 'base-color';
 @import 'base-color-grid';
 @import 'base-antenna';
 @import 'base-arnhem';
-// @import 'base-typography';
+//@import 'base-typography';
+/* @import 'base-nav'; */
+//@import 'base-social';
+//@import 'base-spacing';
 @import 'base-framework';
