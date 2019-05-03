@@ -68,7 +68,7 @@
       </ul>
   </nav>
   <!-- BRAND -->
-  <div class="container">
+  <div id="loyola-site-brand-wrapper" class="container-fluid">
     <span id="loyola-site-name">
       <a href="###">
       School of Continuing and Professional Studies
@@ -84,25 +84,56 @@
 		<nav>
 			<!-- NAV - DESKTOP -->
 <nav class="navbar-collapse" role="navigation">
+	<!-- navigation - main -->
 	<ul id="luc-header-navigation" class="navbar">
-		<li class="active"><a href="#">Navigation <span class="sr-only">(current)</span></a></li>
-		<li><a href="#">Navigation</a></li>
-		<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navigation</a>
-		<ul class="dropdown-menu">
-			<li><a href="#">Navigation</a></li>
-			<li><a href="#">Navigation</a></li>
-			<li><a href="#">Navigation</a></li>
-			<li role="separator" class="divider"></li>
-			<li><a href="#">Navigation</a></li>
-			<li role="separator" class="divider"></li>
-			<li><a href="#">Navigation</a></li>
-		</ul>
+		<li class="active">
+			<a href="#">Navigation</a>
+		</li>
+		<li>
+			<a href="#">Navigation</a>
+		</li>
+		<li class="dropdown">
+			<button class="dropdown-button">Navigation</button>
+			<div class="dropdown-content">
+				<a href="#">Navigation</a>
+				<a href="#">Navigation</a>
+				<a href="#">Navigation</a>
+				<span class="divider" role="separator">
+				<a href="#">Navigation</a>
+				<span class="divider" role="separator">
+				<a href="#">Navigation</a>
+			</div>
+		</li>
+		<li class="dropdown">
+			<button class="dropdown-button">Navigation</button>
+  		<div class="dropdown-content">
+    		<a href="#">Link 1</a>
+    		<a href="#">Link 2</a>
+    		<a href="#">Link 3</a>
+				<div role="separator" class="divider"></div>
+				<a href="#">Link 1</a>
+				<div role="separator" class="divider"></div>
+				<a href="#">Link 1</a>
+  		</div>
 		</li>
 	</ul>
-	<ul id="luc-cta" class="navbar">
-		<li class="active"><a href="#">Apply</a></li>
-		<li><a href="#">Visit</a></li>
-		<li><a href="#">Give</a></li>
+	<!-- navigation - engagement -->
+	<ul id="luc-engagement">
+		<!-- engagement - cta -->
+		<li id="luc-cta" class="navbar">
+			<ul>
+				<li class="active">
+					<a href="#">Apply</a>
+				</li>
+				<li>
+					<a href="#">Visit</a>
+				</li>
+				<li>
+					<a href="#">Give</a>
+				</li>
+			</ul>
+		</li>
+		<!-- engagement - information -->
 		<li id="luc-information" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="information-icon">i</span></a>
 			<ul class="dropdown-menu">
 				<li><a href="#">Navigation</a></li>
@@ -114,6 +145,7 @@
 				<li><a href="#">Navigation</a></li>
 			</ul>
 		</li>
+		<!-- engagement - search -->
 		<li id="luc-search" class="dropdown"><a href="#" class="dropdown-toggle search-icon" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/search-icon.svg"></a>
 			<ul id="drop" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				<form class="form-inline" autocomplete="off">
