@@ -16,44 +16,6 @@ body {
 
 .container { box-sizing: border-box; margin: 0 auto; width: 70%; }
 
-nav {
-  width: 100%;
-  height: auto;
-  font-family: 'Arial', sans-serif;
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    display: inline;
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    font-size: .75em;
-    letter-spacing: .025em;
-    text-decoration: none;
-    list-style: none;
-    border-right: solid 1px $gray-dark;
-    &:first-of-type {
-      border-left: solid 1px $gray-dark;
-    }
-    a {
-      display: block;
-      padding: 22px 20px 8px;
-      color: $gray-light;
-      width: auto;
-      text-decoration: none;
-      text-transform: uppercase;
-      background-color: rgba(0,0,0,0);
-      transition: background-color .2s;
-      &:hover {
-        color: $white;
-      }
-    }
-  }
-}
-
 /* audience-directory header */
 
 #audience-directory {
@@ -134,25 +96,59 @@ nav {
   }
 }
 
-/* brand / logo */
+/* navigation */
 
-#luc-header #loyola-brand {
-  float: right;
-  background: none;
-  img {
-    float: right;
+nav {
+  width: 100%;
+  height: auto;
+  font-family: 'Arial', sans-serif;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    font-size: .75em;
+    letter-spacing: .025em;
+    text-decoration: none;
+    list-style: none;
+    border-right: solid 1px $gray-dark;
+    &:first-of-type {
+      border-left: solid 1px $gray-dark;
+    }
+    a {
+      display: block;
+      padding: 22px 20px 8px;
+      color: $gray-light;
+      width: auto;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: rgba(0,0,0,0);
+      transition: background-color .2s;
+      &:hover {
+        color: $white;
+      }
+    }
   }
 }
 
 /* navigation - dropdown */
 
 .dropdown-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
+  color: $gray-extra-light;
+  padding: 22px 10px 8px 10px;
+  font-size: 1em;
+  text-transform: uppercase;
   border: none;
-}
+  background-color: lighten($gray-dark, 20%);
+    &:hover {
+      background-color: lighten($gray-dark, 0%);
+    }
+  }
 
 .dropdown {
   position: relative;
@@ -181,10 +177,6 @@ nav {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.dropdown:hover .dropdown-button {
-  background-color: #3e8e41;
 }
 
 /* navigation - custom  */
@@ -220,4 +212,14 @@ nav {
   outline: none !important;
   outline-color: none !important;
   box-shadow: none !important;
+}
+
+/* brand / logo */
+
+#luc-header #loyola-brand {
+  float: right;
+  background: none;
+  img {
+    float: right;
+  }
 }
