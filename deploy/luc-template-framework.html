@@ -39,7 +39,7 @@
 		<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	<!--Javascript file jquery-1.11.1.min.js --><script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<!--Javascript file jquery --><script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<!--Javascript file d3.min.js --><script src="js/d3.min.js"></script>
 	<!--Javascript file c3.min.js --><script src="js/c3.min.js"></script>
 
@@ -52,22 +52,38 @@
 <body>
 	<!-- HEADER -->
 	<header id="luc-header">
-		  <!-- AUDIENCE - DIRECTORY -->
-  <nav id="audience-directory" class="container-fluid">
-      <ul id="audience-nav" class="col-md-6 pull-left">
-        <li class="category small"><a href="#">Prospective students</a></li>
-        <li class="category small"><a href="#">Current students</a></li>
-        <li class="category small"><a href="#">Alumni</a></li>
-      </ul>
-      <ul id="directory-nav" class="col-md-5 pull-right">
-        <li class="category small"><a href="#">Support LUC</a></li>
-        <li class="category small"><a href="#">Locus</a></li>
-        <li class="category small"><a href="#">Directory</a></li>
-        <li class="category small"><a href="#">Contact</a></li>
-        <li class="category small"><a href="#">A-Z</a></li>
-      </ul>
+		<!-- AUDIENCE - DIRECTORY -->
+  <nav class="menu container-fluid" role="navigation" aria-label="Main menu">
+    <ul id="audience-navigation" class="nav level-1 list-reset" role="menubar" aria-hidden="false">
+      <li role="menuitem" aria-haspopup="false">
+        <a href="###">Prospective students</a>
+      </li>
+      <li role="menuitem" aria-haspopup="false">
+        <a href="###">Current students</a>
+      </li>
+      <li role="menuitem" aria-haspopup="false">
+        <a href="###">Alumni</a>
+      </li>
+    </ul>
+    <ul id="directory-navigation" class="nav level-1 list-reset" role="menubar" aria-hidden="false">
+      <li role="menuitem" aria-haspopup="false">
+        <a href="###">Support LUC</a>
+      </li>
+      <li role="menuitem" aria-haspopup="false">
+        <a href="###">Locus</a>
+      </li>
+      <li role="menuitem" aria-haspopup="false">
+        <a href="###">Directory</a>
+      </li>
+      <li role="menuitem" aria-haspopup="false">
+        <a href="###">contact</a>
+      </li>
+      <li role="menuitem" aria-haspopup="false">
+        <a href="###">A-Z</a>
+      </li>
+    </ul>
   </nav>
-  <!-- BRAND -->
+<!-- SITE - BRAND -->
   <div id="site-brand-wrapper" class="container-fluid">
     <span id="site-name">
       <a href="###">
@@ -82,82 +98,49 @@
   </div>
 
 		<nav>
-			<!-- NAV - DESKTOP -->
-<nav id="main-navigation" role="navigation">
-	<!-- navigation - main -->
-	<ul id="site-navigation">
-		<li class="active">
-			<a href="#">Navigation</a>
-		</li>
-		<li>
-			<a href="#">Navigation</a>
-		</li>
-		<li class="dropdown">
-			<button class="dropdown-button">Navigation</button>
-			<div class="dropdown-content">
-				<a href="#">Navigation</a>
-				<a href="#">Navigation</a>
-				<a href="#">Navigation</a>
-				<span class="divider" role="separator">
-				<a href="#">Navigation</a>
-				<span class="divider" role="separator">
-				<a href="#">Navigation</a>
-			</div>
-		</li>
-		<li class="dropdown">
-			<button class="dropdown-button">Navigation</button>
-  		<div class="dropdown-content">
-    		<a href="#">Link 1</a>
-    		<a href="#">Link 2</a>
-    		<a href="#">Link 3</a>
-				<div role="separator" class="divider"></div>
-				<a href="#">Link 1</a>
-				<div role="separator" class="divider"></div>
-				<a href="#">Link 1</a>
-  		</div>
-		</li>
-	</ul>
-	<!-- navigation - engagement -->
-	<ul id="engagement-navigation">
-		<!-- engagement - cta -->
-		<li id="cta-navigation">
-			<ul>
-				<li class="active">
-					<a href="#">Apply</a>
-				</li>
-				<li>
-					<a href="#">Visit</a>
-				</li>
-				<li>
-					<a href="#">Give</a>
-				</li>
-			</ul>
-		</li>
-		<!-- engagement - information -->
-		<li id="information-navigation" class="dropdown">
-			<button class="dropdown-button">i</button>
-  		<div class="dropdown-content">
-    		<a href="#">Link 1</a>
-    		<a href="#">Link 2</a>
-    		<a href="#">Link 3</a>
-				<div role="separator" class="divider"></div>
-				<a href="#">Link 1</a>
-				<div role="separator" class="divider"></div>
-				<a href="#">Link 1</a>
-  		</div>
-		</li>
-		<li id="search-navigation"><a href="#" class="search-icon"><img src="images/search-icon.svg"></a>
-			<div>
-				<form class="form-inline" autocomplete="off" role='search' method="get">
-					<div class="form-group">
-						<input type="search" class="form-control" id="searchLaw" placeholder="Search Law School">
-						<button type="submit" class="btn btn-default">Search</button>
-					</div>
-				</form>
-			</div>
-		</li>
-	</ul>
+			<!-- accessible menu -->
+<nav class="menu" id="a11y-menu" role="navigation" aria-label="Main menu">
+  <ul class="nav level-1 list-reset" role="menubar" aria-hidden="false">
+    <li class="has-subnav" role="menuitem" aria-haspopup="true">
+      <a href="###">Navigation one</a>
+      <ul class="level-2 list-reset" data-test="true" aria-hidden="true" role="menu">
+        <li role="menuitem"><a href="###" tabindex="-1">Link here one</a></li>
+        <li role="menuitem"><a href="###" tabindex="-1">Link here two</a></li>
+        <li role="menuitem"><a href="###" tabindex="-1">Link here three</a></li>
+        <li role="menuitem"><a href="###" tabindex="-1">Link here four</a></li>
+      </ul>
+    </li>
+    <li role="menuitem" aria-haspopup="true">
+      <a href="###">Navigation two</a>
+      <ul class="level-2 list-reset" data-test="true" aria-hidden="true" role="menu">
+        <li role="menuitem"><a href="###" tabindex="-1">Link here one</a></li>
+        <li role="menuitem"><a href="###" tabindex="-1">Link here two</a></li>
+        <li role="menuitem"><a href="###" tabindex="-1">Link here three</a></li>
+        <li role="menuitem"><a href="###" tabindex="-1">Link here four</a></li>
+      </ul>
+    </li>
+    <li role="menuitem" aria-haspopup="true">
+      <a href="###">Navigation three</a>
+      <ul class="level-2 list-reset" data-test="true" aria-hidden="true" role="menu">
+        <li role="menuitem"><a href="###" tabindex="-1">Link here one</a></li>
+        <li role="menuitem"><a href="###" tabindex="-1">Link here two</a></li>
+        <li role="menuitem"><a href="###" tabindex="-1">Link here three</a></li>
+        <li role="menuitem"><a href="###" tabindex="-1">Link here four</a></li>
+      </ul>
+    </li>
+    <li role="menuitem" aria-haspopup="true">
+      <a href="###">Navigation four</a>
+      <ul class="level-2 list-reset" data-test="true" aria-hidden="true" role="menu">
+        <li role="menuitem"><a href="###" tabindex="-1">Link here one</a></li>
+        <li role="menuitem"><a href="###" tabindex="-1">Link here two</a></li>
+        <li role="menuitem"><a href="###" tabindex="-1">Link here three</a></li>
+        <li role="menuitem"><a href="###" tabindex="-1">Link here four</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
+
+<!-- ADD CTA NAV HERE -->
 
 		</nav>
 	</header>
@@ -285,6 +268,8 @@
 		
 	</footer>
 	<!-- inject:js -->
+	<script src="js/all.js"></script>
+	<script src="js/all.min.js"></script>
 	<!-- endinject -->
 </body>
 </html>

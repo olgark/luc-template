@@ -1,0 +1,118 @@
+#site-brand-wrapper,
+#audience-navigation,
+#directory-navigation
+nav {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#directory-navigation {
+	float: right;
+}
+
+nav {
+	padding: 0;
+	background: $maroon-extra-dark;
+	li {
+		float: left;
+		margin: 0;
+		padding: 0;
+		border: none;
+		a {
+			float: left;
+			padding: 12px 10px;
+			background: $maroon-extra-dark;
+			&:hover {
+				background: darken($maroon-extra-dark, 8%);
+			}
+		}
+	}
+}
+
+/* dropdowns */
+
+.nav ul {
+	position: absolute;
+	top: 2.5em;
+	left: -9999px;
+	opacity: 0;
+	transition: 0.1s linear opacity;
+	min-width: 150px;
+}
+
+.nav li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	font-size: .75em;
+  letter-spacing: .025em;
+  text-decoration: none;
+  list-style: none;
+  border-right: solid 1px $gray-dark;
+  &:first-of-type {
+    border-left: solid 1px $gray-dark;
+  }
+}
+
+/* nav - top level */
+
+.nav li > a {
+	font-family: 'Antenna', sans-serif;
+	color: $gray-extra-light;
+	padding: 22px 20px 8px;
+	color: $gray-light;
+	width: auto;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: none;
+	transition: background-color .3s;
+	&:hover {
+		color: $white;
+		background-color: lighten($gray-dark, 5%);
+	}
+}
+
+/* dropdowns - hover */
+
+.nav li > a:hover,
+.nav li > a:focus,
+.nav li:focus > a,
+.nav li:hover > a {
+	background: #EFEFEF;
+	outline: 0;
+}
+
+.nav li:hover ul,
+.nav li:focus ul,
+ul.show-menu {
+	left: 0;
+	opacity: 0.99;
+}
+
+.nav ul li {
+	float: none;
+	position: static;
+}
+
+.nav ul a {
+	float: none;
+	display: block;
+	font-size: 12px;
+	text-shadow: none;
+	transition: 0.1s linear all;
+}
+
+.nav ul a:hover,
+.nav ul a:focus {
+	text-shadow: none;
+}
+
+.list-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* CSS - END */
