@@ -1,6 +1,6 @@
 #site-brand-wrapper,
 #audience-navigation,
-#directory-navigation
+#directory-navigation,
 nav {
 	float: left;
 	margin: 0;
@@ -12,21 +12,65 @@ nav {
 }
 
 nav {
-	padding: 0;
+	width: 100%;
 	background: $maroon-extra-dark;
 	li {
 		float: left;
+		position: relative;
 		margin: 0;
 		padding: 0;
-		border: none;
+		font-family: 'Antenna Bold', sans-serif;
+		font-size: .65em;
+		color: darken($gray-light,10%);
+	  letter-spacing: .025em;
+		text-transform: uppercase;
+	  text-decoration: none;
+	  list-style: none;
 		a {
 			float: left;
-			padding: 12px 10px;
+			padding: 12px 10px 10px;
+			width: auto;
+			color: darken($gray-light, 7%);
+			text-transform: uppercase;
+			text-decoration: none;
+			border: 0 none;
 			background: $maroon-extra-dark;
+			transition: background .3s;
 			&:hover {
-				background: darken($maroon-extra-dark, 8%);
+				background: darken($maroon-dark,8%);
 			}
 		}
+	}
+}
+
+#directory-navigation li {
+	float: right;
+}
+
+#site-menu {
+	background: darken($gray,2%);
+	li {
+		font-family: 'Antenna', sans-serif;
+		color: $gray-light;
+		font-size: .775em;
+		border-left: solid 1px darken($gray,20%);
+		a {
+			padding: 22px 20px 8px;
+			color: $gray-extra-light;
+			background: darken($gray,2%);
+			&:hover {
+				background: darken($gray,10%);
+			}
+		}
+	}
+}
+
+#site-menu li li {
+	border: none;
+	a {
+		padding: 16px 20px 15px;
+		text-transform: none;
+		border-bottom: solid 1px lighten($gray,10%);
 	}
 }
 
@@ -34,60 +78,26 @@ nav {
 
 .nav ul {
 	position: absolute;
-	top: 2.5em;
+	top: 47px;
 	left: -9999px;
 	opacity: 0;
-	transition: 0.1s linear opacity;
-	min-width: 150px;
-}
-
-.nav li {
-	float: left;
-	margin: 0;
-	padding: 0;
-	position: relative;
-	font-size: .75em;
-  letter-spacing: .025em;
-  text-decoration: none;
-  list-style: none;
-  border-right: solid 1px $gray-dark;
-  &:first-of-type {
-    border-left: solid 1px $gray-dark;
-  }
-}
-
-/* nav - top level */
-
-.nav li > a {
-	font-family: 'Antenna', sans-serif;
-	color: $gray-extra-light;
-	padding: 22px 20px 8px;
-	color: $gray-light;
-	width: auto;
-	text-transform: uppercase;
-	text-decoration: none;
+	transition: 0.2s linear opacity;
+	min-width: 200px;
 	border: none;
-	transition: background-color .3s;
-	&:hover {
-		color: $white;
-		background-color: lighten($gray-dark, 5%);
-	}
 }
-
-/* dropdowns - hover */
 
 .nav li > a:hover,
 .nav li > a:focus,
 .nav li:focus > a,
 .nav li:hover > a {
-	background: #EFEFEF;
+	background: $gray;
 	outline: 0;
 }
 
 .nav li:hover ul,
 .nav li:focus ul,
 ul.show-menu {
-	left: 0;
+	left: -1px;
 	opacity: 0.99;
 }
 
