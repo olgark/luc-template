@@ -1,18 +1,3 @@
-#site-brand-wrapper,
-#audience-navigation,
-#directory-navigation,
-nav {
-	float: left;
-	margin: 0;
-	padding: 0;
-}
-
-#directory-navigation,
-#directory-navigation li,
-#cta-navigation {
-	float: right;
-}
-
 nav {
 	width: 100%;
 	background-color: $maroon-extra-dark;
@@ -41,13 +26,35 @@ nav {
 	}
 }
 
+#site-brand-wrapper,
+#audience-navigation,
+#directory-navigation,
+nav {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#directory-navigation,
+#cta-navigation {
+	float: right;
+}
+
 #audience-navigation > li,
 #directory-navigation > li {
 	background-color: none;
 	a { background-color: $maroon-extra-dark;
-	&:hover {
+	&:hover, &:focus {
 		background-color: darken($maroon-extra-dark,10%);
 	}
+	}
+}
+
+#directory-navigation li,
+#cta-navigation li {
+	float: left;
+	&:hover, &:focus {
+		background-color: darken($maroon-extra-dark,10%);
 	}
 }
 
@@ -67,7 +74,7 @@ nav {
 
 #site-navigation > ul > li > a {
 	background-color: darken($gray,2%);
-	&:hover {
+	&:hover, &:focus {
 		background-color: darken($gray,10%);
 	}
 }
