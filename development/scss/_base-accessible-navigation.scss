@@ -50,8 +50,7 @@ nav {
 	}
 }
 
-#directory-navigation li,
-#cta-navigation li {
+#directory-navigation li {
 	float: left;
 	&:hover, &:focus {
 		background-color: darken($maroon-extra-dark,10%);
@@ -70,6 +69,35 @@ nav {
 			color: $gray-extra-light;
 		}
 	}
+	@include tablet-portrait {
+		display: none;
+	}
+}
+
+#site-navigation-mobile {
+	display: none;
+	padding: 8px 10px;
+	background-color: darken($gray,2%);
+	button {
+		float: right;
+		padding: 6px;
+		width: 45px;
+		border: none;
+		border-radius: 4px;
+		background-color: $gray-extra-dark;
+		span.menu-icon-bar {
+			float: left;
+			margin: 3px 5%;
+			width: 90%;
+			min-height: 4px;
+			height: 4px;
+			color: lighten($gray, 20%);
+			background-color: $gray;
+		}
+	}
+	@include tablet-portrait {
+		display: block;
+	}
 }
 
 #site-navigation > ul > li > a {
@@ -79,9 +107,27 @@ nav {
 	}
 }
 
-#site-navigation > ul > li > ul {
+#site-navigation > ul > li > ul,
+#cta-navigation > ul > li > ul {
 	background-color: darken($gray,10%);
+	z-index: 2;
 }
+
+#cta-navigation li ul {
+	left: -155px;
+	li {
+	background-color: darken($gray,15%);
+		a {
+			&:hover, &:focus {
+				background-color: darken($gray,20%);
+			}
+		}
+	}
+}
+
+#site-navigation > #cta-navigation > #information > ul { float: right; }
+
+#site-navigation #cta-navigation > li:hover { background-color: red; }
 
 #site-navigation li li {
 	border: none;

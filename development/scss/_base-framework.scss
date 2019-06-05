@@ -55,6 +55,9 @@ header span {
     padding: 0;
     width: auto;
     height: 45px;
+    @include tablet-landscape {
+      height: 40px;
+    }
   }
 }
 
@@ -68,7 +71,7 @@ header #site-name {
   width: auto;
   height: auto;
   font-family: 'Antenna', sans-serif !important;
-  font-size: 2.5em;
+  font-size: 2.25em;
   color: $gray-light;
   line-height: 1;
   letter-spacing: 0;
@@ -84,6 +87,9 @@ header #site-name {
       color: $white;
     }
   }
+  @include desktop-small {
+		font-size: 2em;
+	}
 }
 
 header #brand {
