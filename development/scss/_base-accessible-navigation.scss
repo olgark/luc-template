@@ -125,9 +125,49 @@ nav {
 	}
 }
 
-#site-navigation > #cta-navigation > #information > ul { float: right; }
+#site-navigation > #cta-navigation > #information {
+	margin: 0;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	transition: background-color .2s;
+}
 
-#site-navigation #cta-navigation > li:hover { background-color: red; }
+#site-navigation > #cta-navigation > #information:hover { background-color: red; }
+
+ #site-navigation > #cta-navigation > #information a#information-button {
+	position: absolute;
+	left: 15%;
+	top: 15%;
+	width: 70%;
+	height: 70%;
+	padding: 22%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: darken($bg-overlay-light,12%);
+}
+
+#site-navigation > #cta-navigation > #information a#information-button span {
+ position: absolute;
+ left: 25%;
+ top: 28%;
+ width: 50%;
+ height: 50%;
+ font-family: 'Georgia', serif;
+ font-size: 1.15em;
+ font-weight: 600;
+ font-style: italic;
+ line-height: 1.25;
+ color: $gray-light;
+ text-align: center;
+ text-transform: none;
+}
+
+#site-navigation > #cta-navigation > #information > ul {
+	float: right;
+	top: 50px;
+}
 
 #site-navigation li li {
 	border: none;
@@ -151,6 +191,10 @@ nav {
 	transition: 0.2s linear opacity;
 	min-width: 200px;
 	border: none;
+}
+
+#information > ul {
+	right: 0;
 }
 
 .nav li > a:hover,
@@ -190,6 +234,11 @@ ul.show-menu {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+.visually-hidden {
+	visibility: hidden;
+	display: none;
 }
 
 /* CSS - END */

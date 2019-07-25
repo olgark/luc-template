@@ -152,7 +152,7 @@
       <a href="###">Visit</a>
     </li>
     <li id="information" role="menuitem" aria-haspopup="true">
-      <a href="###">i</a>
+      <a id="information-button" href="###"><span>i</span></a>
       <ul class="level-2 list-reset" data-test="true" aria-hidden="true" role="menu">
         <li role="menuitem"><a href="###" tabindex="-1">Link here one</a></li>
         <li role="menuitem"><a href="###" tabindex="-1">Link here two</a></li>
@@ -160,7 +160,21 @@
         <li role="menuitem"><a href="###" tabindex="-1">Link here four</a></li>
       </ul>
     </li>
+    <li id="search" role="menuitem" aria-haspopup="true">
+      <a id="search-button" href="###"><span>?</span></a>
+    </li>
   </ul>
+  <!--
+  <form role='search' action="/" method="get">
+    <label for='header-search'>
+      <span class='visually-hidden'>Search</span>
+    </label>
+    <input type='text' id='header-search'/>
+    <button type='submit'>
+      <span class='visually-hidden'>Submit Search</span>
+    </button>
+  </form>
+  -->
 </nav>
 
 <nav class="menu" id="site-navigation-mobile" role="navigation" aria-label="main menu">
