@@ -125,7 +125,8 @@ nav {
 	}
 }
 
-#site-navigation > #cta-navigation > #information {
+#site-navigation > #cta-navigation > #information,
+#site-navigation > #cta-navigation > #search {
 	margin: 0;
 	padding: 0;
 	width: 50px;
@@ -133,9 +134,11 @@ nav {
 	transition: background-color .2s;
 }
 
-#site-navigation > #cta-navigation > #information:hover { background-color: red; }
+#site-navigation > #cta-navigation > #information:hover,
+#site-navigation > #cta-navigation > #search:hover { background-color: red; }
 
- #site-navigation > #cta-navigation > #information a#information-button {
+ #site-navigation > #cta-navigation > #information a#information-button,
+ #site-navigation > #cta-navigation > #search a#search-button {
 	position: absolute;
 	left: 15%;
 	top: 15%;
@@ -148,7 +151,8 @@ nav {
 	background-color: darken($bg-overlay-light,12%);
 }
 
-#site-navigation > #cta-navigation > #information a#information-button span {
+#site-navigation > #cta-navigation > #information a#information-button span,
+#site-navigation > #cta-navigation > #search a#search-button span {
  position: absolute;
  left: 25%;
  top: 28%;
@@ -240,5 +244,80 @@ ul.show-menu {
 	visibility: hidden;
 	display: none;
 }
+
+/* SEARCH DROPDOWN */
+
+#search ul#search-form-wrapper {
+  margin-bottom: 0;
+	padding: 0;
+	width: 100vw;
+	min-width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+	left: initial;
+	right: 0;
+}
+
+#search ul#search-form-wrapper form {
+  margin: 1px 0 0 0;;
+  padding: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+	font-family: 'Antenna', sans-serif;
+  font-size: 1em;
+  line-height: 0;
+  color: $white;
+  border-left: none;
+	-webkit-text-stroke: 0 none !important;
+}
+
+#search ul#search-form-wrapper form .form-group:focus,
+#search ul#search-form-wrapper form .form-group:active,
+#search ul#search-form-wrapper form .form-group input {
+  background: none;
+  box-shadow: none;
+	outline: 0 none;
+}
+
+#search ul#search-form-wrapper form .form-group,
+#search ul#search-form-wrapper form .form-group:hover {
+  background-color: lighten($gray, 20%);
+  box-shadow: 0px 3px 3px rgba(0,0,0,.5);
+}
+
+#search ul#search-form-wrapper form input {
+	padding: 30px 40px 30px 0;
+  width: 80vw;
+  height: 100px;
+  font-size: 1.75em;
+	text-transform: uppercase;
+  border: 0;
+}
+
+#search-form-wrapper > form > button,
+#search ul#search-form-wrapper form button {
+	float: right;
+	margin: 35px 40px 35px 0;
+	padding: 8px 12px;
+  width: 10vw;
+  height: 30px;
+  font-size: 1em;
+  color: $gray-light;
+  outline: 0 none;
+	box-shadow: none;
+  border-color: $maroon-extra-dark;
+	background: none;
+  background-color: $maroon-extra-dark;
+  transition: all .2s;
+    &:hover {
+      color: darken($gray-light, 10%);
+      border-color: darken($maroon-extra-dark, 10%);
+      background-color: darken($maroon-extra-dark, 10%);
+    }
+}
+
+#search-label { font-size: .015em; }
+
+/* SEARCH - VALIDATION */
 
 /* CSS - END */

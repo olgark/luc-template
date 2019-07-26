@@ -4,6 +4,8 @@
     box-sizing: border-box
 }
 
+.visibility-hidden { visibility: hidden;}
+
 #main-article-wrapper {
   display: none;
 }
@@ -99,4 +101,30 @@ header #brand {
     float: right;
     opacity: .8;
   }
+}
+
+/* BUTTON */
+
+button {
+	text-rendering: auto;
+	display: inline-block;
+	padding: 8px 12px;
+	border: 2px solid $maroon;
+	border: 2px solid var(--wai-green);
+	font-family: 'Antenna Bold', sans-serif;
+	font-size: .8125rem;
+	line-height: 1.4;
+	letter-spacing: .015em;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $gray-light;
+	border-radius: 5px;
+	background-color: $maroon;
+	background-color: var(--wai-green);
+	cursor: pointer;
 }
