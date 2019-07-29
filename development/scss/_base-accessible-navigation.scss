@@ -1,0 +1,323 @@
+nav {
+	width: 100%;
+	background-color: $maroon-extra-dark;
+	li {
+		float: left;
+		position: relative;
+		margin: 0;
+		padding: 0;
+		font-family: 'Antenna Bold', sans-serif;
+		font-size: .65em;
+		color: darken($gray-light,10%);
+	  letter-spacing: .025em;
+		text-transform: uppercase;
+	  text-decoration: none;
+	  list-style: none;
+		a {
+			float: left;
+			padding: 12px 10px 10px;
+			width: auto;
+			color: darken($gray-light, 7%);
+			text-transform: uppercase;
+			text-decoration: none;
+			border: 0 none;
+			transition: background-color .3s;
+		}
+	}
+}
+
+#site-brand-wrapper,
+#audience-navigation,
+#directory-navigation,
+nav {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#directory-navigation,
+#cta-navigation {
+	float: right;
+}
+
+#audience-navigation > li,
+#directory-navigation > li {
+	background-color: none;
+	a { background-color: $maroon-extra-dark;
+	&:hover, &:focus {
+		background-color: darken($maroon-extra-dark,10%);
+	}
+	}
+}
+
+#directory-navigation li {
+	float: left;
+	&:hover, &:focus {
+		background-color: darken($maroon-extra-dark,10%);
+	}
+}
+
+#site-navigation {
+	background-color: darken($gray,2%);
+	li {
+		font-family: 'Antenna', sans-serif;
+		color: $gray-light;
+		font-size: .775em;
+		border-left: solid 1px darken($gray,20%);
+		a {
+			padding: 22px 20px 8px;
+			color: $gray-extra-light;
+		}
+	}
+	@include tablet-portrait {
+		display: none;
+	}
+}
+
+#site-navigation-mobile {
+	display: none;
+	padding: 8px 10px;
+	background-color: darken($gray,2%);
+	button {
+		float: right;
+		padding: 6px;
+		width: 45px;
+		border: none;
+		border-radius: 4px;
+		background-color: $gray-extra-dark;
+		span.menu-icon-bar {
+			float: left;
+			margin: 3px 5%;
+			width: 90%;
+			min-height: 4px;
+			height: 4px;
+			color: lighten($gray, 20%);
+			background-color: $gray;
+		}
+	}
+	@include tablet-portrait {
+		display: block;
+	}
+}
+
+#site-navigation > ul > li > a {
+	background-color: darken($gray,2%);
+	&:hover, &:focus {
+		background-color: darken($gray,10%);
+	}
+}
+
+#site-navigation > ul > li > ul,
+#cta-navigation > ul > li > ul {
+	background-color: darken($gray,10%);
+	z-index: 2;
+}
+
+#cta-navigation li ul {
+	left: -155px;
+	li {
+	background-color: darken($gray,15%);
+		a {
+			&:hover, &:focus {
+				background-color: darken($gray,20%);
+			}
+		}
+	}
+}
+
+#site-navigation > #cta-navigation > #information,
+#site-navigation > #cta-navigation > #search {
+	margin: 0;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	transition: background-color .2s;
+}
+
+#site-navigation > #cta-navigation > #information:hover,
+#site-navigation > #cta-navigation > #search:hover { background-color: red; }
+
+ #site-navigation > #cta-navigation > #information a#information-button,
+ #site-navigation > #cta-navigation > #search a#search-button {
+	position: absolute;
+	left: 15%;
+	top: 15%;
+	width: 70%;
+	height: 70%;
+	padding: 22%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: darken($bg-overlay-light,12%);
+}
+
+#site-navigation > #cta-navigation > #information a#information-button span,
+#site-navigation > #cta-navigation > #search a#search-button span {
+ position: absolute;
+ left: 25%;
+ top: 28%;
+ width: 50%;
+ height: 50%;
+ font-family: 'Georgia', serif;
+ font-size: 1.15em;
+ font-weight: 600;
+ font-style: italic;
+ line-height: 1.25;
+ color: $gray-light;
+ text-align: center;
+ text-transform: none;
+}
+
+#site-navigation > #cta-navigation > #information > ul {
+	float: right;
+	top: 50px;
+}
+
+#site-navigation li li {
+	border: none;
+	a {
+		padding: 16px 20px 15px;
+		text-transform: none;
+		border-bottom: solid 1px lighten($gray,10%);
+		&:hover {
+			background-color: darken($gray,15%);
+		}
+	}
+}
+
+/* dropdowns */
+
+.nav ul {
+	position: absolute;
+	top: 47px;
+	left: -9999px;
+	opacity: 0;
+	transition: 0.2s linear opacity;
+	min-width: 200px;
+	border: none;
+}
+
+#information > ul {
+	right: 0;
+}
+
+.nav li > a:hover,
+.nav li > a:focus,
+.nav li:focus > a,
+.nav li:hover > a {
+	background: darken($gray,15%);
+	outline: 0;
+}
+
+.nav li:hover ul,
+.nav li:focus ul,
+ul.show-menu {
+	left: -1px;
+	opacity: 0.99;
+}
+
+.nav ul li {
+	float: none;
+	position: static;
+}
+
+.nav ul a {
+	float: none;
+	display: block;
+	font-size: 12px;
+	text-shadow: none;
+	transition: 0.1s linear all;
+}
+
+.nav ul a:hover,
+.nav ul a:focus {
+	text-shadow: none;
+}
+
+.list-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.visually-hidden {
+	visibility: hidden;
+	display: none;
+}
+
+/* SEARCH DROPDOWN */
+
+#search ul#search-form-wrapper {
+  margin-bottom: 0;
+	padding: 0;
+	width: 100vw;
+	min-width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+	left: initial;
+	right: 0;
+}
+
+#search ul#search-form-wrapper form {
+  margin: 1px 0 0 0;;
+  padding: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+	font-family: 'Antenna', sans-serif;
+  font-size: 1em;
+  line-height: 0;
+  color: $white;
+  border-left: none;
+	-webkit-text-stroke: 0 none !important;
+}
+
+#search ul#search-form-wrapper form .form-group:focus,
+#search ul#search-form-wrapper form .form-group:active,
+#search ul#search-form-wrapper form .form-group input {
+  background: none;
+  box-shadow: none;
+	outline: 0 none;
+}
+
+#search ul#search-form-wrapper form .form-group,
+#search ul#search-form-wrapper form .form-group:hover {
+  background-color: lighten($gray, 20%);
+  box-shadow: 0px 3px 3px rgba(0,0,0,.5);
+}
+
+#search ul#search-form-wrapper form input {
+	padding: 30px 40px 30px 0;
+  width: 80vw;
+  height: 100px;
+  font-size: 1.75em;
+	text-transform: uppercase;
+  border: 0;
+}
+
+#search-form-wrapper > form > button,
+#search ul#search-form-wrapper form button {
+	float: right;
+	margin: 35px 40px 35px 0;
+	padding: 8px 12px;
+  width: 10vw;
+  height: 30px;
+  font-size: 1em;
+  color: $gray-light;
+  outline: 0 none;
+	box-shadow: none;
+  border-color: $maroon-extra-dark;
+	background: none;
+  background-color: $maroon-extra-dark;
+  transition: all .2s;
+    &:hover {
+      color: darken($gray-light, 10%);
+      border-color: darken($maroon-extra-dark, 10%);
+      background-color: darken($maroon-extra-dark, 10%);
+    }
+}
+
+#search-label { font-size: .015em; }
+
+/* SEARCH - VALIDATION */
+
+/* CSS - END */

@@ -8,13 +8,13 @@
 	<link rel="stylesheet" href="###">
 </head>
 <body>
-	<header>
-		@@include('./partials/luc-template-audience-directory.html')
+	<!-- HEADER -->
+	<header id="luc-header">
 		@@include('./partials/luc-template-header.html')
+		<nav>
+			@@include('./partials/luc-template-nav-accessible.html')
+		</nav>
 	</header>
-	<nav>
-		<!-- @@include('./partials/luc-template-nav.html') -->
-	</nav>
 	<main>
 		<article>
 			@@include('./partials/main-content-interior.html')
@@ -26,7 +26,7 @@
 		</article>
 	</aside>
 	<footer>
-		@@include('./partials/luc-template-footer.html')
+		<!-- @@include('./partials/luc-template-footer.html') -->
 	</footer>
 	<!-- inject:js -->
 	<!-- endinject -->
