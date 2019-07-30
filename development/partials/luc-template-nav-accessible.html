@@ -49,26 +49,26 @@
     <li role="menuitem" aria-haspopup="false">
       <a href="###">Visit</a>
     </li>
-    <li id="information" role="menuitem" aria-haspopup="true">
-      <a id="information-button" href="###"><span>i</span></a>
-      <ul class="level-2 list-reset" data-test="true" aria-hidden="true" role="menu">
-        <li role="menuitem"><a href="###" tabindex="-1">Link here one</a></li>
-        <li role="menuitem"><a href="###" tabindex="-1">Link here two</a></li>
-        <li role="menuitem"><a href="###" tabindex="-1">Link here three</a></li>
-        <li role="menuitem"><a href="###" tabindex="-1">Link here four</a></li>
-      </ul>
-    </li>
-    <li id="search" role="menuitem" aria-haspopup="true">
-      <a id="search-button" href="###" aria-expanded="false"><span>?</span></a>
-        <ul id="search-form-wrapper" class="level-2 list-reset" data-test="true" aria-hidden="true" role="menu" aria-labelledby="dLabel">
-          <form>
-            <div class="form-group" role="search">
-              <label id="search-label" class="visibility-hidden" for="global-search">Search</label>
-              <input id="global-search" type="search" class="search-input" placeholder="Search LUC.EDU">
-              <button class="button search-button">Search</button>
-            </div>
-          </form>
+    <li id="information" role="menuitem">
+      <button id="information-button" href="###" tabindex="-1"><span>i</span></button>
+        <ul id="information-menu">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
         </ul>
+    </li>
+    <li id="search" role="menuitem" aria-haspopup="false">
+      <button id="search-open" class="btn" onclick="openSearch()" tabindex="-1"><span>?</span></button>
+        <div id="search-overlay" class="overlay">
+          <div class="container">
+            <span id="search-close" onclick="closeSearch()" title="Close Overlay">×</span>
+            <form class="form-group" role="search">
+              <input id="global-search-input" type="search" class="search-input" placeholder="Search LUC.EDU" name="search">
+              <button id="gloabal-search-submit" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
     </li>
   </ul>
 </nav>
