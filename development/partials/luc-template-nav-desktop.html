@@ -1,44 +1,77 @@
 <!-- NAV - DESKTOP -->
-<nav class="collapse navbar-collapse" role="navigation">
-	<ul id="luc-header-navigation" class="navbar">
-		<li class="active"><a href="#">Navigation <span class="sr-only">(current)</span></a></li>
-		<li><a href="#">Navigation</a></li>
-		<li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navigation</a>
-		<ul class="dropdown-menu">
-			<li><a href="#">Navigation</a></li>
-			<li><a href="#">Navigation</a></li>
-			<li><a href="#">Navigation</a></li>
-			<li role="separator" class="divider"></li>
-			<li><a href="#">Navigation</a></li>
-			<li role="separator" class="divider"></li>
-			<li><a href="#">Navigation</a></li>
-		</ul>
+<nav id="main-navigation" role="navigation">
+	<!-- navigation - main -->
+	<ul id="site-navigation">
+		<li class="active">
+			<a href="#">Navigation</a>
+		</li>
+		<li>
+			<a href="#">Navigation</a>
+		</li>
+		<li class="dropdown">
+			<button class="dropdown-button">Navigation</button>
+			<div class="dropdown-content">
+				<a href="#">Navigation</a>
+				<a href="#">Navigation</a>
+				<a href="#">Navigation</a>
+				<span class="divider" role="separator">
+				<a href="#">Navigation</a>
+				<span class="divider" role="separator">
+				<a href="#">Navigation</a>
+			</div>
+		</li>
+		<li class="dropdown">
+			<button class="dropdown-button">Navigation</button>
+  		<div class="dropdown-content">
+    		<a href="#">Link 1</a>
+    		<a href="#">Link 2</a>
+    		<a href="#">Link 3</a>
+				<div role="separator" class="divider"></div>
+				<a href="#">Link 1</a>
+				<div role="separator" class="divider"></div>
+				<a href="#">Link 1</a>
+  		</div>
 		</li>
 	</ul>
-	<ul id="luc-cta" class="nav navbar-nav">
-		<li class="active"><a href="#">Apply</a></li>
-		<li><a href="#">Visit</a></li>
-		<li><a href="#">Give</a></li>
-		<li id="luc-information" class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="information-icon">i</span></a>
-			<ul class="dropdown-menu">
-				<li><a href="#">Navigation</a></li>
-				<li><a href="#">Navigation</a></li>
-				<li><a href="#">Navigation</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">Navigation</a></li>
-				<li role="separator" class="divider"></li>
-				<li><a href="#">Navigation</a></li>
+	<!-- navigation - engagement -->
+	<ul id="engagement-navigation">
+		<!-- engagement - cta -->
+		<li id="cta-navigation">
+			<ul>
+				<li class="active">
+					<a href="#">Apply</a>
+				</li>
+				<li>
+					<a href="#">Visit</a>
+				</li>
+				<li>
+					<a href="#">Give</a>
+				</li>
 			</ul>
 		</li>
-		<li id="luc-search" class="dropdown"> <a href="#" class="dropdown-toggle search-icon" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/search-icon.svg"></a>
-			<ul id="drop" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-				<form class="form-inline" autocomplete="off">
+		<!-- engagement - information -->
+		<li id="information-navigation" class="dropdown">
+			<a href="###" class="dropdown-button" aria-haspopup="true" aria-expanded="false">i</a>
+  		<div class="dropdown-content">
+    		<a href="#">Link 1</a>
+    		<a href="#">Link 2</a>
+    		<a href="#">Link 3</a>
+				<div role="separator" class="divider"></div>
+				<a href="#">Link 1</a>
+				<div role="separator" class="divider"></div>
+				<a href="#">Link 1</a>
+  		</div>
+		</li>
+		<li id="search-navigation" class="dropdown">
+			<button class="dropdown-button">+</button>
+			<div class="dropdown-content">
+				<form class="form-inline" autocomplete="off" role='search' method="get">
 					<div class="form-group">
 						<input type="search" class="form-control" id="searchLaw" placeholder="Search Law School">
 						<button type="submit" class="btn btn-default">Search</button>
 					</div>
 				</form>
-			</ul>
+			</div>
 		</li>
 	</ul>
 </nav>
