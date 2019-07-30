@@ -1,85 +1,16 @@
+
+
 /* ===============================================
 SPACERS ======================================= */
 
 body { background: $white-base; }
-
-/* .container { background: $white-base; }  ONLY FOR LOCAL DEVELOPMENT!!! */
-
-#page-content article { width: 93.103% !important; max-width: 93.103% !important; min-width: 93.103% !important; }
-
-.spacer-80 {
-	display: inline-block;
-	margin: 40px 10px;
-	padding: 0;
-	width: 97%;
-	height: 2px;
-	background: rgba(0,0,0,.25);
-}
-
-.spacer-section-no-rule {
-	display: block;
-	margin: 40px 1.5%;
-	width: 97%;
-	height: 2px;
-	background: rgba(0,0,0,0);
-}
-
-.spacer-category {
-	display: block;
-	float: left;
-	margin: 15px 0 20px;
-	padding: 0;
-	width: 100%;
-	height: 1px;
-	background: rgba(0,0,0,.15);
-}
-
-.padding-left-right-0 { padding-left: 0 !important; padding-right: 0 !important; }
-
-
-/* ===============================================
-COL - ADJUSMENTS - BS ========================= */
-
-#numbers .col-sm-4 {
-	position: relative;
-	padding: 25px 25px;
-	width: 33%;
-	min-height: 1px;
-	box-sizing: border-box;
-}
-
-@media (max-width: 768px) { .number.col-sm-4 { width: 100%; } .number.col-sm-4.rule-left { border-left: 0 none; } }
-
-#numbers .col-sm-4 { display: inline-block; }
-
-.col-sm-12 { width: 100%; }
-
-#lists .col-sm-12, #lists .col-sm-4,
-#tables .col-sm-12, #tables .col-sm-4,
-form .col-sm-12,
-.form-module.col-sm-12, .form-module.col-sm-4, .form-group.col-sm-12 {
-	padding: 0 !important;
-  padding-left: 15px !important;
-	padding-right: 15px !important;
-}
-
-
-/* ===============================================
-FONT-SIZE - RESET ============================= */
-
-/* Document level adjustments */
-html { font-size: 16px; }
-@media (max-width: 900px) { html { font-size: 15px; } }
-@media (max-width: 400px) { html { font-size: 14px; } }
-
-/* body {-webkit-font-smoothing: antialiased !important;}  cleans up aliasing on type */
 
 
 /* ===============================================
 REM SETTING =================================== */
 
 /* Sets font-size relative to html font-size — see above */
-section, article, module, table { font-size: 1rem; }
+section, article, module, table { font-size: 1.1875rem; }
 
 
 /* ===============================================
@@ -88,12 +19,6 @@ GLOBAL========================================= */
 .maroon { color: $maroon-dark !important; }
 
 .reverse { color: $gray-light !important; }
-
-.sentence-case { text-transform: none !important; }
-
-.inline { display: inline; width: auto; }
-
-.label.light { opacity: .25; }
 
 .rule-left { border-left: solid 1px $gray-light; }
 
@@ -1141,9 +1066,6 @@ button { margin: 0 0 10px 0; }
 	font-style: normal;
 }
 
-p a.cta { font-size: .75em;
-	@include media-breakpoint-down(md) { font-size: .75em; }
-}
 
  p.small a.cta { font-size: .925em; }
 

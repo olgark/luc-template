@@ -25,7 +25,15 @@ body {
 
 .container-fluid { box-sizing: border-box; width: 100%; }
 
-.container { box-sizing: border-box; margin: 0 auto; width: 70%; }
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 70%;
+  @include phone-landscape {
+    width: 90%; 
+  }
+
+}
 
 /* header */
 
