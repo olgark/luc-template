@@ -241,17 +241,3 @@ $(document).keyup(function(e) {
 });
 
 //slide out
-
-$("#information-button").click(function(){
-  $("#information-menu").animate({
-    right: '0px',
-    opacity: '1'
-  });
-});
-
-$("#information-button").mouseout(function(){
-  $("#information-menu").animate({
-    right: '-250px',
-    opacity: '1'
-  });
-});
