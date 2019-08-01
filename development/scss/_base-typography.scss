@@ -16,6 +16,10 @@ body, h1, h2, h3, h4, h5, h6 {
   font-size-adjust: 0.5;
 }
 
+.story-body {
+  max-width: 720px;
+}
+
 /* Body Content */
 
 #pag-content {
@@ -33,6 +37,8 @@ body, h1, h2, h3, h4, h5, h6 {
     /* equivalent to 22px */
   }
 }
+
+
 
 
 /* ===============================================
@@ -100,9 +106,9 @@ h5 {
 }
 
 p {
-	font-size: 1.185em;
+	font-size: 1.25em;
 	font-family: "myriad-pro", sans-serif;
-	line-height: 1.55em;
+	line-height: 1.65em;
 	margin: 0 0 30px 0;
 }
 
@@ -138,7 +144,7 @@ p {
 		line-height: 1.4em;
 	}
 	p {
-		font-size: 1.05em;
+		font-size: 1.15em;
 		line-height: 1.65em;
 	}
 }
