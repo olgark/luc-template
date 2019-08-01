@@ -30,8 +30,14 @@ body {
   margin: 0 auto;
   width: 70%;
   @include phone-landscape {
+<<<<<<< HEAD
     width: 90%;
   }
+=======
+    width: 90%; 
+  }
+
+>>>>>>> typography
 }
 
 /* header */
