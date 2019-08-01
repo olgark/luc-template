@@ -16,13 +16,6 @@ body, h1, h2, h3, h4, h5, h6 {
   font-size-adjust: 0.5;
 }
 
-<<<<<<< HEAD
-=======
-.story-body {
-  max-width: 720px;
-}
-
->>>>>>> typography
 /* Body Content */
 
 #pag-content {
@@ -35,18 +28,11 @@ body, h1, h2, h3, h4, h5, h6 {
 @include phone-landscape {
   #page-content {
     font-size: 1em;
-    /* equivalent to 16px */
     line-height: 1.375;
-    /* equivalent to 22px */
   }
 }
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> typography
 /* ===============================================
 GLOBAL========================================= */
 
@@ -112,15 +98,9 @@ h5 {
 }
 
 p {
-<<<<<<< HEAD
-	font-size: 1.185em;
-	font-family: "myriad-pro", sans-serif;
-	line-height: 1.55em;
-=======
 	font-size: 1.25em;
 	font-family: "myriad-pro", sans-serif;
 	line-height: 1.65em;
->>>>>>> typography
 	margin: 0 0 30px 0;
 }
 
@@ -156,20 +136,13 @@ p {
 		line-height: 1.4em;
 	}
 	p {
-<<<<<<< HEAD
-		font-size: 1.05em;
-=======
 		font-size: 1.15em;
->>>>>>> typography
 		line-height: 1.65em;
 	}
 }
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> typography
 /* ===============================================
 Links ======================================= */
 
