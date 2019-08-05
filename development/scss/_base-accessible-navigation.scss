@@ -371,4 +371,130 @@ ul.show-menu {
 
 #search-label { font-size: .015em; }
 
+/* W3C - NAV */
+
+ul[role="menubar"] {
+  margin: 0;
+  padding: 0;
+  font-size: 110%;
+  list-style: none;
+  background-color: #eee;
+}
+
+ul[role="menubar"] [role="menuitem"],
+ul[role="menubar"] [role="separator"] {
+	margin: 0;
+  padding: 0;
+  background-color: #eee;
+}
+
+ul[role="menubar"] [role="separator"] {
+  padding-top: 0.15em;
+  background-image: url('../images/separator.png');
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+ul[role="menubar"] [role="menuitem"]:focus,
+ul[role="menubar"] [role="menuitem"]:hover,
+ul[role="menubar"] [role="separator"]:focus,
+ul[role="menubar"] [role="separator"]:hover {
+  background-color: black;
+  color: $gray-extra-light;
+}
+
+ul[role="menubar"] li {
+  margin: 0;
+  padding: 0;
+	font-family: 'Antenna', sans-serif;
+	font-size: .8em;
+	color: darken($gray-light,10%);
+	letter-spacing: .025em;
+	text-transform: uppercase;
+	text-decoration: none;
+	list-style: none;
+	border-left: solid 1px $gray-dark;
+}
+
+ul[role="menubar"] > li {
+  display: inline;
+  position: relative;
+}
+
+ul[role="menubar"] a[role="menuitem"] {
+	padding: 22px 20px 8px;
+	width: auto;
+	color: $gray-extra-light;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: background-color .3s;
+	background-color: darken($gray,2%);
+	&:hover, &:focus {
+		background-color: darken($gray,10%);
+	}
+}
+
+ul[role="menubar"] > li > a::after {
+  content: url('../images/down-arrow-brown.png');
+  padding-left: 0.25em;
+}
+
+ul[role="menubar"] ul[role="menu"] {
+  display: none;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="menubar"] ul[role="menu"] li a {
+  display: block;
+  width: 20em;
+}
+
+ul[role="menubar"] ul[role="menu"] a[aria-haspopup="true"]::after {
+  content: url('../images/right-arrow-brown.png');
+  padding-right: 2em;
+}
+
+#information, #search {
+	margin: 0;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	transition: background-color .2s;
+}
+
+#information #information-button,
+#search #search-button {
+	position: relative;
+	left: 15%;
+	top: 15%;
+	width: 70%;
+	height: 70%;
+	padding: 22%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: darken($bg-overlay-light,12%);
+}
+
+#information #information-button span,
+#search #search-button span {
+ position: absolute;
+ left: 25%;
+ top: 28%;
+ width: 50%;
+ height: 50%;
+ font-family: 'Georgia', serif;
+ font-size: 1.15em;
+ font-weight: 600;
+ font-style: italic;
+ line-height: 1.25;
+ color: red;
+ text-align: center;
+ text-transform: none;
+}
+
 /* CSS - END */
