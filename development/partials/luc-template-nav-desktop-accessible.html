@@ -1,7 +1,7 @@
 <!-- menu -->
-<nav aria-label="Loyola University Chicago">
+<nav id="main" aria-label="Loyola University Chicago">
   <!-- site menu -->
-  <ul id="menubar1"
+  <ul id="site-nav"
       role="menubar"
       aria-label="Loyola University Chicago">
     <li role="none">
@@ -204,14 +204,11 @@
     </li>
   </ul>
 <!-- cta menu -->
-  <ul id="menubar2"
-    style="float: right;"
+  <ul id="cta-nav"
     role="menubar"
     aria-label="Loyola University Chicago Information">
     <li role="none">
       <a role="menuitem"
-        aria-haspopup="true"
-        aria-expanded="false"
         href="#"
         tabindex="0">
         Apply
@@ -219,32 +216,28 @@
     </li>
     <li role="none">
       <a role="menuitem"
-        aria-haspopup="true"
-        aria-expanded="false"
         href="#"
-        tabindex="0">
+        tabindex="-1">
         Info
       </a>
     </li>
     <li role="none">
       <a role="menuitem"
-        aria-haspopup="true"
-        aria-expanded="false"
         href="#"
-        tabindex="0">
+        tabindex="-1">
         Visit
       </a>
     </li>
     <li id="information" role="none">
       <a id="information-button"
         role="menuitem"
-        aria-haspopup="false"
+        aria-haspopup="true"
         aria-expanded="false"
         href="#"
-        tabindex="0">
+        tabindex="-1">
         <span>i</span>
       </a>
-        <ul role="menu" aria-label="Information">
+        <ul id="information-nav" role="menu" aria-label="Information">
           <li role="none">
             <a role="menuitem"
               href="mb-about.html#InformationLinkOne"
@@ -252,12 +245,23 @@
               Link one
             </a>
           </li>
+          <li role="none">
+            <a role="menuitem"
+              href="mb-about.html#InformationLinkTwo"
+              tabindex="-1">
+              Link two
+            </a>
+          </li>
         </ul>
     </li>
     <li id="search" role="none">
       <a id="search-button"
         onclick="openSearch()"
-        tabindex="0">
+        role="menuitem"
+        aria-haspopup="true"
+        aria-expanded="false"
+        href="#"
+        tabindex="-1">
         <span>?</span>
       </a>
         <div id="search-overlay" class="overlay">
@@ -272,11 +276,18 @@
     </li>
   </ul>
 </nav>
+<nav id="main-mobile">
+  <button type="button">
+    <span class="menu-icon-bar"></span>
+    <span class="menu-icon-bar"></span>
+    <span class="menu-icon-bar"></span>
+  </button>
+</nav>
 <script type="text/javascript">
-  var menubar = new Menubar(document.getElementById('menubar1'));
+  var menubar = new Menubar(document.getElementById('site-nav'));
   menubar.init();
 </script>
 <script type="text/javascript">
-  var menubar = new Menubar(document.getElementById('menubar2'));
+  var menubar = new Menubar(document.getElementById('cta-nav'));
   menubar.init();
 </script>

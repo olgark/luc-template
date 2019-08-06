@@ -55,40 +55,97 @@
 	<!-- HEADER -->
 	<header id="luc-header">
 		<!-- nav top -->
-  <nav class="menu container-fluid" role="navigation" aria-label="main menu">
-<!-- audience -->
-    <ul id="audience-navigation" class="nav level-1 list-reset" role="menubar" aria-hidden="false">
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Prospective students</a>
-      </li>
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Current students</a>
-      </li>
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Alumni</a>
-      </li>
-    </ul>
-<!-- directory -->
-    <ul id="directory-navigation" class="nav level-1 list-reset" role="menubar" aria-hidden="false">
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">A-Z</a>
-      </li>
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Contact</a>
-      </li>
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Directory</a>
-      </li>
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Locus</a>
-      </li>
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Support LUC</a>
-      </li>
-    </ul>
-  </nav>
-<!-- site - brand -->
+  <!-- AUDIENCE - DIRECTORY - HEADER -->
+<nav id="audience-directory">
+  <div class="container-fluid">
+    <nav aria-label="Loyola University Chicago information">
+      <ul
+        id="audience-nav"
+        role="menubar"
+        aria-label="Loyola University Chicago information"
+        class="col-md-6 pull-left">
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="###"
+            tabindex="0">
+            Prospective students
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Current students
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Alumni
+          </a>
+        </li>
+      </ul>
+      <ul
+        id="directory-nav"
+        role="menubar"
+        aria-label="Loyola University Chicago directory"
+        class="col-md-5 pull-right">
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            A-Z
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Contact
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Directory
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Locus
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Support LUC
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</nav>
+<script type="text/javascript">
+  var menubar = new Menubar(document.getElementById('audience-nav'));
+  menubar.init();
+</script>
+<script type="text/javascript">
+  var menubar = new Menubar(document.getElementById('directory-nav'));
+  menubar.init();
+</script>
+
+<!-- brand -->
   <div id="site-brand-wrapper" class="container-fluid">
+    <span id="loyola-university-chicago">
+      <a href="###">
+      Loyola University Chicago
+      </a>
+    </span>
     <span id="site-name">
       <a href="###">
       School of Continuing and Professional Studies
@@ -100,12 +157,11 @@
       </a>
     </span>
   </div>
-
-		<nav>
-			<!-- menu -->
-<nav aria-label="Loyola University Chicago">
+<!-- nav main -->
+  <!-- menu -->
+<nav id="main" aria-label="Loyola University Chicago">
   <!-- site menu -->
-  <ul id="menubar1"
+  <ul id="site-nav"
       role="menubar"
       aria-label="Loyola University Chicago">
     <li role="none">
@@ -308,14 +364,11 @@
     </li>
   </ul>
 <!-- cta menu -->
-  <ul id="menubar2"
-    style="float: right;"
+  <ul id="cta-nav"
     role="menubar"
     aria-label="Loyola University Chicago Information">
     <li role="none">
       <a role="menuitem"
-        aria-haspopup="true"
-        aria-expanded="false"
         href="#"
         tabindex="0">
         Apply
@@ -323,32 +376,28 @@
     </li>
     <li role="none">
       <a role="menuitem"
-        aria-haspopup="true"
-        aria-expanded="false"
         href="#"
-        tabindex="0">
+        tabindex="-1">
         Info
       </a>
     </li>
     <li role="none">
       <a role="menuitem"
-        aria-haspopup="true"
-        aria-expanded="false"
         href="#"
-        tabindex="0">
+        tabindex="-1">
         Visit
       </a>
     </li>
     <li id="information" role="none">
       <a id="information-button"
         role="menuitem"
-        aria-haspopup="false"
+        aria-haspopup="true"
         aria-expanded="false"
         href="#"
-        tabindex="0">
+        tabindex="-1">
         <span>i</span>
       </a>
-        <ul role="menu" aria-label="Information">
+        <ul id="information-nav" role="menu" aria-label="Information">
           <li role="none">
             <a role="menuitem"
               href="mb-about.html#InformationLinkOne"
@@ -356,12 +405,23 @@
               Link one
             </a>
           </li>
+          <li role="none">
+            <a role="menuitem"
+              href="mb-about.html#InformationLinkTwo"
+              tabindex="-1">
+              Link two
+            </a>
+          </li>
         </ul>
     </li>
     <li id="search" role="none">
       <a id="search-button"
         onclick="openSearch()"
-        tabindex="0">
+        role="menuitem"
+        aria-haspopup="true"
+        aria-expanded="false"
+        href="#"
+        tabindex="-1">
         <span>?</span>
       </a>
         <div id="search-overlay" class="overlay">
@@ -376,16 +436,23 @@
     </li>
   </ul>
 </nav>
+<nav id="main-mobile">
+  <button type="button">
+    <span class="menu-icon-bar"></span>
+    <span class="menu-icon-bar"></span>
+    <span class="menu-icon-bar"></span>
+  </button>
+</nav>
 <script type="text/javascript">
-  var menubar = new Menubar(document.getElementById('menubar1'));
+  var menubar = new Menubar(document.getElementById('site-nav'));
   menubar.init();
 </script>
 <script type="text/javascript">
-  var menubar = new Menubar(document.getElementById('menubar2'));
+  var menubar = new Menubar(document.getElementById('cta-nav'));
   menubar.init();
 </script>
 
-		</nav>
+
 	</header>
 	<main>
 		<article>

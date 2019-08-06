@@ -1,38 +1,12 @@
 <!-- nav top -->
-  <nav class="menu container-fluid" role="navigation" aria-label="main menu">
-<!-- audience -->
-    <ul id="audience-navigation" class="nav level-1 list-reset" role="menubar" aria-hidden="false">
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Prospective students</a>
-      </li>
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Current students</a>
-      </li>
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Alumni</a>
-      </li>
-    </ul>
-<!-- directory -->
-    <ul id="directory-navigation" class="nav level-1 list-reset" role="menubar" aria-hidden="false">
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">A-Z</a>
-      </li>
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Contact</a>
-      </li>
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Directory</a>
-      </li>
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Locus</a>
-      </li>
-      <li role="menuitem" aria-haspopup="false">
-        <a href="###">Support LUC</a>
-      </li>
-    </ul>
-  </nav>
-<!-- site - brand -->
+  @@include('./luc-template-audience-directory.html')
+<!-- brand -->
   <div id="site-brand-wrapper" class="container-fluid">
+    <span id="loyola-university-chicago">
+      <a href="###">
+      Loyola University Chicago
+      </a>
+    </span>
     <span id="site-name">
       <a href="###">
       School of Continuing and Professional Studies
@@ -44,3 +18,5 @@
       </a>
     </span>
   </div>
+<!-- nav main -->
+  @@include('./luc-template-nav-desktop-accessible.html')
