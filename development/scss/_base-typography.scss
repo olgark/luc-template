@@ -1,16 +1,40 @@
+/* ===============================================
 
+#page-content article { width: 93.103% !important; max-width: 93.103% !important; min-width: 93.103% !important; }
 
 /* ===============================================
-SPACERS ======================================= */
+FONT-SIZE - RESET ============================= */
 
-body { background: $white-base; }
+/* Document level adjustments */
+html { font-size: 16px; }
 
+body {
+  font-size: 100%;
+}
 
-/* ===============================================
-REM SETTING =================================== */
+body, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
 
-/* Sets font-size relative to html font-size — see above */
-section, article, module, table { font-size: 1.1875rem; }
+.story-body {
+  max-width:700px;
+}
+
+/* Body Content */
+
+#pag-content {
+  font-size: 1em;
+  /* equivalent to 16px */
+  line-height: 1.25;
+  /* equivalent to 20px */
+}
+
+@include phone-landscape {
+  #page-content {
+    font-size: 1em;
+    line-height: 1.375;
+  }
+}
 
 
 /* ===============================================
@@ -19,6 +43,12 @@ GLOBAL========================================= */
 .maroon { color: $maroon-dark !important; }
 
 .reverse { color: $gray-light !important; }
+
+.sentence-case { text-transform: none !important; }
+
+.inline { display: inline; width: auto; }
+
+.label.light { opacity: .25; }
 
 .rule-left { border-left: solid 1px $gray-light; }
 
@@ -34,266 +64,95 @@ GLOBAL========================================= */
 
 
 /* ===============================================
-LINKS ========================================= */
+HEADERS =================== */
 
-a { color: $maroon-dark }
-
-a:link {
-	outline: none;
-	outline-offset: 0;
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Antenna Bold", sans-serif;
 }
 
-a:visited, a:hover, a:focus {
-	outline: none;
-	outline-offset: 0;
-	color: $maroon-dark;
-	text-decoration: none;
+h1 {
+	font-size: 3em;
+	line-height: 1.05em;
+	margin: 0 0 30px 0;
 }
 
-p a, article.content p a {
-	line-height: 1;
-	color: $maroon-dark;
-	outline: none;
-	outline-offset: 0;
-	text-decoration: none;
-	background-image: url('<t4 type="media" id="406288" formatter="path/*"/>');
-	background-repeat: no-repeat;
-	background-repeat: repeat-x;
-	background-position: 0 100%;
-}
-
-p a { font-weight: bold; }
-
-a:hover, article.content p a:hover, a.label:focus, a.label:hover { color: $maroon; }
-
-.nav a:visited,
-.nav a:hover,
-.nav a:focus {
-	outline: none;
-	outline-offset: 0;
-	color: $gray-extra-light;
-	text-decoration: none;
-}
-
-
-/* ===============================================
-HEADERS - ORGANIZING LABELS =================== */
-
-h1.pagelayout {
+h2 {
 	font-size: 2.25em;
+	line-height: 1.25em;
+	margin: 0 0 20px 0;
+}
+
+h3 {
+	font-size: 1.75em;
+	line-height: 1.25em;
+	margin: 0 0 10px 0;
+}
+
+h4 {
+	font-size: 1.125em;
+	line-height: 1.222222em;
+	margin: 0 0 10px 0;
+}
+
+h5 {
+	font-size: 1.05em;
+	line-height: 1.222222em;
+	margin: 0 0 10px 0;
 	text-transform: uppercase;
 }
 
-h1, h2, h3 {
-	margin: 10px 0;
-	padding: 0;
-	font-family: "Antenna Bold", sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	line-height: 1.25;
-	letter-spacing: .015em;
-}
-
-h4, h5, h6 {
-	margin: 15px 0 5px 0;
-	padding: 0;
-	font-family: "Antenna Bold", sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	line-height: 1.25;
-	letter-spacing: .015em;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: $gray-extra-dark; }
-
-h1.primary,
-h2.secondary-explainer,
-h3.standalone, .accordion h3.standalone,
-h4.subhead,
-h5.label,
-h6.category.bold,
-h6.category.light { font-family: "Antenna Bold", sans-serif !important; }
-
-h1.primary,
-h1.primary-alternate,
-h2.secondary-explainer,
-h2.secondary-alternate,
-h3.standalone, .accordion h3.standalone,
-h4.subhead,
-h5.label,
-h6.category.bold,
-h6.category.light { font-weight: normal; font-style: normal; }
-
-h6.category.bold.maroon { background: none; }
-
-h1.primary							{ font-size: 	2.25em; }
-h1.primary-alternate		{ font-size: 	2.75em; letter-spacing: -.01em; }
-h2.secondary-explainer	{ font-size: 	1.75em; }
-h2.secondary-alternate	{ font-size: 	2.15em; letter-spacing: -.01em; }
-h3.standalone						{ font-size: 	1.45em; line-height: 1.5; } .accordion h3.standalone { display: inline-block; }
-h4.subhead							{ font-size: 	1.15em; letter-spacing: -.01em; }
-h5.label								{ font-size: 	1.10em; font-family:"Antenna Black"; letter-spacing: -.01em; color: $gray-extra-dark; }
-h6.category.bold				{ font-size: 	0.975em; letter-spacing: -.01em; }
-h6.category.light				{ font-size: 	0.975em; letter-spacing: -.02em; }
-
-h6.category.graphic-text {
-	margin: 20px 0 0 40px;
-	font-family: 'Antenna', sans-serif;
-	line-height: 1.85;
-}
-
-	@media (max-width: 414px) { h5.label { font-size: .975em; } }
-
-.label {
-		display: block;
-    padding: 0;
-    font-size: 1.15em;
-    font-weight: bold;
-    line-height: 1.45;
-    color: $gray-extra-dark;
-    text-align: left;
-    white-space: normal;
-    vertical-align: baseline;
-    border-radius: 0;
-    background: none;
-    background-color: none;
-}
-
-.label.list { margin-top: 35px; margin-bottom: 30px; }
-
-
-/* ===============================================
-HEADERS - DISPLAY ============================= */
-
-h1.display { font-size: 3.5em; letter-spacing: -.005em; }
-
-h1.arnhem.display { font-size: 3.5em; font-weight: lighter; letter-spacing: -.0175em; text-transform: none; }
-
-.jumbotron.h1 { font-size: 3.25em; }
-
-.jumbotron p { font-size: .95em; }
-
-
-/* ===============================================
-FONT FAMILY - STYLE =========================== */
-
-body { font-family: 'arial', san-serif; }
-
-.arnhem { font-family: 'Arnhem Blond', 'Georgia', serif !important; font-weight: 100; letter-spacing: -.0175em; }
-
-.italic, .explainer { font-style: italic; text-transform: none; }
-
-
-/* ===============================================
-UPPERCASE ===================================== */
-
-h5, h6,
-
-.label, .label-chapter, .label-feature, .label-chapter-secondary, .category,
-
-.credit, .byline, .tagline, .credit-tagline, .credit-byline,
-
-.credit-personality-name, .credit-personality-title,
-
-.calendar-date, .calendar-day,
-
-.leader, .cta,
-
-.number, .number-50, .scale, .key, callout, .uppercase { text-transform: uppercase; }
-
-
-/* ===============================================
-FONT WEIGHTS ================================== */
-
-.light	{ font-family:"Antenna Light"	!important; font-style: normal; font-weight: 100 !important; letter-spacing: -.5px; }
-.bold		{ font-family:"Antenna Bold"	!important; font-style: normal; font-weight: bold; }
-.black	{ font-family:"Antenna Black"	!important; font-style: normal; font-weight: normal; }
-
-
-/* ===============================================
-FONT SCALE ==================================== */
-
-.small				{ font-size: 85% !important; }
-.extra-small	{ font-size: 70% !important; }
-.number .small { font-size: 80% !important; }
-.display			{ font-size: 150%; }
-h5.display		{ font-size: 150%; }
-
-.number p.body.extra-small { font-size: 60% !important; }
-
-
-/* ===============================================
-PARAGRAPHS ==================================== */
-
 p {
-	margin: 0 0 10px;
-	padding: 0;
-	font-family: 'arial', san-serif;
-	font-size: .975em;
-	line-height: 1.65;
+	font-size: 1.25em;
+	font-family: "myriad-pro", sans-serif;
+	line-height: 1.65em;
+	margin: 0 0 30px 0;
 }
 
-.body {
-	font-family: 'arial', sans-serif;
-	font-size: .975em;
-	line-height: 1.65;
+@include tablet-portrait {
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.125em;
+  }
+	h2 {
+		font-size: 2em;
+		line-height: 1.25em;
+	}
+	h3 {
+		font-size: 1.5em;
+		line-height: 1.25em;
+	}
+	h4 {
+		line-height: 1.11111em;
+	}
 }
 
-p.bold, p.intro.bold, p.explode.bold, p.infobox.bold, p.endnote.bold,
-p.body.bold, p.body.bold, p.body.intro.bold, p.body.explode.bold, p.body.infobox.bold, p.body.endnote.bold {
-	font-family: 'arial', sans-serif !important;
-	font-weight: bold;
-	font-weight: 700;
+@include phone-landscape {
+  h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+  }
+	h2 {
+		font-size: 1.625em;
+		line-height: 1.15em;
+	}
+	h3 {
+		font-size: 1.375em;
+		line-height: 1.4em;
+	}
+	p {
+		font-size: 1.15em;
+		line-height: 1.65em;
+	}
 }
 
-p.body.intro { font-size: 1.125em; line-height: 1.75; }
-	@media (max-width: 768px) { p.body.intro { font-size: 1.1em; } }
 
-p.body.explode { font-size: .975em; line-height: 1.95; }
 
-p.infobox { font-size: .925em; }
+/* ===============================================
+Links ======================================= */
 
-p.body.endnote {
-	padding: 10px 0 0 0;
-	font-size: .85em;
-	line-height: 1.65;
-	font-style: italic;
-	border-top: solid 1px $gray-light;
+article a {
+	color: $maroon-dark;
 }
-
-p.body span.dropcap,
-p.body.intro span.dropcap,
-p.body.explode span.dropcap {
-	float: left;
-	margin-top: 5px;
-	padding-right: 6px;
-	padding-left: 0;
-	color: $gray-extra-dark;
-	font-family: 'Antenna Black';
-	font-size: 3.15em;
-	line-height: .9;
-}
-
-p.body.intro span.dropcap		{ font-size: 5.2em; }
-
-p.body.explode span.dropcap	{ font-size: 3.5em; }
-
-.alternate { font-family: 'Arnhem Blond', 'Georgia', serif; }
-
-.body-group { margin: 0 0 25px 0; }
-
-.body-group p { margin: 0; }
-
-.leadin {
-	margin: 0;
-	padding: 0;
-	font-family: 'arial', san-serif;
-	font-size: 1em;
-	font-weight: bold;
-	font-weight: 700;
-	line-height: 1.65;
-}
-
 
 /* ===============================================
 CREDITS ======================================= */
@@ -561,7 +420,6 @@ p.calendar-date, p.calendar-day {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: center;
-	color: $white-base;
 	background: $maroon-dark;
 }
 
@@ -596,7 +454,6 @@ TABS ========================================= */
 	list-style-type: none !important;
 	list-style-image: none !important;
 	border-color: $gray-light;
-	border-bottom: $white-base;
 	background: $gray-light;
 	background: -moz-linear-gradient(top, $gray-light 90%, $gray 95%, lighten($gray-dark,40%) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, $gray-light 90%, $gray 95%, lighten($gray-dark,40%) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -606,8 +463,6 @@ TABS ========================================= */
 
 #tabs > li.active a {
 	color: $gray-dark;
-	border-bottom-color: $white-base;
-	background: $white-base;
 }
 
 
@@ -670,7 +525,6 @@ input.form-control, textarea.form-control, select.form-control,
 	text-transform: none;
 	border-radius: 4px !important;
 	border: solid 1px $gray-light;
-	background: $white-base;
 	box-shadow: none;
 }
 	@media (max-width: 400px) { input.form-control { margin: 10px 0 0 0; } }
@@ -808,16 +662,6 @@ input[type="file"] { margin: 0 0 0; }
 /* FOCUS STATES */
 
 select:focus { text-transform: uppercase; font-size: .65em; }
-
-input:focus::-webkit-input-placeholder { color: $white-base; } /* WebKit, Blink, Edge */
-
-input:focus:-moz-placeholder { color: $white-base; } /* Firefox 19+ */
-
-input:focus::-moz-placeholder { color: $white-base; } /* Firefox 4 to 18 */
-
-input:focus:-ms-input-placeholder { color: $white-base; } /* IE 10-11 */
-
-input:focus::placeholder-shown { color: $white-base; } /* Standard */
 
 /* HAS-ERROR */
 
@@ -993,7 +837,6 @@ button { margin: 0 0 10px 0; }
 	font-size: .85em;
 	text-align: left;
 	text-transform: uppercase !important;
-	background-color: $white-base !important;
 }
 
 #select-custom .btn-group.open,
@@ -1005,7 +848,6 @@ button { margin: 0 0 10px 0; }
 	width: 96%;
 	min-width: 96%;
 	text-align: left;
-	background-color: $white-base !important;
 }
 
 #select-custom .btn-group > .dropdown-menu li {
@@ -1104,7 +946,6 @@ input[type="file"] {
 .btn.cta:hover, .btn-group.cta:hover,
 .btn.cta:active, .btn-group.cta:active,
 .btn.cta:visited, .btn-group.cta:visited {
-	color: $white-base;
 	background-color: $maroon;
 }
 
