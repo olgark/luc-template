@@ -52,6 +52,7 @@
 	<script src="js/PopupMenuLinks.js"></script>
 </head>
 <body>
+	<div id="main-wrapper">
 	<!-- HEADER -->
 	<header id="luc-header">
 		<!-- nav top -->
@@ -436,13 +437,6 @@
     </li>
   </ul>
 </nav>
-<nav id="main-mobile">
-  <button type="button">
-    <span class="menu-icon-bar"></span>
-    <span class="menu-icon-bar"></span>
-    <span class="menu-icon-bar"></span>
-  </button>
-</nav>
 <script type="text/javascript">
   var menubar = new Menubar(document.getElementById('site-nav'));
   menubar.init();
@@ -575,41 +569,105 @@
 		</article>
 	</aside>
 	<footer>
-		<!-- FOOTER -->
-<!--
-</div>
-</div>
-</div>
-</div>
--->
-<footer class="container-fluid">
+		<nav id="main-mobile">
+  <!--<span onclick="openNav()">open</span>-->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+		<a href="#">About</a>
+		<a href="#">About</a>
+		<a href="#">About</a>
+		<div id="accordionGroup" class="Accordion" data-allow-toggle>
+    <h3>
+      <button aria-expanded="true"
+              class="Accordion-trigger"
+              aria-controls="sect1"
+              id="accordion1id">
+        <span class="Accordion-title">
+          Navigation one
+          <span class="Accordion-icon"></span>
+        </span>
+      </button>
+    </h3>
+    <div id="sect1"
+         role="region"
+         aria-labelledby="accordion1id"
+         class="Accordion-panel">
+      <div>
+      	<p>Test</p>
+      </div>
+    </div>
+    <h3>
+      <button aria-expanded="false"
+              class="Accordion-trigger"
+              aria-controls="sect2"
+              id="accordion2id">
+        <span class="Accordion-title">
+          Navigation two
+          <span class="Accordion-icon"></span>
+        </span>
+      </button>
+    </h3>
+    <div id="sect2"
+         role="region"
+         aria-labelledby="accordion2id"
+         class="Accordion-panel"
+         hidden="">
+      <div>
+				<p>Test</p>
+      </div>
+    </div>
+    <h3>
+      <button aria-expanded="false"
+              class="Accordion-trigger"
+              aria-controls="sect3"
+              id="accordion3id">
+        <span class="Accordion-title">
+          Navigation three
+          <span class="Accordion-icon"></span>
+        </span>
+      </button>
+    </h3>
+    <div id="sect3"
+         role="region"
+         aria-labelledby="accordion3id"
+         class="Accordion-panel"
+         hidden="">
+      <div>
+      	<p>Test</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</nav>
+<div class="container-fluid">
 	<div class="container">
     <div id="footer-address" class="vcard">
-			<div class="footercard">
-				<span class="fn org body small reverse">
+			<div id="footercard">
+				<span id="fn org">
 					School of Law
 				</span>&middot;
-				<span class="adr">
-						<span class="street-address body small explainer reverse">
+				<span id="adr">
+						<span id="street-address">
 	    				Philip H. Corboy Law Center &middot; 25 E. Pearson Street
 						</span>,
-	    			<span class="locality body small explainer reverse">
+	    			<span id="locality">
 	    				Chicago
 						</span>,
-	    			<span class="region body small explainer reverse">
+	    			<span class="region">
 	    				Il
 	    			</span>
-	    			<span class="postal-code body small explainer reverse">
+	    			<span class="postal-code">
 	    				60611
 	    			</span>
 					</span> &middot;
-					<span class="tel body small explainer reverse">
+					<span class="tel">
 	   				312.915.7120
 	   			</span>
 	   			<a class="email" href="mailto:"></a>
 				</div>
 				<!-- FOOTERCARD - CLOSED -->
-			<p class="body small explainer reverse">&copy; Copyright &amp; Disclaimer 2018</p>
+			<p>&copy; Copyright &amp; Disclaimer 2018</p>
 		</div>
 		<!-- VCARD - CLOSED -->
   </div>
@@ -626,5 +684,6 @@
 	<script src="js/all.js"></script>
 	<script src="js/all.min.js"></script>
 	<!-- endinject -->
+	</div>
 </body>
 </html>
