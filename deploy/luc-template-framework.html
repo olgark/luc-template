@@ -570,74 +570,76 @@
 	</aside>
 	<footer>
 		<nav id="main-mobile">
-  <!--<span onclick="openNav()">open</span>-->
-  <div id="mySidenav" class="sidenav">
+  <span onclick="openNav()" tabindex="0">open</span>
+  <div id="SideNav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">About</a>
-		<a href="#">About</a>
-		<a href="#">About</a>
-		<a href="#">About</a>
-		<div id="accordionGroup" class="Accordion" data-allow-toggle>
-    <h3>
-      <button aria-expanded="true"
-              class="Accordion-trigger"
-              aria-controls="sect1"
-              id="accordion1id">
-        <span class="Accordion-title">
-          Navigation one
-          <span class="Accordion-icon"></span>
-        </span>
-      </button>
-    </h3>
-    <div id="sect1"
-         role="region"
-         aria-labelledby="accordion1id"
-         class="Accordion-panel">
-      <div>
-      	<p>Test</p>
+    <div id="sidenav-inner-wrapper">
+      <a href="#">About</a>
+  		<a href="#">About</a>
+  		<a href="#">About</a>
+  		<a href="#">About</a>
+  		<div id="accordionGroup" class="Accordion">
+        <h3>
+          <button aria-expanded="true"
+                  class="Accordion-trigger"
+                  aria-controls="sect1"
+                  id="accordion1id">
+            <span class="Accordion-title">
+              Navigation one
+              <span class="Accordion-icon"></span>
+            </span>
+          </button>
+        </h3>
+        <div id="sect1"
+             role="region"
+             aria-labelledby="accordion1id"
+             class="Accordion-panel">
+          <div>
+          	<p>Test</p>
+          </div>
+        </div>
+        <h3>
+          <button aria-expanded="false"
+                  class="Accordion-trigger"
+                  aria-controls="sect2"
+                  id="accordion2id">
+            <span class="Accordion-title">
+              Navigation two
+              <span class="Accordion-icon"></span>
+            </span>
+          </button>
+        </h3>
+        <div id="sect2"
+             role="region"
+             aria-labelledby="accordion2id"
+             class="Accordion-panel"
+             hidden="">
+          <div>
+    				<p>Test</p>
+          </div>
+        </div>
+        <h3>
+          <button aria-expanded="false"
+                  class="Accordion-trigger"
+                  aria-controls="sect3"
+                  id="accordion3id">
+            <span class="Accordion-title">
+              Navigation three
+              <span class="Accordion-icon"></span>
+            </span>
+          </button>
+        </h3>
+        <div id="sect3"
+             role="region"
+             aria-labelledby="accordion3id"
+             class="Accordion-panel"
+             hidden="">
+          <div>
+          	<p>Test</p>
+          </div>
+        </div>
       </div>
     </div>
-    <h3>
-      <button aria-expanded="false"
-              class="Accordion-trigger"
-              aria-controls="sect2"
-              id="accordion2id">
-        <span class="Accordion-title">
-          Navigation two
-          <span class="Accordion-icon"></span>
-        </span>
-      </button>
-    </h3>
-    <div id="sect2"
-         role="region"
-         aria-labelledby="accordion2id"
-         class="Accordion-panel"
-         hidden="">
-      <div>
-				<p>Test</p>
-      </div>
-    </div>
-    <h3>
-      <button aria-expanded="false"
-              class="Accordion-trigger"
-              aria-controls="sect3"
-              id="accordion3id">
-        <span class="Accordion-title">
-          Navigation three
-          <span class="Accordion-icon"></span>
-        </span>
-      </button>
-    </h3>
-    <div id="sect3"
-         role="region"
-         aria-labelledby="accordion3id"
-         class="Accordion-panel"
-         hidden="">
-      <div>
-      	<p>Test</p>
-      </div>
-    </div>
-  </div>
   </div>
 </nav>
 <div class="container-fluid">
