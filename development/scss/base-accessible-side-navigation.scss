@@ -157,8 +157,7 @@ button {
 }
 
 .Accordion-icon {
-  border: solid hsl(0, 0%, 62%);
-  border-width: 0 2px 2px 0;
+	content: "+";
   height: 0.5rem;
   pointer-events: none;
   position: absolute;
