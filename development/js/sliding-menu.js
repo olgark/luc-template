@@ -19,3 +19,10 @@ function openNav() {
 function closeNav() {
   document.getElementById("SideNav").style.width = "0px";
 }
+
+var sideNavEscape = "SideNav";
+window.onkeyup = function (event) {
+if (event.keyCode == 27) {
+document.getElementById(sideNavEscape).style.width = "0px";
+}
+}

@@ -78,9 +78,11 @@ nav#main-mobile {
   position: absolute;
   top: 0;
   right: 20px;
-  font-size: 36px;
   margin: 0;
+  width: 36px;
+	height: auto;
 	border-bottom: none;
+	opacity: .5;
 }
 
 /* No effect - header is fixed */
@@ -166,7 +168,7 @@ button {
 .Accordion-trigger:focus .Accordion-title {
   border-color: $maroon-dark;
 }
-
+/*
 .Accordion-icon {
   border: solid hsl(0, 0%, 62%);
   border-width: 0 2px 2px 0;
@@ -179,14 +181,29 @@ button {
   width: 0.5rem;
 	background: none;
 }
+*/
+.Accordion-icon:after {
+	float: right;
+	margin-top: -3px;
+  content: '+';
+  font-family: 'Antenna', sans-serif;
+  font-size: 1.35em;
+  color: $gray;
+}
 
 .Accordion-trigger:focus .Accordion-icon,
 .Accordion-trigger:hover .Accordion-icon {
   border-color: $maroon-dark;
 }
 
-.Accordion-trigger[aria-expanded="true"] .Accordion-icon {
-  transform: translateY(-50%) rotate(-135deg);
+.Accordion-trigger[aria-expanded="true"] .Accordion-icon:after {
+	float: right;
+	margin-top: -3px;
+	margin-right: 3px;
+	content: '-';
+	font-family: 'Antenna', sans-serif;
+	font-size: 1.35em;
+	color: $gray;
 }
 
 .Accordion-panel {

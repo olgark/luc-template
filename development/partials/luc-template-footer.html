@@ -1,7 +1,7 @@
 <nav id="main-mobile">
-  <span onclick="openNav()" tabindex="0">open</span>
+  <span id="SideNavOpen" onclick="openNav()" tabindex="0">open</span>
   <div id="SideNav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/close-icon.svg" alt="Close Navigation"/></a>
     <div id="sidenav-inner-wrapper">
       <a href="#">About</a>
   		<a href="#">About</a>
@@ -9,7 +9,7 @@
   		<a href="#">About</a>
   		<div id="accordionGroup" class="Accordion">
         <h3>
-          <button aria-expanded="true"
+          <button aria-expanded="false"
                   class="Accordion-trigger"
                   aria-controls="sect1"
                   id="accordion1id">
@@ -22,10 +22,11 @@
         <div id="sect1"
              role="region"
              aria-labelledby="accordion1id"
-             class="Accordion-panel">
-          <div>
-          	<p>Test</p>
-          </div>
+             class="Accordion-panel"
+             hidden="">
+            <a href="#">Link one</a>
+            <a href="#">Link two</a>
+            <a href="#">Link three</a>
         </div>
         <h3>
           <button aria-expanded="false"
@@ -43,9 +44,9 @@
              aria-labelledby="accordion2id"
              class="Accordion-panel"
              hidden="">
-          <div>
-    				<p>Test</p>
-          </div>
+            <a href="#">Link one</a>
+            <a href="#">Link two</a>
+            <a href="#">Link three</a>
         </div>
         <h3>
           <button aria-expanded="false"
@@ -63,9 +64,9 @@
              aria-labelledby="accordion3id"
              class="Accordion-panel"
              hidden="">
-          <div>
-          	<p>Test</p>
-          </div>
+            <a href="#">Link one</a>
+            <a href="#">Link two</a>
+            <a href="#">Link three</a>
         </div>
       </div>
     </div>
@@ -97,11 +98,8 @@
 	   			</span>
 	   			<a class="email" href="mailto:"></a>
 				</div>
-				<!-- FOOTERCARD - CLOSED -->
 			<p>&copy; Copyright &amp; Disclaimer 2018</p>
 		</div>
-		<!-- VCARD - CLOSED -->
   </div>
-	<!-- COL-MD-CLOSED - CLOSED -->
 </div>
 <!-- LUC-FOOTER - CLOSED -->
