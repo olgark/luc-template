@@ -51,9 +51,9 @@ nav#main-mobile {
   text-decoration: none;
 	font-family: 'Antenna', sans-serif;
   font-size: 1em;
-  color: $gray;
+/*  color: $gray;*/
 	text-transform: uppercase;
-	border-bottom: solid 1px $gray-dark;
+/*	border-bottom: solid 1px $gray-dark;*/
   transition: 0.3s;
 }
 
@@ -105,7 +105,7 @@ nav#main-mobile {
 }
 
 .Accordion.focus {
-  border-color: $maroon-dark;
+  //border-color: $maroon-dark;
 }
 
 .Accordion.focus h3 {
@@ -128,7 +128,7 @@ nav#main-mobile {
 .Accordion-trigger:focus,
 .Accordion-trigger:hover {
   background: none;
-	outline: 3px solid $maroon-dark;
+	//outline: 3px solid $maroon-dark;
 	outline-offset: -3px;
 }
 
@@ -153,7 +153,7 @@ button {
 }
 
 .Accordion-trigger:focus .Accordion-title {
-  border-color: $maroon-dark;
+  //border-color: $maroon-dark;
 }
 
 .Accordion-icon {
@@ -171,7 +171,7 @@ button {
 
 .Accordion-trigger:focus .Accordion-icon,
 .Accordion-trigger:hover .Accordion-icon {
-  border-color: $maroon-dark;
+  //border-color: $maroon-dark;
 }
 
 .Accordion-trigger[aria-expanded="true"] .Accordion-icon {

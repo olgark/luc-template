@@ -38,32 +38,6 @@ body, h1, h2, h3, h4, h5, h6 {
 
 
 /* ===============================================
-GLOBAL========================================= */
-
-.maroon { color: $maroon-dark !important; }
-
-.reverse { color: $gray-light !important; }
-
-.sentence-case { text-transform: none !important; }
-
-.inline { display: inline; width: auto; }
-
-.label.light { opacity: .25; }
-
-.rule-left { border-left: solid 1px $gray-light; }
-
-.boxed { margin: 20px 0; padding: 20px; background: $gray-extra-light; }
-
-.boxed-mid { margin: 20px 0; padding: 20px; background: $gray-dark; }
-
-.boxed-dark, .boxed-dark-gallery { margin: 20px 0; padding: 20px; background: $gray-extra-dark; }
-
-.boxed-dark-gallery { padding: 40px; }
-
-.bg-info, .bg-success, .bg-warning, .bg-danger { background-color: rgba(0,0,0,.1); }
-
-
-/* ===============================================
 HEADERS =================== */
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,31 +47,38 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size: 3em;
 	line-height: 1.05em;
-	margin: 0 0 30px 0;
+	margin: 0 0 1.15rem 0;
 }
 
 h2 {
 	font-size: 2.25em;
 	line-height: 1.25em;
-	margin: 0 0 20px 0;
+	margin: 0 0 1.15rem 0;
 }
 
 h3 {
 	font-size: 1.75em;
 	line-height: 1.25em;
-	margin: 0 0 10px 0;
+	margin: 0 0 1rem  0;
 }
 
 h4 {
 	font-size: 1.125em;
 	line-height: 1.222222em;
-	margin: 0 0 10px 0;
+	margin: 0 0 1rem  0;
 }
 
 h5 {
 	font-size: 1.05em;
 	line-height: 1.222222em;
-	margin: 0 0 10px 0;
+	margin: 0 0 1rem  0;
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: .95em;
+	line-height: 1.222222em;
+	margin: 0 0 .9rem 0;
 	text-transform: uppercase;
 }
 
@@ -105,7 +86,26 @@ p {
 	font-size: 1.25em;
 	font-family: "myriad-pro", sans-serif;
 	line-height: 1.65em;
-	margin: 0 0 30px 0;
+	margin: 0 0 1.25rem 0;
+}
+
+footnote {
+  font-family: "Antenna Light", sans-serif;
+  line-height: 1.45;
+  font-size: .85em;
+  text-transform: uppercase;
+}
+
+details summary {
+  font-family: "Antenna Bold", sans-serif;
+  font-size: .85em;
+  text-transform: uppercase;
+}
+
+details p {
+  font-family: "myriad-pro", sans-serif;
+  font-size: .925em;
+  line-height: 1.65em;
 }
 
 @include tablet-portrait {
@@ -146,7 +146,6 @@ p {
 }
 
 
-
 /* ===============================================
 Links ======================================= */
 
@@ -154,39 +153,87 @@ article a {
 	color: $maroon-dark;
 }
 
+article a:hover {
+	color: $maroon-light;
+}
+
+button {
+  margin: 0px 10px 10px 0px;
+  font-family: 'Antenna Bold', sans-serif;
+  display: inline-block;
+  color: $maroon;
+  text-transform: uppercase;
+  letter-spacing: .015em;
+  border: $maroon 1px solid;
+  white-space: normal;
+  background: none;
+  transition: all .2s;
+}
+
+button:hover {
+  color: white;
+  background: $maroon;
+}
 /* ===============================================
-CREDITS ======================================= */
+HOME ======================================= */
 
-.byline, .credit-byline { font-size: .8em; margin: 0 0 5px 0; }
-
-.credit-byline.explainer { font-size: 1.05em; }
-
-.credit, .tagline, .credit-tagline { font-size: .7em; margin: 0 0 5px 0; }
-
-.personality-wrapper { display: table; width: 100%; }
-
-.personality-wrapper.image {
-	display: table-cell !important;
-	margin: 0;
-	padding: 0 10px 0 0;
-	width: 100%;
-	vertical-align: bottom;
+#home h1 {
+	font-size: 4em;
+	line-height: 1.05em;
+	margin: 0 0 30px 0;
 }
 
-.personality-info {
-	display: table-cell !important;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	vertical-align: bottom;
+#home h2 {
+font-size: 1.85em;
+text-transform: uppercase;
 }
-	@media (max-width: 460px) { .personality-wrapper, .personality-info { display: block !important; } .personality-wrapper.image { display: block !important; width: 100%; } }
 
-.credit-personality, .credit-personality-title, .credit-personality-name { font-size: .85em; }
+#home h3 {
+  font-size: 1.5em;
+}
 
-.personality-info h6.category, .personality-info h6.category, .personality-info h6.category.maroon { margin: 5px 0 !important; background: none; }
+#home h4 {
+  font-size: 1.15em;
+  font-family: "Antenna Light", sans-serif;
+  text-transform: uppercase;
+}
 
-.personality-info p.explainer { margin: 5px 0 0 0; vertical-align: baseline; }
+#home h5 {
+  font-size: 1.15em;
+  font-family: "Antenna Bold", sans-serif;
+  text-transform: uppercase;
+}
+
+#home h5 {
+  font-size: 1.15em;
+  font-family: "Antenna Bold", sans-serif;
+  text-transform: uppercase;
+}
+
+#home span a {
+  font-family: 'Antenna Bold', sans-serif !important;
+  text-transform: uppercase;
+  font-size: 90%;
+  text-decoration: none;
+}
+
+#home span a:hover {
+  color: $maroon-light;
+}
+
+@include tablet-portrait {
+  #home h1 {
+    font-size: 2.5em;
+    line-height: 1.125em;
+  }
+}
+
+@include phone-landscape {
+#home  h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+  }
+}
 
 
 /* ===============================================
@@ -792,186 +839,6 @@ tr th, #page-content tr th, #page-content table tr th { text-transform: none; }
 }
 
 
-/* ===============================================
-CTAS - BUTTON ================================= */
-
-.cta-wrapper {
-	display: inline-block;
-	margin: 10px 0 0 0;
-	padding: 0;
-	width: 100%;
-	background: rgba(0,0,0,0);
-}
-
-button { margin: 0 0 10px 0; }
-
-.btn,
-.btn:hover,
-.btn:focus,
-.btn:active,
-.btn.active,
-.btn.disabled,
-.btn[disabled] {
-	display: inline-block;
-	width: auto;
-	font-weight: normal;
-	font-style: normal;
-	background-color: $maroon-dark;
-}
-
-#select-custom .button,
-#select-custom .btn,
-#select-custom .btn:hover,
-#select-custom .btn:focus,
-#select-custom .btn:active,
-#select-custom .btn.active,
-#select-custom .btn.disabled,
-#select-custom .btn[disabled],
-#select-custom .btn-group,
-#select-custom .btn-group-open,
-#select-custom .button,
-#select-custom .btn {
-	display: inline-block;
-	width: 100%;
-	min-width: 100%;
-	font-size: .85em;
-	text-align: left;
-	text-transform: uppercase !important;
-}
-
-#select-custom .btn-group.open,
-#select-custom .btn-group.open .dropdown-toggle { box-shadow: none; }
-
-#select-custom .btn-group > .dropdown-menu {
-	margin: 0 2%;
-	padding: 10px 2%;
-	width: 96%;
-	min-width: 96%;
-	text-align: left;
-}
-
-#select-custom .btn-group > .dropdown-menu li {
-	margin: 0;
-	padding: 5px 0;
-	font-size: 1.1em;
-	text-transform: none;
-	border-bottom: solid 1px $gray-light;
-}
-
-#select-custom .btn-group > .dropdown-menu li:hover {
-	background-color: $gray-extra-light;
-}
-
-#select-custom .btn-group > .dropdown-menu li:last-child {
-	border-bottom: 0 none;
-}
-
-#select-custom .btn-group > .dropdown-menu li a {
-	margin: 0;
-	padding: 0 1%;
-	width: 98%;
-	border-bottom: none;
-	background-color: none;
-}
-
-#select-custom .btn-group > .dropdown-menu li a:hover,
-#select-custom .btn-group > .dropdown-menu li a:focus {
-	background-color: transparent;
-	border: $gray-light !important;
-	box-shadow: 0 none;
-}
-
-#select-custom .btn-group span {
-	display: table;
-	float: left;
-	margin: 3px 0 0 0;
-}
-
-#select-custom .btn-group span.select-arrow {
-	float: right;
-	display: table;
-	top: 0;
-	bottom: 0;
-	margin: -2px 0 0;
-	width: 10px;
-	height: 20px;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20fill%3D%22%23555555%22%20%0A%09%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%22-261%20145.2%2024%2024%22%20style%3D%22enable-background%3Anew%20-261%20145.2%2024%2024%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cpath%20d%3D%22M-245.3%2C156.1l-3.6-6.5l-3.7%2C6.5%20M-252.7%2C159l3.7%2C6.5l3.6-6.5%22%2F%3E%0A%3C%2Fsvg%3E");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: none;
-	background-size: 170% 170%;
-}
-
-.btn-group > .btn, .btn-group > .dropdown-menu, .btn-group > .popover, .cta {
-	font-size: .95em;
-	font-weight: normal;
-	font-style: normal;
-}
-
-
- p.small a.cta { font-size: .925em; }
-
-
-.btn.cta, input[type="file"] {
-	margin: 0;
-	padding: 6px 8px 4px 8px;
-	font-family: "Antenna Bold", "Arial", sans-serif;
-	font-size: .825em;
-	font-weight: bold;
-	font-style: normal;
-	color: $gray-extra-light;
-	text-align: left;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	text-shadow: none;
-	background-color: $maroon-dark;
-	background-image: none;
-	border: none;
-	border-radius: 3px;
-	outline: none;
-	text-decoration: none;
-	-moz-transition: all 0.2s ease-in;
-	-webkit-transition: all 0.2s ease-in;
-}
-
-input[type="file"] {
-	margin: 30px 0 0;
-	padding: 10px !important;
-	width: 100%;
-	font-size: .65em;
-	text-transform: uppercase !important;
-	background-color: $gray-extra-light;
-}
-
-.btn.cta:hover, .btn-group.cta:hover,
-.btn.cta:active, .btn-group.cta:active,
-.btn.cta:visited, .btn-group.cta:visited {
-	background-color: $maroon;
-}
-
-/* ===============================================
-CTAS ========================================== */
-
-p a.cta {
-	margin-left: 0;
-	font-family: "Antenna Bold", "Arial", sans-serif;
-	font-weight: bold;
-	letter-spacing: -.025em;
-	text-decoration: none;
-	background: none;
-	background-color: none;
-	background-image: none !important;
-}
-
-.cta:hover { background: none; color: $maroon; }
-
-/* ===============================================
-ADJUSTMENT ==================================== */
-
-.col-xs-12.padding-left-right-0,
-.col-sm-12.padding-left-right-0,
-.col-md-12.padding-left-right-0,
-.col-lg-12.padding-left-right-0 { padding-left: 0 !important; padding-right: 0 !important; }
 
 /* ===============================================
 CSS END ======================================= */
