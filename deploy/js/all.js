@@ -972,3 +972,10 @@ if (event.keyCode == 27) {
 document.getElementById(sideNavEscape).style.width = "0px";
 }
 }
+
+var sideNavOpen = "SideNav";
+window.onkeyup = function (event) {
+if (event.keyCode == 27) {
+document.getElementById(sideNavOpen).style.width = "250px";
+}
+}
