@@ -157,23 +157,24 @@ article a:hover {
 	color: $maroon-light;
 }
 
-button {
+main button {
   margin: 0px 10px 10px 0px;
   font-family: 'Antenna Bold', sans-serif;
   display: inline-block;
   color: $maroon;
   text-transform: uppercase;
   letter-spacing: .015em;
-  border: $maroon 1px solid;
+  border: 1px solid $maroon;
   white-space: normal;
   background: none;
   transition: all .2s;
 }
 
-button:hover {
+main button:hover {
   color: white;
   background: $maroon;
 }
+
 /* ===============================================
 HOME ======================================= */
 
@@ -237,143 +238,85 @@ text-transform: uppercase;
 
 
 /* ===============================================
-BREAKOUTS ===================================== */
+BLOCKQUOTES ===================================== */
 
-.number { margin: 20px 0; }
-
-.number.display { margin: 10px 0 0; }
-
-.number.display p.body { margin: 0 0 20px 0; line-height: 1.35; }
-
-.number h1.display	{ margin: -12px 0 5px 0; font-size: 450%; letter-spacing: -.055em; }
-	@media (max-width: 600px) { .number h1.display { font-size: 300% } .number.display h1.display { font-size: 200%; } }
-
-.number p.body	{ margin: 0 0 -2px 0; line-height: 1.75; }
-
-blockquote, blockquote p, #page-content blockquote, #page-content blockquote p  {
+blockquote  {
 	display: inline-block;
-	margin: 20px 0 30px !important;
-	padding: 0 !important;
-	width: 100%;
-	max-width: 100%;
-	font-family: 'Antenna Bold', san-serif;
+	font-family: 'Antenna Bold', sans-serif;
 	font-size: 1.25em;
 	font-weight: 700;
 	font-style: none;
 	letter-spacing: 0em;
 	line-height: 1.85;
 	color: $gray-extra-dark;
-	border-left: 0;
-	border-top: none 0;
-	border-bottom: none 0;
+  margin: 0 0 1.25rem 0;
 }
 
-blockquote p, #page-content blockquote p { margin: 0 0 10px !important; padding: 0; }
-	@media (max-width: 414px) { blockquote, blockquote p { font-size: 1.05em; line-height: 1.85; } }
+.uppercase blockquote  {
+  font-family: 'Antenna Bold', sans-serif;
+	font-size: 1.65em;
+  text-transform: uppercase;
+}
 
-blockquote cite {
+
+cite {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	font-family: 'Antenna Light', san-serif;
-	font-size: .7em;
-	font-weight: lighter;
-	font-weight: 100;
-	font-style: normal;
+	font-family: 'Antenna Light', sans-serif;
+  font-style: normal;
+	font-size: .9em;
 	letter-spacing: 0;
 	line-height: 1.45;
 	text-transform: uppercase;
 }
 
-blockquote cite a {
-	font-family: 'Antenna Bold', san-serif;
+.uppercase cite {
+  font-size: 1.1em;
+}
+
+cite a {
+	font-family: 'Antenna Bold', sans-serif;
 	font-weight: bold;
 }
 
-
-/* ===============================================
-IMAGES ======================================== */
-
-img { width: 100%; margin: 10px 0 5px; }
-
-img:before, .image img:before {
-	content: "";
-	display: table;
-	margin-top: 56.25%;
-	width: 100% !important;
-	overflow: hidden;
-}
-
-img.credit-personality-image { margin: 0 10px 5px 0; width: auto; height: auto; }
-
-.image p.credit { margin: 0 0 5px 0; text-align: right; }
-
-.image h3.standalone { margin: 0 0 5px 0; }
-
-.image h5.label.display { margin: 0 0 5px 0; font-size: 1em; }
-
-.image p.caption { margin: 0 0 10px 0; line-height: 1.45; }
-
-.image.boxed img, .image.boxed-dark-gallery img { width: 100%; margin: 0 0 5px; }
-
-
-/* ===============================================
-UTILITY ======================================= */
-
-.utility { margin: 10px 0; }
-
-.utility h6.category { margin: 0 0 3px 0; }
-
-.utility p { margin: 0; }
 
 
 /* ===============================================
 INFOBOXES ===================================== */
 
-#page-content article.content .infobox, .infobox {
-	padding: 20px 2.469% !important;
+.infobox {
+	padding: 1.75rem 1.75rem 1rem 1.75rem;
 	width: 100% !important;
 	background: $gray-extra-light;
 }
-
-.infobox .explainer { font-size: .975em; font-weight: 100; }
-
-.infobox h6 { margin: 15px 0; font-size: .975em; }
-
-.infobox .tagline { font-size: .7em; }
-
-.infobox ul { font-size: 1em; margin: 0 0 10px 15px; }
 
 
 /* ===============================================
 LISTS ========================================= */
 
-.list {
-	margin: 20px 0 0 20px;
-	padding: 0;
-}
 
-.list h5.label-topic, ul h5.label-topic, ol h5.label-topic, dl h5.label-topic {
-	margin: 15px 0 0 0;
-}
-
-.list h6.category, ul h6.category, ol h6.category, dl h6.category {
-	margin: 15px 0 0 0;
-}
-
-ol, ul, #page-content article.content ol, #page-content article.content ul {
-	margin: 20px 0 0 20px;
+main article ol, main article ul {
+	margin: 1rem 0 1.75rem 1.5rem;
 	padding: 0;
 	list-style-type: square;
 	list-style-position: inside;
 }
 
-ol, #page-content article.content ol {
+
+main ol li, main ul li {
+	margin: 7px 0;
+  font-size: 1.05em;
+	font-family: 'myriad-pro', sans-serif;
+	line-height: 1.45;
+}
+
+main ol, main ol {
     counter-reset: ordered-list-counter;
     list-style-type: none !important;
 }
 
-ol li:before, #page-content article.content ol li:before {
+main ol li:before {
     content: counter(ordered-list-counter, decimal)".";
     counter-increment: ordered-list-counter;
     margin-right: 5px;
@@ -383,51 +326,72 @@ ol li:before, #page-content article.content ol li:before {
 		list-style-type: none !important;
 }
 
-ol ol, ul ul {
-	margin: 7px 0 7px 15px;
-	padding: 0;
-	list-style-type: square;
+.circle-number ol li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  font-size: 0.9em;
+  color: white;
+  font-weight: bold;
+  background-color: #333;
+  border-radius: 28px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  margin-top: -4px;
 }
 
-ol li, ul li {
-	margin: 7px 0;
-	font-family: 'myriad-pro', sans-serif;
-	font-size: .975em;
-	line-height: 1.45;
+.circle-number ol li {
+  counter-increment: step-counter;
+  margin-bottom: 20px;
 }
 
-ol li li, ul li li {
-	font-size: 1em;
+.circle-number ol li span {
+  font-family: "Antenna Bold", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
 }
 
-dl {
-	margin: 20px 0 0 20px;
-	padding: 0;
-	font-family: 'myriad-pro', sans-serif;
-	font-size: 1em;
-	list-style-type: none;
+.circle-number ol li span::after {
+  content: '\A'; white-space: pre;
 }
 
-dl dt {
-	margin: 15px 0 3px;
-	font-family: 'Antenna Bold', sans-serif;
-	font-size: .975em;
-	font-weight: bold;
-	font-weight: 700;
-	line-height: 1.45;
-	text-transform: uppercase;
+.circle-number ol {
+  position: relative;
+  padding-left: 42px;
+  list-style-type: none;
+  margin: 30px 0 30px 10px;
+  counter-reset: step-counter;
 }
 
-dl dd {
-	margin: 0 0 0 15px;
-	padding: 0;
-	font-size: .975em;
+/* ===============================================
+NUMBERS ========================================= */
+
+.number-lg {
+  h2 {
+    font-family: "Antenna Bold", sans-serif;
+    font-size: 6em;
+    margin-bottom: -.75rem;
+  }
+  span {
+    font-family: "Antenna Light", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2em;
+  }
 }
 
-ul span.bullet, ol span.bullet,
-p span.bullet, .list span.bullet { margin: 0 5px; }
-
-
+.number-md {
+  h2 {
+    font-family: "Antenna Bold", sans-serif;
+    font-size: 4.5em;
+    margin-bottom: -.5rem;
+  }
+  span {
+    font-family: "Antenna Light", sans-serif;
+    text-transform: uppercase;
+  }
+}
 /* ===============================================
 CALENDAR ====================================== */
 
@@ -474,43 +438,6 @@ p.calendar-day { color: $gray-light; background: $gray-extra-dark; }
 
 p.calendar-date { border-radius: 4px 4px 0 0; }
 
-
-/* ===============================================
-TABS ========================================= */
-
-#page-content article.content #content-tabs ul, #content-tabs ul {
-	margin: 10px 0 30px 0 !important;
-	padding: 0 0 4px 0;
-	list-style-type: none !important;
-	list-style-image: none !important;
-}
-
-#tabs > li { list-style-image: none !important; }
-
-
-#tabs > li a {
-	top: 1px;
-	display: inline;
-	padding: 8px 15px 6px;
-	font-family: 'Antenna Light', sans-serif !important;
-	font-size: .825em !important;
-	font-weight: normal;
-	color: $gray;
-	text-transform: uppercase;
-	line-height: 1;
-	list-style-type: none !important;
-	list-style-image: none !important;
-	border-color: $gray-light;
-	background: $gray-light;
-	background: -moz-linear-gradient(top, $gray-light 90%, $gray 95%, lighten($gray-dark,40%) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, $gray-light 90%, $gray 95%, lighten($gray-dark,40%) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, $gray-light 90%, $gray 95%, lighten($gray-dark,40%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#888888',GradientType=0 ); /* IE6-9 */
-}
-
-#tabs > li.active a {
-	color: $gray-dark;
-}
 
 
 /* ===============================================
