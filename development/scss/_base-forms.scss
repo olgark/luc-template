@@ -28,154 +28,13 @@ input[type="color"],
 
 input[type="radio"], input[type="checkbox"] { margin-left: 0 !important; margin-right: 5px !important; width: auto; }
 
-form { display: inline-block; }
-
-@media (max-width: 768px) { form { width: 100%; } }
-
-.form-module { font-size: 1em; }
-
-.form-module label, label { margin-top: 5px; font-size: .725em; color: $gray-dark; text-transform: uppercase; }
-
-.form-module p { width: 100%; font-size: .95em; }
-
-.form-sub-header-group h6 { margin: 0; } /* Unique margins to maintain continuity h6 and h6/p combinations */
-
-.form-sub-group { margin: 20px 0 0 0; padding: 0; width: 100%; } /* Separates groupings within forms */
-
-.form-group { margin-bottom: 5px; }
-
-input.form-control, textarea.form-control, select.form-control,
-#select-custom .dropdown-toggle.btn-default {
-	width: 100%;
-	font-size: .85em;
-	font-weight: 100;
-	height: 30px;
-	line-height: 1.2em;
-	line-height: 20px\9; /*for IE */
-	letter-spacing: 0.025em;
-	color: $gray;
-	text-transform: none;
-	border-radius: 4px !important;
-	border: solid 1px $gray-light;
-	box-shadow: none;
+form {
+  display: inline-block;
+  font-family: "Antenna Light", sans-serif;
+  text-transform: uppercase;
+  font-size: .85em;
+  margin-bottom: 10px;
 }
-	@media (max-width: 400px) { input.form-control { margin: 10px 0 0 0; } }
-
-#select-custom .dropdown-toggle.btn-default { font-weight: bold; color: $gray-dark; }
-
-select.form-control { font-size: .65em; text-transform: uppercase; }
-
-select.form-control option { text-transform: none; }
-
-.form-control:focus {
-	font-size: .85em;
-	line-height: 1;
-	color: $gray;
-  border-color: $gray;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 0, 0, 0.15);
-  outline: 0 none;
-  cursor: text;
-}
-
-textarea.form-control {
-	min-height: 70px;
-	max-width: 100%;
-	font-size: .85em;
-	height: 30px;
-	line-height: 1.35;
-	line-height: 20px\9; /*for IE */
-	font-weight: 100;
-	color: $gray-extra-dark !important;
-	text-transform: none;
-}
-
-textarea.form-control:focus {
-	line-height: 1.35;
-}
-
-input[type="checkbox"], input[type="file"] {
-	display: inline-block !important;
-	margin: 1px 0 20px 0;
-	padding: 0 0 0 10px;
-	width: auto;
-}
-
-input[type="file"] { margin: 0 0 0; }
-
-.radio, .checkbox, .radio-inline, .checkbox-inline {
-	margin: 0 0 8px;
-	padding: 0 0 0 5px;
-}
-
-.checkbox label, .checkbox-inline label, radio label, radio-inline label {
-	display: inline-block;
-	margin: 0 0 0 5px;
-	padding: 0;
-	font-weight: bold;
-	letter-spacing: .015em;
-}
-
-/* SUPPORT TEXT */
-
-.help-block {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: .95em;
-    font-style: italic;
-    color: $gray-dark;
-}
-
-/* FORM VALIDATION STATES - ERROR */
-
-.has-error .form-control {
-    border-color: $maroon-dark;
-    background: rgba(238,177,17,.15);
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-.has-error .help-block,
-.has-error .control-label,
-.has-error .radio,
-.has-error .checkbox,
-.has-error .radio-inline,
-.has-error .checkbox-inline,
-.has-error.radio label,
-.has-error.checkbox label,
-.has-error.radio-inline label,
-.has-error.checkbox-inline label {
-    color: $maroon-dark;
-}
-
-/* FORM VALIDATION STATES - WARNING */
-
-.has-warning .form-control {
-    border-color: $maroon-dark;
-    background: rgba(238,177,17,.1);
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-.has-warning .help-block,
-.has-warning .control-label,
-.has-warning .radio,
-.has-warning .checkbox,
-.has-warning .radio-inline,
-.has-warning .checkbox-inline,
-.has-warning.radio label,
-.has-warning.checkbox label,
-.has-warning.radio-inline label,
-.has-warning.checkbox-inline label {
-    color: $maroon-dark;
-}
-
-.checkbox.disabled label, .checkbox-inline.disabled label {
-	color: $gray-dark !important;
-	font-weight: normal;
-}
-
-/* IMPORTANT - INTERACTIVE STATES - These need to remain separate to apply to different browsers */
 
 /* PLACEHOLDER */
 
@@ -194,42 +53,6 @@ input[type="file"] { margin: 0 0 0; }
 /* FOCUS STATES */
 
 select:focus { text-transform: uppercase; font-size: .65em; }
-
-/* HAS-ERROR */
-
-.has-error select:focus { text-transform: uppercase; font-size: .65em; }
-
-.has-error input:focus::-webkit-input-placeholder { color: rgba(238,177,17,0); } /* WebKit, Blink, Edge */
-
-.has-error input:focus:-moz-placeholder { color: rgba(238,177,17,0); } /* Firefox 19+ */
-
-.has-error input:focus::-moz-placeholder { color: rgba(238,177,17,0); } /* Firefox 4 to 18 */
-
-.has-error input:focus:-ms-input-placeholder { color: rgba(238,177,17,0); } /* IE 10-11 */
-
-.has-error input:focus::placeholder-shown { color: rgba(0,0,0,0); } /* Standard */
-
-/* HAS-WARNING */
-
-.has-warning select:focus { text-transform: uppercase; font-size: .65em; }
-
-.has-warning input:focus::-webkit-input-placeholder { color: rgba(238,177,17,0); } /* WebKit, Blink, Edge */
-
-.has-warning input:focus:-moz-placeholder { color: rgba(238,177,17,0); } /* Firefox 19+ */
-
-.has-warning input:focus::-moz-placeholder { color: rgba(238,177,17,0); } /* Firefox 4 to 18 */
-
-.has-warning input:focus:-ms-input-placeholder { color: rgba(238,177,17,0); } /* IE 10-11 */
-
-.has-warning input:focus::placeholder-shown { color: rgba(0,0,0,0); } /* Standard */
-
-/* HAS-ERROR - HAS-WARNING - FOCUS */
-
-.has-error .form-control:focus, .has-warning .form-control:focus {
-    border-color: $maroon-dark;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px lighten($maroon, 20%);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 0, 0, 0.15);
-}
 
 
 /* ===============================================
