@@ -44,7 +44,6 @@
 	<!--Javascript file c3.min.js --><script src="js/c3.min.js"></script>
 
 	<!-- inject:css -->
-	<link rel="stylesheet" href="css/base-accessible-side-navigation.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<!-- endinject -->
 	<script src="js/MenubarItemLinks.js"></script>
@@ -571,7 +570,15 @@
 	</aside>
 	<footer>
 		<nav id="main-mobile">
-  <span id="SideNavOpen" onclick="openNav()" tabindex="0">open</span>
+  <div class="container-fluid p-0">
+  	<div class="container">
+      <span id="SideNavOpen" onclick="openNav()" tabindex="0" title="menu">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>  
+      </span>
+    </div>
+  </div>
   <div id="SideNav" class="sidenav">
     <a id="sideNavClose" href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/close-icon.svg" alt="Close Navigation"/></a>
     <div id="sidenav-inner-wrapper">
