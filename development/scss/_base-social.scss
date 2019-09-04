@@ -1,0 +1,35 @@
+/* fixes social icon bar */
+
+#social-icon-bar {
+  position: fixed;
+  top: 38%;
+  left: 0;
+	background: $maroon;
+  z-index: 10;
+  -webkit-transform: translateY(-40%);
+  -ms-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 10;
+}
+
+/* social icons */
+
+#social-icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px 14px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-top: solid 1px $gray-extra-light;
+  transition: all 0.3s ease;
+  &:first-of-type {
+    border-top: none;
+  }
+}
+
+#social li a {
+  background: url("http://www.luc.edu/media/home/images/social-icons-logos-33-070714.png") no-repeat scroll 0 0 $gray-dark;
+}
+
+#social-icon-bar a:hover { background-color: darken($maroon-dark,5%); }
