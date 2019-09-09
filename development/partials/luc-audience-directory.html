@@ -1,17 +1,83 @@
 <!-- AUDIENCE - DIRECTORY - HEADER -->
 <div id="audience-directory-header">
-<div-class="container-fluid">
-  <ul id="audience-nav" class="col-md-6 pull-left">
-    <li class="category small"><a href="#">Prospective students</a></li>
-    <li class="category small"><a href="#">Current students</a></li>
-    <li class="category small"><a href="#">Alumni</a></li>
-  </ul>
-  <ul id="directory-nav" class="col-md-5 pull-right">
-    <li class="category small"><a href="#">A-Z</a></li>
-    <li class="category small"><a href="#">Contact</a></li>
-    <li class="category small"><a href="#">Directory</a></li>
-    <li class="category small"><a href="#">Locus</a></li>
-    <li class="category small"><a href="#">Support LUC</a></li>
-  </ul>
+  <div class="container-fluid">
+    <nav aria-label="Loyola University Chicago information">
+      <ul
+        id="audience-nav"
+        role="menubar"
+        aria-label="Loyola University Chicago information"
+        class="col-md-6 pull-left">
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="###"
+            tabindex="0">
+            Prospective students
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Current students
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Alumni
+          </a>
+        </li>
+      </ul>
+      <ul
+        id="directory-nav"
+        role="menubar"
+        aria-label="Loyola University Chicago directory"
+        class="col-md-5 pull-right">
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            A-Z
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Contact
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Directory
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Locus
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Support LUC
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>
-</div>
+<script type="text/javascript">
+  var menubar = new Menubar(document.getElementById('audience-nav'));
+  menubar.init();
+</script>
+<script type="text/javascript">
+  var menubar = new Menubar(document.getElementById('directory-nav'));
+  menubar.init();
+</script>
