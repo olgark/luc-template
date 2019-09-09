@@ -936,6 +936,14 @@ function closeSearch() {
   document.getElementById("search-overlay").style.display = "none";
 }
 
+function openFooterSearch() {
+  document.getElementById("search-overlay").style.display = "block";
+}
+
+function closeFooterSearch() {
+  document.getElementById("search-overlay").style.display = "none";
+}
+
 $(document).keyup(function(e) {
   if (e.which == 27) {
     $(".overlay").fadeOut(300);

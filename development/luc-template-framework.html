@@ -12,6 +12,17 @@
 </head>
 <body>
 	<div id="main-wrapper">
+		<div id="search-overlay-wrapper">
+			<div id="search-overlay" class="overlay">
+				<div class="container">
+					<span id="search-close" onclick="closeSearch()" title="Close Overlay">×</span>
+					<form class="form-group" role="search">
+						<input id="global-search-input" type="search" class="search-input" placeholder="Search LUC.EDU" name="search">
+						<button id="gloabal-search-submit" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	<!-- HEADER -->
 	<header id="luc-header">
 		@@include('./partials/luc-template-header.html')
