@@ -193,7 +193,7 @@ footer span, footer p {
 
 nav#main-mobile {
   padding: 10px 0;
-  background: #888888;
+  background-color: darken($gray,2%);
 }
 
 nav#main-mobile .menu-bar {
@@ -201,5 +201,5 @@ nav#main-mobile .menu-bar {
   margin: 6px 0;
   width:35px;
   height: 4px;
-  background: #272727;
+	background-color: lighten($gray-extra-dark,10%);
 }
