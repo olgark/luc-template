@@ -1,0 +1,64 @@
+/* ===============================================
+FORMS ========================================= */
+
+article.content input,
+article.content textarea,
+article.content .uneditable-input { width: 100%; }
+
+article.content input[type="radio"],
+article.content input[type="checkbox"] { width: auto; }
+
+
+input[type="radio"], input[type="checkbox"] { margin-left: 0 !important; margin-right: 5px !important; width: auto; }
+
+
+form {
+  display: inline-block;
+  font-family: "Antenna Light", sans-serif;
+  font-size: .85em;
+  margin-bottom: 10px;
+  font-size: .85em;
+  margin-bottom: 10px;
+  background: #f1f1f1;
+  padding: 2%;
+  > div {
+    > input[type="text"],
+    > input[type="email"],
+    > input[type="password"] {
+
+      &:focus {
+        & + label {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+
+form
+ > input {
+ &:invalid {
+  border-color:#dc3545;
+}
+}
+
+input {
+ &:valid {
+  border-color:#28a745;
+}
+}
+
+input:-internal-autofill-selected {
+  background-color: #fff !important;
+  color: #c1c1c1;
+}
+
+form :focus {
+  outline-color: $patina-light;
+}
+
+
+/* PLACEHOLDER */
+
+.checkbox label span, .checkbox-inline label span { display: inline-block; margin: 0 0 0 15px; }

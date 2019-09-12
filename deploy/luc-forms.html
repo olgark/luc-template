@@ -48,95 +48,49 @@
 	<!-- endinject -->
 	<link rel="stylesheet" href="###">
 	<link rel="stylesheet" href="###">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-	<style>
-	* {
-		box-sizing: border-box;
-	}
-	body {
-		padding: 10px;
-		background: #ecf0f1;
-		font-family: helvetica, sans-serif;
-		font-weight: 200;
-	}
-	.btn {
-		border: none;
-		background: linear-gradient(to bottom, #3498db, #2980b9);
-		border-radius: 3px;
-		font-family: Arial;
-		color: #ffffff;
-		padding: 5px 10px 5px 10px;
-		text-decoration: none;
-		margin: 5px;
-		cursor: crosshair;
-	}
-	.btn:hover {
-		background: green;
-	}
-	.active {
-		background: red;
-		text-decoration: none;
-	}
-	.box {
-		background-image: linear-gradient(to bottom, #3498db, #2980b9);
-		padding: 10px;
-		height: 100px;
-		width: calc(25% - 10px);
-		float: left;
-		margin: 5px;
-		text-align: center;
-		border-radius: 3px;
-		color: #fff;
-	}
-	.spacer {
-		clear: both;
-		height: 20px;
-	}
-	</style>
 </head>
 <body>
-	<header>
-		
-	</header>
-	<nav>
-		
-	</nav>
-	<main>
-		<article>
-			<div id="main-content">
-	<div id="container">
-		<style>
-			#container > div > ul > ul > li,
-			#container > div > ul > ul > li a {
-				text-transform: uppercase;
-				color: red !important;
-				cursor: default;
-			}
-		</style>
-		<div>
-			<h2>Page Templates</h2>
-			<ul>
-				<li><a href="luc-color-palette.html">Color palette</a></li>
-				<li><a href="luc-typography.html">Typography</a></li>
-				<li><a href="luc-forms.html">Forms</a></li>
-				<li><a href="luc-interior.html">Interior</a></li>
-				<li><a href="luc-template-framework.html">Framework</a></li>
-			</ul>
-		</div>
+<header>
+	
+</header>
+<nav>
+	
+</nav>
+<main>
+	<article>
+		<div class="container-fluid">
+		<div class="container story-body">
+		<section>
+	<h2>
+		Forms
+		</h2>
+		<form>
+
+<label for="firstname">First name</label>
+<input required type="text" type="text" name="firstname" id="firstname" placeholder="First"><br>
+<label for="lastname">Last name</label>
+<input required type="text" type="text" name="lastname" id="lastname" placeholder="Last"><br>
+<label for="email">Email</label>
+<input required type="text" type="email" name="email" id="email" placeholder="email@LUC.edu"><br>
+
+<button type="button" id="alertconfirm">Sign Up</button>
+<input type="checkbox" name="subscribe" id="subscribe">
+<label for="subscribe">Subscribe to newsletter</label>
+</form>
+</section>
+
 	</div>
 </div>
-
-		</article>
-	</main>
-	<aside>
-		<article>
-			<!-- sidebar content here -->
-		</article>
-	</aside>
-	<footer>
-		
-	</footer>
+	</article>
+</main>
+<aside>
+	<article>
+		<!-- sidebar content here -->
+	</article>
+</aside>
+<footer>
+	
+</footer>
 	<!-- inject:js -->
 	<script src="js/MenubarItemLinks.js"></script>
 	<script src="js/MenubarLinks.js"></script>

@@ -46,12 +46,14 @@
 	<!-- inject:css -->
 	<link rel="stylesheet" href="css/styles.css">
 	<!-- endinject -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="js/MenubarItemLinks.js"></script>
 	<script src="js/MenubarLinks.js"></script>
 	<script src="js/PopupMenuItemLinks.js"></script>
 	<script src="js/PopupMenuLinks.js"></script>
 </head>
 <body>
+	<div id="main-wrapper">
 	<!-- HEADER -->
 	<header id="luc-header">
 		<!-- nav top -->
@@ -153,7 +155,7 @@
     </span>
     <span id="brand">
       <a href="###">
-        <img src="/images/luc-logo-reverse.svg">
+        <img src="images/luc-logo-reverse.svg">
       </a>
     </span>
   </div>
@@ -436,13 +438,6 @@
     </li>
   </ul>
 </nav>
-<nav id="main-mobile">
-  <button type="button">
-    <span class="menu-icon-bar"></span>
-    <span class="menu-icon-bar"></span>
-    <span class="menu-icon-bar"></span>
-  </button>
-</nav>
 <script type="text/javascript">
   var menubar = new Menubar(document.getElementById('site-nav'));
   menubar.init();
@@ -455,6 +450,21 @@
 
 	</header>
 	<main>
+		<aside id="social-icon-bar">
+			<article>
+				    <!-- facebook -->
+    <a target="_blank" href="###"><i class="fa fa-facebook"></i></a>
+    <!-- twitter -->
+    <a target="_blank" href="###"><i class="fa fa-twitter"></i></a>
+    <!-- linkedin -->
+    <a target="_blank" href="###"><i class="fa fa-linkedin"></i></a>
+    <!-- youtube -->
+    <a target="_blank" href="###"><i class="fa fa-youtube"></i></a>
+    <!-- contact -->
+  	<a target="_blank" href="###"><i class="fa fa-at"></i></a>
+
+			</article>
+		</aside>
 		<article>
 			<!-- MAIN-CONTENT-INTERIOR -->
 	<div id="main-article-wrapper" class="container-fluid">
@@ -568,14 +578,127 @@
 	</div>
 
 		</article>
+		<aside>
+			<article>
+				<!-- sidebar content here -->
+			</article>
+		</aside>
 	</main>
-	<aside>
-		<article>
-			<!-- sidebar content here -->
-		</article>
-	</aside>
 	<footer>
-		
+		<nav id="main-mobile">
+  <div class="container-fluid p-0">
+  	<div class="container">
+      <span id="SideNavOpen" onclick="openNav()" tabindex="0" title="menu">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>  
+      </span>
+    </div>
+  </div>
+  <div id="SideNav" class="sidenav">
+    <a id="sideNavClose" href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/close-icon.svg" alt="Close Navigation"/></a>
+    <div id="sidenav-inner-wrapper">
+      <a href="#">About</a>
+  		<a href="#">About</a>
+  		<a href="#">About</a>
+  		<a href="#">About</a>
+  		<div id="accordionGroup" class="Accordion">
+        <h3>
+          <button aria-expanded="false"
+                  class="Accordion-trigger"
+                  aria-controls="sect1"
+                  id="accordion1id">
+            <span class="Accordion-title">
+              Navigation one
+              <span class="Accordion-icon"></span>
+            </span>
+          </button>
+        </h3>
+        <div id="sect1"
+             role="region"
+             aria-labelledby="accordion1id"
+             class="Accordion-panel"
+             hidden="">
+            <a href="#">Link one</a>
+            <a href="#">Link two</a>
+            <a href="#">Link three</a>
+        </div>
+        <h3>
+          <button aria-expanded="false"
+                  class="Accordion-trigger"
+                  aria-controls="sect2"
+                  id="accordion2id">
+            <span class="Accordion-title">
+              Navigation two
+              <span class="Accordion-icon"></span>
+            </span>
+          </button>
+        </h3>
+        <div id="sect2"
+             role="region"
+             aria-labelledby="accordion2id"
+             class="Accordion-panel"
+             hidden="">
+            <a href="#">Link one</a>
+            <a href="#">Link two</a>
+            <a href="#">Link three</a>
+        </div>
+        <h3>
+          <button aria-expanded="false"
+                  class="Accordion-trigger"
+                  aria-controls="sect3"
+                  id="accordion3id">
+            <span class="Accordion-title">
+              Navigation three
+              <span class="Accordion-icon"></span>
+            </span>
+          </button>
+        </h3>
+        <div id="sect3"
+             role="region"
+             aria-labelledby="accordion3id"
+             class="Accordion-panel"
+             hidden="">
+            <a href="#">Link one</a>
+            <a href="#">Link two</a>
+            <a href="#">Link three</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+	<div class="container">
+    <div id="footer-address" class="vcard">
+			<div id="footercard">
+				<span id="fn org">
+					School of Law
+				</span>&middot;
+				<span id="adr">
+						<span id="street-address">
+	    				Philip H. Corboy Law Center &middot; 25 E. Pearson Street
+						</span>,
+	    			<span id="locality">
+	    				Chicago
+						</span>,
+	    			<span class="region">
+	    				Il
+	    			</span>
+	    			<span class="postal-code">
+	    				60611
+	    			</span>
+					</span> &middot;
+					<span class="tel">
+	   				312.915.7120
+	   			</span>
+	   			<a class="email" href="mailto:"></a>
+				</div>
+			<p>&copy; Copyright &amp; Disclaimer 2018</p>
+		</div>
+  </div>
+</div>
+<!-- LUC-FOOTER - CLOSED -->
+
 	</footer>
 	<!-- inject:js -->
 	<script src="js/MenubarItemLinks.js"></script>
@@ -585,5 +708,6 @@
 	<script src="js/all.js"></script>
 	<script src="js/all.min.js"></script>
 	<!-- endinject -->
+	</div>
 </body>
 </html>

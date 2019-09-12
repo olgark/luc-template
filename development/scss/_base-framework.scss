@@ -98,6 +98,7 @@ header #loyola-university-chicago {
     }
   }
   @include desktop-small {
+    margin: 0;
 		font-size: 2em;
 	}
 }
@@ -105,6 +106,7 @@ header #loyola-university-chicago {
 header #loyola-university-chicago {
   display: none;
   bottom: auto;
+  margin: 0;
   margin-bottom: 10px;
   width: 100%;
   font-size: .95em;
@@ -159,4 +161,45 @@ button {
 	background-color: $maroon;
 	background-color: var(--wai-green);
 	cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 0 0 15px 0;
+  width: 100%;
+  background: darken($gray-light,12%);
+  z-index: 10000;
+}
+
+footer span, footer p {
+  font-family: 'Arial', sans-serif;
+  font-size: .925em;
+  line-height: 1.5;
+  letter-spacing: -.015em;
+  color: $gray-extra-dark;
+  margin-bottom: 0;
+}
+
+#footer-address, #footercard {
+  display: block;
+  float: left;
+  margin: 5px 0 0 0;
+}
+
+/* MOBILE-NAV-BAR */
+
+nav#main-mobile {
+  padding: 10px 0;
+  background: #888888;
+}
+
+nav#main-mobile .menu-bar {
+  display: block;
+  margin: 6px 0;
+  width:35px;
+  height: 4px;
+  background: #272727;
 }
