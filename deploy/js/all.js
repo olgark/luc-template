@@ -958,7 +958,7 @@ $(document).keyup(function(e) {
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
-  document.getElementById("SideNav").style.width = "250px";
+  document.getElementById("SideNav").style.width = "300px";
 }
 
 /* Set the width of the side navigation to 0 */

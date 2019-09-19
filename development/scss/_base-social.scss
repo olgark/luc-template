@@ -2,7 +2,7 @@
 
 #social-icon-bar {
   position: fixed;
-  top: 38%;
+  top: 45%;
   left: 0;
 	background: $maroon;
   z-index: 10;
@@ -11,7 +11,7 @@
   transform: translateY(-40%);
   z-index: 1000;
   @include tablet-portrait {
-    top: calc(100% - 170px);
+    top: calc(100% - 110px);
     width: 100%;
   }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	@@include('./partials/luc-head.html')
+	@@include('./partials/framework/luc-template-head.html')
 	<!-- inject:css -->
 	<!-- endinject -->
 	<link rel="stylesheet" href="###">
@@ -17,14 +17,14 @@
 <main>
 	<article>
 		<div class="container-fluid">
-		<div class="container story-body">
-		@@include('./partials/typography-headings-home.html')
-		@@include('./partials/typography-headings.html')
-		@@include('./partials/typography-body.html')
-		@@include('./partials/typography-ctas.html')
-		@@include('./partials/typography-blockquotes.html')
-	</div>
-</div>
+			<div class="container story-body">
+				@@include('./partials/typography-headings-home.html')
+				@@include('./partials/typography-headings.html')
+				@@include('./partials/typography-body.html')
+				@@include('./partials/typography-ctas.html')
+				@@include('./partials/typography-blockquotes.html')
+			</div>
+		</div>
 	</article>
 </main>
 <aside>

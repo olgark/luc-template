@@ -65,6 +65,7 @@ header span {
     width: auto;
     height: 45px;
     @include tablet-landscape {
+      display: block;
       height: 40px;
     }
   }
@@ -78,16 +79,15 @@ header #loyola-university-chicago {
   bottom: -5px;
   margin: 0 10px;
   padding: 0;
-  width: auto;
+  width: 100%;
   height: auto;
   font-family: 'Antenna', sans-serif !important;
   font-size: 2.25em;
   color: $gray-light;
-  line-height: 1;
+  line-height: 1.15;
   letter-spacing: 0;
   text-align: left;
   text-transform: none;
-  text-decoration: none;
   background: none;
   a {
     color: darken($gray-light,5%);
@@ -98,33 +98,26 @@ header #loyola-university-chicago {
     }
   }
   @include desktop-small {
-    margin: 0;
-		font-size: 2em;
+		font-size: 1.65em;
 	}
+  @include tablet-portrait {
+    margin: 0;
+  }
 }
 
 header #loyola-university-chicago {
   display: none;
   bottom: auto;
   margin: 0;
-  margin-bottom: 10px;
-  width: 100%;
+  margin-bottom: 5px;
   font-size: .95em;
   letter-spacing: .035em;
+  line-height: 1;
   text-transform: uppercase;
-  text-decoration: none;
   background: none;
-  a {
-    color: darken($gray-light,5%);
-    text-decoration: none;
-    transition: color .2s;
-    &:hover {
-      color: $white;
-    }
-  }
   @include tablet-portrait {
     display: block;
-		font-size: 1em;
+		font-size: .75em;
 	}
 }
 
@@ -183,17 +176,37 @@ footer span, footer p {
   margin-bottom: 0;
 }
 
-#footer-address, #footercard {
-  display: block;
-  float: left;
-  margin: 5px 0 0 0;
+#footer-address {
+  margin-top: 10px;
+  @include tablet-portrait {
+    display: none;
+  }
+}
+
+#footercard #street-address,
+#footercard #locality,
+#footercard .region,
+#footercard .postal-code {
+  font-size: 1em;
 }
 
 /* MOBILE-NAV-BAR */
 
 nav#main-mobile {
+  display: none;
+  margin: 0 0 10px;
   padding: 10px 0;
   background-color: darken($gray,2%);
+  @include tablet-portrait {
+    display: block;
+  }
+}
+
+#main-mobile .container-fluid .container {
+  @include tablet-portrait {
+    padding: 0 15px;
+    width: 100%;
+  }
 }
 
 nav#main-mobile .menu-bar {
