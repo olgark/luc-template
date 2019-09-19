@@ -927,6 +927,12 @@ Array.prototype.slice.call(document.querySelectorAll('.Accordion')).forEach(func
 
 });
 
+document.getElementById('alertconfirm')
+	.addEventListener('click', function() {
+		/* [… code saving data …] */
+		alert('Thanks for submitting the form!');
+	});
+
 
 function openSearch() {
   document.getElementById("search-overlay").style.display = "block";
@@ -958,7 +964,7 @@ $(document).keyup(function(e) {
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
-  document.getElementById("SideNav").style.width = "300px";
+  document.getElementById("SideNav").style.width = "250px";
 }
 
 /* Set the width of the side navigation to 0 */
