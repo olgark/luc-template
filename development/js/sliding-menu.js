@@ -12,13 +12,27 @@
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
-  document.getElementById("SideNav").style.width = "250px";
+  document.getElementById("SideNav").style.width = "300px";
 }
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
   document.getElementById("SideNav").style.width = "0px";
 }
+
+// Get the input field
+var input = document.getElementById("SideNavOpen");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("SideNavOpen").click();
+  }
+});
 
 var sideNavEscape = "SideNav";
 window.onkeyup = function (event) {

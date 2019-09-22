@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	@@include('./partials/luc-head.html')
+	@@include('./partials/framework/luc-template-head.html')
 	<!-- inject:css -->
 	<!-- endinject -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="js/MenubarItemLinks.js"></script>
 	<script src="js/MenubarLinks.js"></script>
 	<script src="js/PopupMenuItemLinks.js"></script>
@@ -11,22 +12,38 @@
 </head>
 <body>
 	<div id="main-wrapper">
+		<div id="search-overlay-wrapper">
+			<div id="search-overlay" class="overlay">
+				<div class="container">
+					<span id="search-close" onclick="closeSearch()" title="Close Overlay">×</span>
+					<form class="form-group" role="search">
+						<input id="global-search-input" type="search" class="search-input" placeholder="Search LUC.EDU" name="search">
+						<button id="gloabal-search-submit" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	<!-- HEADER -->
 	<header id="luc-header">
-		@@include('./partials/luc-template-header.html')
+		@@include('./partials/framework/luc-template-header.html')
 	</header>
 	<main>
+		<aside id="social-icon-bar">
+			<article>
+				@@include('./partials/framework/luc-template-social-media-bar.html')
+			</article>
+		</aside>
 		<article>
 			@@include('./partials/main-content-interior.html')
 		</article>
+		<aside>
+			<article>
+				<!-- sidebar content here -->
+			</article>
+		</aside>
 	</main>
-	<aside>
-		<article>
-			<!-- sidebar content here -->
-		</article>
-	</aside>
 	<footer>
-		@@include('./partials/luc-template-footer.html')
+		@@include('./partials/framework/luc-template-footer.html')
 	</footer>
 	<!-- inject:js -->
 	<!-- endinject -->

@@ -4,24 +4,25 @@
 		<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- build:navtitle -->
-	<title>Public Index: Loyola University Chicago: </title>
-	<!-- endbuild -->
-	<meta name="Description" content="" />
-	<meta name="Keywords" content="Hello Loyola University Chicago, Loyola, LUC, Jesuit university, Catholic university, liberal arts university, private university, chicago university, urban university, ">
-	<meta name="Template" content="B3 Primary">
-	<!-- build:pageid -->
-	<meta name="PageID" content="87674" />
-	<!-- endbuild -->
-	<!-- build:ogtitle -->
-	<meta property="og:title" content=" B3 Primary: Loyola University Chicago" />
-	<!-- endbuild -->
-	<!-- build:ogdescription -->
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<!-- build:navtitle -->
+	<title>Loyola University Chicago</title>
+<!-- endbuild -->
+	<meta name="Description" content=""/>
+	<meta name="Keywords" content="Loyola University Chicago, Loyola, LUC, Jesuit university, Catholic university, liberal arts university, private university, chicago university, urban university, ">
+	<meta name="Template" content="LUC Primary">
+<!-- build:pageid -->
+	<meta name="PageID" content="*****" />
+<!-- endbuild -->
+<!-- build:ogtitle -->
+	<meta property="og:title" content=" LUC Primary: Loyola University Chicago" />
+<!-- endbuild -->
+<!-- build:ogdescription -->
 	<meta property="og:description" content="" />
-	<!-- endbuild -->
-	<!-- build:ogsitename -->
-	<meta property="og:site_name" content="Loyola University Chicago - Pattern Library" />
-	<!-- endbuild -->
+<!-- endbuild -->
+<!-- build:ogsitename -->
+	<meta property="og:site_name" content="Loyola University Chicago" />
+<!-- endbuild -->
 	<link rel="shortcut icon" href="http://www.luc.edu/media/home/images/favicon.ico">
 	<link rel="apple-touch-icon" href="http://www.luc.edu/media/home/images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="http://www.luc.edu/media/home/images/apple-touch-icon-72x72.png">
@@ -29,24 +30,29 @@
 	<meta name="application-name" content="LUC" />
 	<meta name="msapplication-TileColor" content="#92003b" />
 	<meta name="msapplication-TileImage" content="http://www.luc.edu/media/home/images/luc-microsoft-tile.png" />
-	<!-- Custom styles for this template -->
-	<!-- build:customcss -->
-	<!-- endbuild -->
-	<!-- Load font awesome icons -->
+<!-- Custom styles for this template -->
+<!-- build:customcss -->
+<!-- endbuild -->
+<!-- core CSS -->
+<!-- Load font awesome icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-		<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-	<!--Javascript file jquery --><script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<!--Javascript file d3.min.js --><script src="js/d3.min.js"></script>
-	<!--Javascript file c3.min.js --><script src="js/c3.min.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!--Javascript file jquery-1.11.1.min.js-->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!--Javascript file d3.min.js - charting-->
+	<script src="js/d3.min.js"></script>
+<!--Javascript file c3.min.js - charting-->
+	<script src="js/c3.min.js"></script>
 
 	<!-- inject:css -->
 	<link rel="stylesheet" href="css/base-accessible-side-navigation.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<!-- endinject -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="js/MenubarItemLinks.js"></script>
 	<script src="js/MenubarLinks.js"></script>
 	<script src="js/PopupMenuItemLinks.js"></script>
@@ -54,6 +60,17 @@
 </head>
 <body>
 	<div id="main-wrapper">
+		<div id="search-overlay-wrapper">
+			<div id="search-overlay" class="overlay">
+				<div class="container">
+					<span id="search-close" onclick="closeSearch()" title="Close Overlay">×</span>
+					<form class="form-group" role="search">
+						<input id="global-search-input" type="search" class="search-input" placeholder="Search LUC.EDU" name="search">
+						<button id="gloabal-search-submit" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	<!-- HEADER -->
 	<header id="luc-header">
 		<!-- nav top -->
@@ -424,17 +441,8 @@
         aria-expanded="false"
         href="#"
         tabindex="-1">
-        <span>?</span>
+        <i class="fa fa-search"></i>
       </a>
-        <div id="search-overlay" class="overlay">
-          <div class="container">
-            <span id="search-close" onclick="closeSearch()" title="Close Overlay">×</span>
-            <form class="form-group" role="search">
-              <input id="global-search-input" type="search" class="search-input" placeholder="Search LUC.EDU" name="search">
-              <button id="gloabal-search-submit" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
     </li>
   </ul>
 </nav>
@@ -450,128 +458,57 @@
 
 	</header>
 	<main>
+		<aside id="social-icon-bar">
+			<article>
+				    <!-- facebook -->
+    <a target="_blank" href="###"><i class="fa fa-facebook"></i></a>
+    <!-- twitter -->
+    <a target="_blank" href="###"><i class="fa fa-twitter"></i></a>
+    <!-- linkedin -->
+    <a target="_blank" href="###"><i class="fa fa-linkedin"></i></a>
+    <!-- youtube -->
+    <a target="_blank" href="###"><i class="fa fa-youtube"></i></a>
+    <!-- contact -->
+  	<a target="_blank" href="###"><i class="fa fa-at"></i></a>
+
+			</article>
+		</aside>
 		<article>
 			<!-- MAIN-CONTENT-INTERIOR -->
 	<div id="main-article-wrapper" class="container-fluid">
 		<div class="container">
-			<div id="law-interior" class="container-fluid bg-white story-content-padding">
-  
- <!-- xxx -->
-			<div class="col-md-12 p-0">
-  <h3 class="label display gold-dark m-b-30"> BEAZLEY INSTITUTE FOR HEALTH LAW AND POLICY</h3>
- <!-- xxx -->
-			<div class="container-fluid p-0 m-b-30">
-<div id="story-refer-panel" class="container p-0 equal-box-container" style="background: #eeeeee;">
-  <div class="refer-image">
-    <img  class="m-t-0 m-b-0 image-object-cover" src="http://placehold.it/1000x560">
-  </div>
-  <div class="refer-content equal-box" style="background: #eeeeee;">
-    <div class="story-content-padding-medium">
-      <h6 class="category" style="margin: 0 0 10px 0; font-family: 'Antenna Light', sans-serif;"> School of Law</h5>
-      <h1 class="home-lede">Big headgline our community</h1>
-      <p class="body">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore dolore cta.<a class="cta" href="https://luc.edu"> Read more</a></p>
-    </div>
-  </div>
-</div>
-</div>
- <!-- xxx -->
-			<div class="col-md-12 spacer-top">
-<h3 class="label display gold-dark"> Beazley Institute for Health Law and Policy</h3>
-<h5 class="label" id="breadcrumbs"> <a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=109959&amp;chid=8&amp;lang=en">Admission</a> &gt; <a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110085&amp;chid=8&amp;lang=en">Apply</a> &gt; Juris Doctorate</h5>
-  <h1 class="display m-b-20 m-t-0">Lorem ipsum headline</h1>
-</div>
-<div class="col-md-9 rule-left-spacing">
-  <div class="col-md-12 row">
-  <p class="body">
-      Hello ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-
-  <p class="body">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-  </p>
- <!-- xxx -->
-		  <div class="col-md-12 p-l-0 spacer-top">
-  <div class="col-md-4">
-      <div class="box">
-      <div class="box-image" style="background-image: url('http://via.placeholder.com/200x200');">
-      </div>
-      <div class="content">
-        <h4 class="module">Big hedgline here hedgline headline here</h4>
-        <button class="btn"> CTA Here </button>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-      <div class="box">
-      <div class="box-image" style="background-image: url('http://via.placeholder.com/200x200');">
-      </div>
-      <div class="content">
-        <h4 class="module">Big hedgline here hedgline headline here</h4>
-        <button class="btn"> CTA Here </button>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-      <div class="box">
-      <div class="box-image" style="background-image: url('http://via.placeholder.com/200x200');">
-      </div>
-      <div class="content">
-        <h4 class="module">Big hedgline here hedgline headline here</h4>
-        <button class="btn"> CTA Here </button>
-      </div>
-    </div>
-</div>
-</div>
-</div>
- <!-- xxx -->
-			
-</div>
-
-<div class="col-md-3 col-sm-6">
-  <div id="interior-nav" class="BAL">
-   <div class="x after">
-     <h4 class="accordion"><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110085&amp;chid=8&amp;lang=en">Apply</a></h4>
-     <div class="multilevel-linkdiv-0 panel">
-       <a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110092&amp;chid=8&amp;lang=en">Juris Doctorate</a><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110093&amp;chid=8&amp;lang=en">MJ</a><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110094&amp;chid=8&amp;lang=en">LLM</a>
-       <a
-         href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110216&amp;chid=8&amp;lang=en">Certificate</a>
-     </div>
-   </div>
-   <div class="x after">
-     <h4 class="accordion"><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110086&amp;chid=8&amp;lang=en">Financial Aid</a></h4>
-     <div class="multilevel-linkdiv-0 panel">
-       <a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110095&amp;chid=8&amp;lang=en">MJ Tuition and Fees</a><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110096&amp;chid=8&amp;lang=en">LLM Tuition and Fees</a>
-     </div>
-   </div>
-   <div class="x">
-     <h4 class="accordion"><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110087&amp;chid=8&amp;lang=en">FAQ</a></h4></div>
-   <div class="x">
-     <h4 class="accordion"><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110088&amp;chid=8&amp;lang=en">ABA Required Disclosures</a></h4></div>
-   <div class="x">
-     <h4 class="accordion"><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110089&amp;chid=8&amp;lang=en">Let's Get Started (JD Degree Program)</a></h4></div>
-   <div class="x">
-     <h4 class="accordion"><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110090&amp;chid=8&amp;lang=en">Let's Get Started (MJ Degree Program)</a></h4></div>
-   <div class="x">
-     <h4 class="accordion"><a href="SiteManager?ctfn=publish&amp;fnno=30&amp;sid=110091&amp;chid=8&amp;lang=en">Let's get Started (LLM Degree Program)</a></h4></div>
-  </div>
-
-</div>
-</div>
- <!-- xxx -->
 		</div>
 	</div>
 
 		</article>
+		<aside>
+			<article>
+				<!-- sidebar content here -->
+			</article>
+		</aside>
 	</main>
-	<aside>
-		<article>
-			<!-- sidebar content here -->
-		</article>
-	</aside>
 	<footer>
 		<nav id="main-mobile">
-  <span id="SideNavOpen" onclick="openNav()" tabindex="0">open</span>
+  <div class="container-fluid p-0">
+  	<div class="container">
+      <span id="SideNavOpen" onclick="openNav()" tabindex="0" title="menu">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </span>
+      <span id="search-button-wrapper" role="none">
+        <a id="search-button"
+          onclick="openSearch()"
+          role="menuitem"
+          aria-haspopup="true"
+          aria-expanded="false"
+          href="#"
+          tabindex="-1">
+          <i class="fa fa-search"></i>
+        </a>
+      </span>
+    </div>
+  </div>
   <div id="SideNav" class="sidenav">
     <a id="sideNavClose" href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/close-icon.svg" alt="Close Navigation"/></a>
     <div id="sidenav-inner-wrapper">
@@ -644,9 +581,7 @@
     </div>
   </div>
 </nav>
-<div class="container-fluid">
-	<div class="container">
-    <div id="footer-address" class="vcard">
+    <div id="footer-address" class="container vcard">
 			<div id="footercard">
 				<span id="fn org">
 					School of Law
@@ -672,8 +607,6 @@
 				</div>
 			<p>&copy; Copyright &amp; Disclaimer 2018</p>
 		</div>
-  </div>
-</div>
 <!-- LUC-FOOTER - CLOSED -->
 
 	</footer>

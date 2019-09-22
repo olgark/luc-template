@@ -1,0 +1,49 @@
+/* fixes social icon bar */
+
+#social-icon-bar {
+  position: fixed;
+  top: 45%;
+  left: 0;
+	background: $maroon;
+  z-index: 10;
+  -webkit-transform: translateY(-40%);
+  -ms-transform: translateY(-40%);
+  transform: translateY(-40%);
+  z-index: 1000;
+  @include tablet-portrait {
+    top: calc(100% - 110px);
+    width: 100%;
+  }
+}
+
+/* social icons */
+
+#social-icon-bar a {
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-top: solid 1px $gray-extra-light;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:first-of-type {
+    border-top: none;
+  }
+  @include tablet-portrait {
+    float: left;
+    box-sizing: border-box;
+    padding: 10px 0;
+    width: 20%;
+    border-top: none;
+    border-left: solid 1px $gray-extra-light;
+    &:first-of-type {
+      border-left: none;
+    }
+  }
+}
+
+#social-icon-bar a:hover { background-color: darken($maroon-dark,5%); }
