@@ -33,14 +33,18 @@
 				@@include('./partials/framework/luc-template-social-media-bar.html')
 			</article>
 		</aside>
-		<article>
-			@@include('./partials/main-content-interior.html')
-		</article>
-		<aside>
-			<article>
-				<!-- sidebar content here -->
+		<div id="main-content-wrapper" class="container">
+			<article id="main-article-wrapper">
+				<h3>Main <span style="font-family: 'Antenna Light', sans-serif; font-size: .525em; text-transform: uppercase;">9 columns</span></h3>
+				@@include('./partials/main-content-article.html')
 			</article>
-		</aside>
+			<aside id="main-aside-wrapper">
+				<article>
+					<h3 >Aside <span> <span style="font-family: 'Antenna Light', sans-serif; font-size: .525em; text-transform: uppercase;">3 columns</span></h3>
+					@@include('./partials/main-content-aside.html')
+				</article>
+			</aside>
+		</div>
 	</main>
 	<footer>
 		@@include('./partials/framework/luc-template-footer.html')

@@ -472,25 +472,81 @@
 
 			</article>
 		</aside>
-		<article>
-			<!-- MAIN-CONTENT-INTERIOR -->
-	<div id="main-article-wrapper" class="container-fluid">
-		<div class="container">
-			<div class="grid-wrapper">
-				<div class="grid-item item1">Start column line 1, span 3 column tracks.</div>
-  			<div class="grid-item item2">Start column line 6, span 4 column tracks. 2 row tracks.</div>
-				<div class="grid-item item3">Start row 2 column line 2, span 2 column tracks.</div>
-				<div class="grid-item item4">Start at column line 3, span to the end of the grid (-1).</div>
-			</div>
+		<div id="main-content-wrapper" class="container">
+			<article id="main-article-wrapper">
+				<h3>Main <span style="font-family: 'Antenna Light', sans-serif; font-size: .525em; text-transform: uppercase;">9 columns</span></h3>
+				<!-- MAIN-CONTENT-INTERIOR -->
+	<section>
+		<h6>12 column grid</h6>
+		<div class="grid-wrapper">
+			<div class="grid-item col-span-1">1</div>
+  		<div class="grid-item col-span-1">2</div>
+  		<div class="grid-item col-span-1">3</div>
+  		<div class="grid-item col-span-1">4</div>
+  		<div class="grid-item col-span-1">5</div>
+  		<div class="grid-item col-span-1">6</div>
+			<div class="grid-item col-span-1">7</div>
+			<div class="grid-item col-span-1">8</div>
+			<div class="grid-item col-span-1">9</div>
+			<div class="grid-item col-span-1">10</div>
+			<div class="grid-item col-span-1">11</div>
+			<div class="grid-item col-span-1">12</div>
 		</div>
-	</div>
+	</section>
+	<div class="padding-sm" style="padding-left: 0; padding-right: 0;"></div>
+	<section>
+		<h6>6 column grid</h6>
+		<div class="grid-wrapper">
+			<div class="grid-item col-span-2">1-2</div>
+  		<div class="grid-item col-span-2">3-4</div>
+  		<div class="grid-item col-span-2">5-6</div>
+  		<div class="grid-item col-span-2">7-8</div>
+  		<div class="grid-item col-span-2">9-10</div>
+			<div class="grid-item col-span-2">11-12</div>
+		</div>
+	</section>
+	<div class="padding-sm" style="padding-left: 0; padding-right: 0;"></div>
+	<section>
+		<h6>4 column grid</h6>
+		<div class="grid-wrapper">
+			<div class="grid-item col-span-3">1-3</div>
+  		<div class="grid-item col-span-3">4-6</div>
+  		<div class="grid-item col-span-3">6-9</div>
+  		<div class="grid-item col-span-3">9-12</div>
+		</div>
+	</section>
+	<div class="padding-sm" style="padding-left: 0; padding-right: 0;"></div>
+	<section>
+		<h6>3 column grid</h6>
+		<div class="grid-wrapper">
+			<div class="grid-item col-span-4">1-4</div>
+  		<div class="grid-item col-span-4">5-8</div>
+  		<div class="grid-item col-span-4">9-12</div>
+		</div>
+	</section>
+	<div class="padding-sm" style="padding-left: 0; padding-right: 0;"></div>
+	<section>
+		<h6>2 column grid</h6>
+		<div class="grid-wrapper">
+			<div class="grid-item col-span-6">1-6</div>
+			<div class="grid-item col-span-6">7-12</div>
+		</div>
+	</section>
 
-		</article>
-		<aside>
-			<article>
-				<!-- sidebar content here -->
 			</article>
-		</aside>
+			<aside id="main-aside-wrapper">
+				<article>
+					<h3 >Aside <span> <span style="font-family: 'Antenna Light', sans-serif; font-size: .525em; text-transform: uppercase;">3 columns</span></h3>
+					<section>
+	<h6>12 column grid</h6>
+	<div class="grid-wrapper">
+		<div class="grid-item col-span-12">1-12</div>
+	</div>
+</section>
+
+				</article>
+			</aside>
+		</div>
 	</main>
 	<footer>
 		<nav id="main-mobile">
