@@ -51,33 +51,569 @@
 	<!-- inject:css -->
 	<link rel="stylesheet" href="css/styles.css">
 	<!-- endinject -->
-	<link rel="stylesheet" href="###">
-	<link rel="stylesheet" href="###">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/MenubarItemLinks.js"></script>
+	<script src="js/MenubarLinks.js"></script>
+	<script src="js/PopupMenuItemLinks.js"></script>
+	<script src="js/PopupMenuLinks.js"></script>
 </head>
 <body>
-	<header>
-		
+	<div id="main-wrapper">
+		<div id="search-overlay-wrapper">
+			<div id="search-overlay" class="overlay">
+				<div class="container">
+					<span id="search-close" onclick="closeSearch()" title="Close Overlay">×</span>
+					<form class="form-group" role="search">
+						<input id="global-search-input" type="search" class="search-input" placeholder="Search LUC.EDU" name="search">
+						<button id="gloabal-search-submit" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	<!-- HEADER -->
+	<header id="luc-header">
+		<!-- nav top -->
+  <!-- AUDIENCE - DIRECTORY - HEADER -->
+<nav id="audience-directory">
+  <div class="container-fluid">
+    <nav aria-label="Loyola University Chicago information">
+      <ul
+        id="audience-nav"
+        role="menubar"
+        aria-label="Loyola University Chicago information"
+        class="col-md-6 pull-left">
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="###"
+            tabindex="0">
+            Prospective students
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Current students
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Alumni
+          </a>
+        </li>
+      </ul>
+      <ul
+        id="directory-nav"
+        role="menubar"
+        aria-label="Loyola University Chicago directory"
+        class="col-md-5 pull-right">
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            A-Z
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Contact
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Directory
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Locus
+          </a>
+        </li>
+        <li role="none" class="category small">
+          <a role="menuitem"
+            href="#"
+            tabindex="-1">
+            Support LUC
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</nav>
+<script type="text/javascript">
+  var menubar = new Menubar(document.getElementById('audience-nav'));
+  menubar.init();
+</script>
+<script type="text/javascript">
+  var menubar = new Menubar(document.getElementById('directory-nav'));
+  menubar.init();
+</script>
+
+<!-- brand -->
+  <div id="site-brand-wrapper" class="container-fluid">
+    <span id="loyola-university-chicago">
+      <a href="###">
+      Loyola University Chicago
+      </a>
+    </span>
+    <span id="site-name">
+      <a href="###">
+      School of Continuing and Professional Studies
+      </a>
+    </span>
+    <span id="brand">
+      <a href="###">
+        <img src="images/luc-logo-reverse.svg">
+      </a>
+    </span>
+  </div>
+<!-- nav main -->
+  <!-- menu -->
+<nav id="main" aria-label="Loyola University Chicago">
+  <!-- site menu -->
+  <ul id="site-nav"
+      role="menubar"
+      aria-label="Loyola University Chicago">
+    <li role="none">
+      <a role="menuitem"
+         aria-haspopup="true"
+         aria-expanded="false"
+         href="#"
+         tabindex="0">
+        Navigation one
+      </a>
+      <ul role="menu" aria-label="NavigationOne">
+        <li role="none">
+          <a role="menuitem"
+             href="mb-about.html#NavigationOneLinkOne"
+             tabindex="-1">
+            Link one
+          </a>
+        </li>
+        <li role="none">
+          <a role="menuitem"
+             href="mb-about.html#NavigationOneLinkTwo"
+             tabindex="-1">
+            Link two
+          </a>
+        </li>
+        <li role="none">
+          <a id="menubar113"
+             role="menuitem"
+             href="#"
+             aria-haspopup="true"
+             aria-expanded="false"
+             tabindex="-1">
+            Link three
+          </a>
+          <ul role="menu" aria-label="NavigationOneLinkThree">
+            <li role="none">
+              <a role="menuitem"
+                 href="mb-about.html#linkthree"
+                 tabindex="-1">
+                Link three - link one
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem"
+                 href="mb-about.html#linkthree"
+                 tabindex="-1">
+                Link three - link two
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem"
+                 href="mb-about.html#linkthree"
+                 tabindex="-1">
+                Link three - link three
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li role="none">
+          <a role="menuitem"
+             href="#"
+             aria-haspopup="true"
+             aria-expanded="false"
+             tabindex="-1">
+            Link four
+          </a>
+          <ul role="menu" aria-label="NavigationOneLinkFour">
+            <li role="none">
+              <a role="menuitem"
+                 href="mb-about.html#linkfour"
+                 tabindex="-1">
+                Link four - link one
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem"
+                 href="mb-about.html#linkfour"
+                 tabindex="-1">
+                Link four - link two
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem"
+                 href="mb-about.html#linkfour"
+                 tabindex="-1">
+                Link four - link three
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li role="none">
+      <a role="menuitem"
+         aria-haspopup="true"
+         aria-expanded="false"
+         href="#"
+         tabindex="-1">
+        Navigation two
+      </a>
+      <ul role="menu" aria-label="NavigationTwo">
+        <li role="none">
+          <a role="menuitem"
+             href="mb-admissions.html#NavigationTwoLinkOne"
+             tabindex="-1">
+            Link one
+          </a>
+        </li>
+        <li role="none">
+          <a role="menuitem"
+             href="mb-admissions.html#NavigationTwoLinkTwo"
+             tabindex="-1">
+            Link two
+          </a>
+        </li>
+        <li role="none">
+          <a role="menuitem"
+             href="mb-admissions.html#NavigationTwoLinkThree"
+             tabindex="-1">
+            Link three
+          </a>
+        </li>
+        <li role="separator"></li>
+        <li role="none">
+          <a role="menuitem"
+             href="mb-admissions.html#NavigationTwoLinkFour"
+             tabindex="-1">
+            Link four
+          </a>
+        </li>
+        <li role="none">
+          <a role="menuitem"
+             href="mb-admissions.html#NavigationTwoLinkFive"
+             tabindex="-1">
+            Link five
+          </a>
+        </li>
+        <li role="none">
+          <a role="menuitem"
+             href="mb-admissions.html#NavigationTwoLinkSix"
+             tabindex="-1">
+            Link six
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li role="none">
+      <a role="menuitem"
+         aria-haspopup="true"
+         aria-expanded="false"
+         href="#"
+         tabindex="-1">
+        Navigation three
+      </a>
+      <ul role="menu" aria-label="NavigationThree">
+        <li role="none">
+          <a role="menuitem"
+             href="mb-academics.html#NavigationThreeLinkOne"
+             tabindex="-1">
+            Link one
+          </a>
+        </li>
+        <li role="none">
+          <a role="menuitem"
+             href="mb-academics.html#NavigationThreeLinkTwo"
+             tabindex="-1">
+            Link two
+          </a>
+        </li>
+        <li role="none">
+          <a role="menuitem"
+             href="mb-academics.html#NavigationThreeLinkThree"
+             tabindex="-1">
+            Link three
+          </a>
+        </li>
+        <li role="none">
+          <a role="menuitem"
+             href="mb-academics.html#NavigationThreeLinkFour"
+             tabindex="-1">
+            Link four
+          </a>
+        </li>
+        <li role="separator"></li>
+        <li role="none">
+          <a role="menuitem"
+             href="mb-academics.html#NavigationThreeLinkFive"
+             tabindex="-1">
+            Link five
+          </a>
+        </li>
+        <li role="none">
+          <a role="menuitem"
+             href="mb-academics.html#NavigationThreeLinkSix"
+             tabindex="-1">
+            Link six
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+<!-- cta menu -->
+  <ul id="cta-nav"
+    role="menubar"
+    aria-label="Loyola University Chicago Information">
+    <li role="none">
+      <a role="menuitem"
+        href="#"
+        tabindex="0">
+        Apply
+      </a>
+    </li>
+    <li role="none">
+      <a role="menuitem"
+        href="#"
+        tabindex="-1">
+        Info
+      </a>
+    </li>
+    <li role="none">
+      <a role="menuitem"
+        href="#"
+        tabindex="-1">
+        Visit
+      </a>
+    </li>
+    <li id="information" role="none">
+      <a id="information-button"
+        role="menuitem"
+        aria-haspopup="true"
+        aria-expanded="false"
+        href="#"
+        tabindex="-1">
+        <span>i</span>
+      </a>
+        <ul id="information-nav" role="menu" aria-label="Information">
+          <li role="none">
+            <a role="menuitem"
+              href="mb-about.html#InformationLinkOne"
+              tabindex="-1">
+              Link one
+            </a>
+          </li>
+          <li role="none">
+            <a role="menuitem"
+              href="mb-about.html#InformationLinkTwo"
+              tabindex="-1">
+              Link two
+            </a>
+          </li>
+        </ul>
+    </li>
+    <li id="search" role="none">
+      <a id="search-button"
+        onclick="openSearch()"
+        role="menuitem"
+        aria-haspopup="true"
+        aria-expanded="false"
+        href="#"
+        tabindex="-1">
+        <i class="fa fa-search"></i>
+      </a>
+    </li>
+  </ul>
+</nav>
+<script type="text/javascript">
+  var menubar = new Menubar(document.getElementById('site-nav'));
+  menubar.init();
+</script>
+<script type="text/javascript">
+  var menubar = new Menubar(document.getElementById('cta-nav'));
+  menubar.init();
+</script>
+
+
 	</header>
-	<nav>
-		
-	</nav>
 	<main>
+		<aside id="social-icon-bar">
+			<article>
+				    <!-- facebook -->
+    <a target="_blank" href="###"><i class="fa fa-facebook"></i></a>
+    <!-- twitter -->
+    <a target="_blank" href="###"><i class="fa fa-twitter"></i></a>
+    <!-- linkedin -->
+    <a target="_blank" href="###"><i class="fa fa-linkedin"></i></a>
+    <!-- youtube -->
+    <a target="_blank" href="###"><i class="fa fa-youtube"></i></a>
+    <!-- contact -->
+  	<a target="_blank" href="###"><i class="fa fa-at"></i></a>
+
+			</article>
+		</aside>
 		<article>
 			<!-- MAIN-CONTENT-INTERIOR -->
 	<div id="main-article-wrapper" class="container-fluid">
 		<div class="container">
+			<div class="grid-wrapper">
+				<div class="grid-item item1">Start column line 1, span 3 column tracks.</div>
+  			<div class="grid-item item2">Start column line 6, span 4 column tracks. 2 row tracks.</div>
+				<div class="grid-item item3">Start row 2 column line 2, span 2 column tracks.</div>
+				<div class="grid-item item4">Start at column line 3, span to the end of the grid (-1).</div>
+			</div>
 		</div>
 	</div>
 
 		</article>
+		<aside>
+			<article>
+				<!-- sidebar content here -->
+			</article>
+		</aside>
 	</main>
-	<aside>
-		<article>
-			<!-- sidebar content here -->
-		</article>
-	</aside>
 	<footer>
-		
+		<nav id="main-mobile">
+  <div class="container-fluid p-0">
+  	<div class="container">
+      <span id="SideNavOpen" onclick="openNav()" tabindex="0" title="menu">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </span>
+      <span id="search-button-wrapper" role="none">
+        <a id="search-button"
+          onclick="openSearch()"
+          role="menuitem"
+          aria-haspopup="true"
+          aria-expanded="false"
+          href="#"
+          tabindex="-1">
+          <i class="fa fa-search"></i>
+        </a>
+      </span>
+    </div>
+  </div>
+  <div id="SideNav" class="sidenav">
+    <a id="sideNavClose" href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/close-icon.svg" alt="Close Navigation"/></a>
+    <div id="sidenav-inner-wrapper">
+      <a href="#">About</a>
+  		<a href="#">About</a>
+  		<a href="#">About</a>
+  		<a href="#">About</a>
+  		<div id="accordionGroup" class="Accordion">
+        <h3>
+          <button aria-expanded="false"
+                  class="Accordion-trigger"
+                  aria-controls="sect1"
+                  id="accordion1id">
+            <span class="Accordion-title">
+              Navigation one
+              <span class="Accordion-icon"></span>
+            </span>
+          </button>
+        </h3>
+        <div id="sect1"
+             role="region"
+             aria-labelledby="accordion1id"
+             class="Accordion-panel"
+             hidden="">
+            <a href="#">Link one</a>
+            <a href="#">Link two</a>
+            <a href="#">Link three</a>
+        </div>
+        <h3>
+          <button aria-expanded="false"
+                  class="Accordion-trigger"
+                  aria-controls="sect2"
+                  id="accordion2id">
+            <span class="Accordion-title">
+              Navigation two
+              <span class="Accordion-icon"></span>
+            </span>
+          </button>
+        </h3>
+        <div id="sect2"
+             role="region"
+             aria-labelledby="accordion2id"
+             class="Accordion-panel"
+             hidden="">
+            <a href="#">Link one</a>
+            <a href="#">Link two</a>
+            <a href="#">Link three</a>
+        </div>
+        <h3>
+          <button aria-expanded="false"
+                  class="Accordion-trigger"
+                  aria-controls="sect3"
+                  id="accordion3id">
+            <span class="Accordion-title">
+              Navigation three
+              <span class="Accordion-icon"></span>
+            </span>
+          </button>
+        </h3>
+        <div id="sect3"
+             role="region"
+             aria-labelledby="accordion3id"
+             class="Accordion-panel"
+             hidden="">
+            <a href="#">Link one</a>
+            <a href="#">Link two</a>
+            <a href="#">Link three</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    <div id="footer-address" class="vcard">
+			<div id="footercard">
+				<span id="fn org">
+					School of Law
+				</span>&middot;
+				<span id="adr">
+						<span id="street-address">
+	    				Philip H. Corboy Law Center &middot; 25 E. Pearson Street
+						</span>,
+	    			<span id="locality">
+	    				Chicago
+						</span>,
+	    			<span class="region">
+	    				Il
+	    			</span>
+	    			<span class="postal-code">
+	    				60611
+	    			</span>
+					</span> &middot;
+					<span class="tel">
+	   				312.915.7120
+	   			</span>
+	   			<a class="email" href="mailto:"></a>
+				</div>
+			<p>&copy; Copyright &amp; Disclaimer 2018</p>
+		</div>
+<!-- LUC-FOOTER - CLOSED -->
+
 	</footer>
 	<!-- inject:js -->
 	<script src="js/MenubarItemLinks.js"></script>
@@ -87,5 +623,6 @@
 	<script src="js/all.js"></script>
 	<script src="js/all.min.js"></script>
 	<!-- endinject -->
+	</div>
 </body>
 </html>
