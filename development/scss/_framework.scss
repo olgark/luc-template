@@ -1,14 +1,10 @@
 /* FRAMEWORK */
 
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 .visibility-hidden { visibility: hidden;}
-
-#main-article-wrapper {
-  display: none;
-}
 
 body {
   top: 0;
@@ -28,7 +24,7 @@ body {
 .container {
   box-sizing: border-box;
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
   @include phone-landscape {
     width: 90%;
   }
@@ -161,10 +157,14 @@ button {
 footer {
   position: fixed;
   bottom: 0;
-  padding: 0 0 15px 0;
+  padding: 10px 20px 15px;
   width: 100%;
   background: darken($gray-light,12%);
   z-index: 10000;
+  @include tablet-portrait {
+    padding: 0;
+    bottom: 0;
+  }
 }
 
 footer span, footer p {
@@ -199,6 +199,7 @@ nav#main-mobile {
   background-color: darken($gray,2%);
   @include tablet-portrait {
     display: block;
+    margin: 0;
   }
 }
 
