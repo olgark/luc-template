@@ -485,11 +485,24 @@
 		<nav id="main-mobile">
   <div class="container-fluid p-0">
   	<div class="container">
-      <span id="SideNavOpen" onclick="openNav()" tabindex="0" title="menu">
+      <button aria-controls="global-nav" aria-haspopup="true" tabindex="-1" id="menu-button">
         <span class="menu-bar"></span>
         <span class="menu-bar"></span>
         <span class="menu-bar"></span>
-      </span>
+        <span class="menu-text">Menu</span>
+      </button>
+      <!--
+      <button id="SideNavOpen" onclick="openNav()" tabindex="0" title="menu">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+      <button aria-controls="global-nav" aria-haspopup="true" tabindex="2" id="menu-button">
+        <span class="menu-icon" aria-hidden="true">
+          <svg version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30'><rect width='30' height='5'/><rect y='24' width='30' height='5' /><rect y='12' width='30' height='5'/></svg>
+        </span>
+      </button>
+      -->
       <span id="search-button-wrapper" role="none">
         <a id="search-button"
           onclick="openSearch()"
@@ -501,77 +514,6 @@
           <i class="fa fa-search"></i>
         </a>
       </span>
-    </div>
-  </div>
-  <div id="SideNav" class="sidenav">
-    <a id="sideNavClose" href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/close-icon.svg" alt="Close Navigation"/></a>
-    <div id="sidenav-inner-wrapper">
-      <a href="#">About</a>
-  		<a href="#">About</a>
-  		<a href="#">About</a>
-  		<a href="#">About</a>
-  		<div id="accordionGroup" class="Accordion">
-        <h3>
-          <button aria-expanded="false"
-                  class="Accordion-trigger"
-                  aria-controls="sect1"
-                  id="accordion1id">
-            <span class="Accordion-title">
-              Navigation one
-              <span class="Accordion-icon"></span>
-            </span>
-          </button>
-        </h3>
-        <div id="sect1"
-             role="region"
-             aria-labelledby="accordion1id"
-             class="Accordion-panel"
-             hidden="">
-            <a href="#">Link one</a>
-            <a href="#">Link two</a>
-            <a href="#">Link three</a>
-        </div>
-        <h3>
-          <button aria-expanded="false"
-                  class="Accordion-trigger"
-                  aria-controls="sect2"
-                  id="accordion2id">
-            <span class="Accordion-title">
-              Navigation two
-              <span class="Accordion-icon"></span>
-            </span>
-          </button>
-        </h3>
-        <div id="sect2"
-             role="region"
-             aria-labelledby="accordion2id"
-             class="Accordion-panel"
-             hidden="">
-            <a href="#">Link one</a>
-            <a href="#">Link two</a>
-            <a href="#">Link three</a>
-        </div>
-        <h3>
-          <button aria-expanded="false"
-                  class="Accordion-trigger"
-                  aria-controls="sect3"
-                  id="accordion3id">
-            <span class="Accordion-title">
-              Navigation three
-              <span class="Accordion-icon"></span>
-            </span>
-          </button>
-        </h3>
-        <div id="sect3"
-             role="region"
-             aria-labelledby="accordion3id"
-             class="Accordion-panel"
-             hidden="">
-            <a href="#">Link one</a>
-            <a href="#">Link two</a>
-            <a href="#">Link three</a>
-        </div>
-      </div>
     </div>
   </div>
 </nav>
