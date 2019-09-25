@@ -1,18 +1,107 @@
-/* SLIDING NAV - ACCESS - PANEL */
+/* MOBILE-NAV-BAR - SLIDING NAV */
 
-/* The side navigation menu */
-.sidenav {
-	position: fixed; /* Stay in place */
-	top: 0; /* Stay at the top */
-	left: 0;
-	padding: 0; /* Must be 0 to be hidden */
-	padding-top: 60px; /* Place content 60px from the top */
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  background-color: lighten($gray-extra-dark,5%);
+/* MOBILE-NAV-BAR */
+
+nav#main-mobile {
+  display: none;
+  margin: 0 0 10px;
+  padding: 10px 0;
+  background-color: darken($gray,2%);
+  @include tablet-portrait {
+    display: block;
+    margin: 0;
+  }
+}
+
+#main-mobile .container-fluid .container {
+  @include tablet-portrait {
+    padding: 0 15px;
+    width: 100%;
+  }
+}
+
+nav#main-mobile button {
+  padding: 0;
+}
+
+nav#main-mobile .menu-bar {
+  display: block;
+  margin: 6px 0;
+  width:35px;
+  height: 5px;
+	background-color: lighten($gray-extra-dark,10%);
+}
+
+span.menu-text, span.search-text {
+  display: block;
+  margin-top: 0.5em;
+  font-size: .9em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+span.search-text {
+  margin-top: 0.35em;
+  font-size: .8em;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+/* SLIDE OUT NAVIGATION */
+
+#main-wrapper {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  z-index: 1;
+}
+
+#side-nav {
+  background-color: #333;
+	position: fixed;
+  top: 0;
+	bottom: 0;
+  left: -250px;
+	width: 100%;
+  max-width: 250px;
+  overflow: auto;
+	background-color: lighten($gray-extra-dark,5%);
   overflow-x: hidden; /* Disable horizontal scroll */
-	z-index: 1; /* Stay on top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	z-index: 1;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+/* MOVE BODY
+body.active {
+    -moz-transform: translateX(-220px);
+    -ms-transform: translateX(-220px);
+    -webkit-transform: translateX(-220px);
+    transform: translateX(-220px);
+  }
+*/
+
+body.active #side-nav {
+  -moz-transform: translateX(250px);
+  -ms-transform: translateX(250px);
+  -webkit-transform: translateX(250px);
+  transform: translateX(250px);
 }
 
 #sidenav-inner-wrapper {
@@ -20,7 +109,7 @@
 }
 
 /* The navigation menu links */
-.sidenav a,
+#side-nav a,
 .Accordion-title,
 .Accordion-panel p {
 	display: block;
@@ -40,13 +129,12 @@
 	color: darken($gray,7%);
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
+#side-nav a:hover {
+  color: $gray-extra-light;
 }
 
 /* Position and style the close button (top right corner) */
-.sidenav .closebtn {
+#side-nav-close {
   position: absolute;
   top: 0;
   right: 20px;
@@ -57,18 +145,11 @@
 	opacity: .5;
 }
 
-/* No effect - header is fixed */
-/*
-#main-wrapper {
-  transition: margin-left .5s;
-  padding: 0px;
-}
-*/
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* On smaller screens, where height is less than 450px,
+change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 1.5em;}
+  #side-nav {padding-top: 15px;}
+  #side-nav a {font-size: 1.5em;}
 }
 
 /* ACCORDION */
@@ -178,18 +259,4 @@ button {
 /* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
 .Accordion-panel[hidden] {
   display: none;
-}
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-input {
-  border: 1px solid hsl(0, 0%, 62%);
-  border-radius: 0.3em;
-  display: block;
-  font-size: inherit;
-  padding: 0.3em 0.5em;
 }

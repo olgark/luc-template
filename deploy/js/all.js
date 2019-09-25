@@ -934,20 +934,14 @@ document.getElementById('alertconfirm')
 	});
 
 
+function closeNav() {
+  document.getElementById("site-nav").style.width = "0";
+}
+
 function openSearch() {
   document.getElementById("search-overlay").style.display = "block";
 }
 
 function closeSearch() {
   document.getElementById("search-overlay").style.display = "none";
-}
-
-/* Set the width of the side navigation to 300px */
-function openNav() {
-  document.getElementById("SideNav").style.width = "300px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("SideNav").style.width = "0px";
 }
