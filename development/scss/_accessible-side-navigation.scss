@@ -6,7 +6,7 @@ nav#main-mobile {
   display: none;
   margin: 0 0 10px;
   padding: 10px 0;
-  background-color: darken($gray,2%);
+  background-color: darken($gray-light,20%);
   @include tablet-portrait {
     display: block;
     margin: 0;
@@ -75,9 +75,9 @@ span.search-text {
 	position: fixed;
   top: 0;
 	bottom: 0;
-  left: -250px;
+  left: -350px;
 	width: 100%;
-  max-width: 250px;
+  max-width: 350px;
   overflow: auto;
 	background-color: lighten($gray-extra-dark,5%);
   overflow-x: hidden; /* Disable horizontal scroll */
@@ -98,14 +98,14 @@ body.active {
 */
 
 body.active #side-nav {
-  -moz-transform: translateX(250px);
-  -ms-transform: translateX(250px);
-  -webkit-transform: translateX(250px);
-  transform: translateX(250px);
+  -moz-transform: translateX(350px);
+  -ms-transform: translateX(350px);
+  -webkit-transform: translateX(350px);
+  transform: translateX(350px);
 }
 
 #sidenav-inner-wrapper {
-	padding: 20px;
+	padding: 20px 20px 150px 20px;
 }
 
 /* The navigation menu links */
@@ -113,11 +113,11 @@ body.active #side-nav {
 .Accordion-title,
 .Accordion-panel p {
 	display: block;
-  padding: 8px 5px;
+  padding: 12px 10px;
   text-decoration: none;
 	font-family: 'Antenna', sans-serif;
   font-size: .95em;
-  color: $gray;
+  color: $gray-light;
 	text-transform: uppercase;
 	border-bottom: solid 1px $gray-dark;
   transition: 0.3s;
@@ -129,15 +129,17 @@ body.active #side-nav {
 	color: darken($gray,7%);
 }
 
+#side-nav #accordionGroup .Accordion-panel a {
+	color: darken($gray,7%);
+}
+
 #side-nav a:hover {
   color: $gray-extra-light;
 }
 
 /* Position and style the close button (top right corner) */
 #side-nav-close {
-  position: absolute;
-  top: 0;
-  right: 20px;
+  position: relative;
   margin: 0;
   width: 36px;
 	height: auto;
@@ -253,10 +255,109 @@ button {
 .Accordion-panel {
   margin: 0;
   padding: 0;
-	background: $gray-extra-dark;
+	background: lighten($gray-extra-dark, 1%);
 }
 
 /* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
 .Accordion-panel[hidden] {
   display: none;
 }
+
+/* SIDE NAV - FOOTER ADDRESS */
+#side-nav #footer-address {
+	display: block;
+	margin: 20px 0;
+	font-family: 'Arial', sans-serif;
+	font-size: .95em;
+	color: $gray;
+}
+
+#side-nav #footer-address span {
+	display: block;
+	margin: 0 0 8px 0;
+	width: 100%;
+}
+
+#side-nav #footer-address span#fnorg {
+	color: $gray-light;
+	text-transform: uppercase;
+}
+
+#side-nav #footer-address span#locality,
+#side-nav #footer-address span.region,
+#side-nav #footer-address span.postal-code {
+	display: inline;
+	width: auto;
+}
+
+#side-nav #footer-address a.email {
+	margin: 20px 0;
+	padding: 5px 10px;
+	height: 30px;
+	font-size: .85em;
+	text-align: center;
+	color: $gray-light;
+	border: solid 1px $gray;
+	border-radius: 5px;
+	background: rgba(255,255,255,.15);
+	transition: all .2;
+	&:hover {
+		background: rgba(255,255,255,.5);
+	}
+}
+
+.copyright p {
+	font-size: 1em;
+}
+
+#side-nav-close img {
+	width: 70%;
+}
+
+/* SIDE NAV - SEARCH */
+
+#side-nav-search-wrapper {
+	margin: 10px 0 20px;
+	padding: 0;
+}
+
+#side-nav-search-wrapper form {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background: none;
+}
+
+#side-nav-search-wrapper form input {
+	padding: 20px;
+	height: 40px;
+	width: 85%;
+	background: $gray-light;
+	border: none;
+}
+
+#side-nav-search-wrapper form input {
+	font-size: 1.15em;
+	text-transform: uppercase;
+}
+
+#side-nav-search-wrapper form button {
+  float: right;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 8px 12px;
+  width: 15%;
+	height: 40px;
+  font-size: 1.15em;
+	outline: 0 none;
+	border-radius: 0 5px 5px 0;
+	background-color: $maroon-dark;
+	cursor: pointer;
+	transition: all .2s;
+		&:hover {
+			color: darken($gray-light, 10%);
+			background-color: darken($maroon-dark, 5%);
+		}
+}
+
+#side-nav-search-wrapper #search-label { font-size: .015em; }
