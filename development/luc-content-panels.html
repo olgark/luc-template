@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./partials/framework/luc-template-head.html')
+	<!-- inject:css -->
+	<!-- endinject -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/MenubarItemLinks.js"></script>
+	<script src="js/MenubarLinks.js"></script>
+	<script src="js/PopupMenuItemLinks.js"></script>
+	<script src="js/PopupMenuLinks.js"></script>
+</head>
+<body>
+	<div id="main-wrapper">
+		<div id="search-overlay-wrapper">
+			<div id="search-overlay" class="overlay">
+				<div class="container">
+					<span id="search-close" onclick="closeSearch()" title="Close Overlay">×</span>
+					<form class="form-group" role="search">
+						<input id="global-search-input" type="search" class="search-input" placeholder="Search LUC.EDU" name="search">
+						<button id="gloabal-search-submit" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		@@include('./partials/framework/luc-template-sliding-menu.html')
+	<!-- HEADER -->
+	<header id="luc-header">
+		@@include('./partials/framework/luc-template-header.html')
+	</header>
+	<main>
+		<aside id="social-icon-bar">
+			<article>
+				@@include('./partials/framework/luc-template-social-media-bar.html')
+			</article>
+		</aside>
+		<div id="main-content-wrapper" class="container">
+			<article id="main-article-wrapper">
+				<h3>Main <span style="font-family: 'Antenna Light', sans-serif; font-size: .525em; text-transform: uppercase;">9 columns</span></h3>
+				@@include('./partials/main-content-text.html')
+			</article>
+			<aside id="main-aside-wrapper">
+				<article>
+					<h3 >Aside <span> <span style="font-family: 'Antenna Light', sans-serif; font-size: .525em; text-transform: uppercase;">3 columns</span></h3>
+					@@include('./partials/main-content-aside.html')
+				</article>
+			</aside>
+		</div>
+	</main>
+	<footer>
+		@@include('./partials/framework/luc-template-footer.html')
+	</footer>
+	<!-- inject:js -->
+	<!-- endinject -->
+	</div>
+<script>
+var MS = {};
+
+MS.App = (function() {
+
+  var ESCAPE_CODE = 27;
+
+  var navButton = $('#menu-button'),
+      navMenu = $('#global-nav');
+
+  var navLinks = navMenu.find('a');
+
+  function initApp() {
+    navMenu.on('keydown', handleKeydown);
+    navButton.on('click', handleClick);
+    disableNavLinks();
+  }
+  function handleKeydown(event) {
+    if (event.keyCode === ESCAPE_CODE) {
+      document.body.classList.toggle('active');
+      disableNavLinks();
+      navButton.focus();
+    }
+  }
+  function handleClick(event) {
+    if (document.body.classList.contains('active')) {
+      document.body.classList.remove('active');
+      disableNavLinks();
+    }
+    else {
+      document.body.classList.add('active');
+      enableNavLinks();
+      navLinks.eq(0).focus();
+    }
+  }
+  function enableNavLinks() {
+    navButton.attr('aria-label', 'Menu expanded');
+    navMenu.removeAttr('aria-hidden');
+    navLinks.removeAttr('tabIndex');
+  }
+  function disableNavLinks() {
+    navButton.attr('aria-label', 'Menu collapsed');
+    navMenu.attr('aria-hidden', 'true');
+    navLinks.attr('tabIndex', '-1');
+  }
+
+  return {
+    init: function(){
+      initApp();
+    }
+  }
+})();
+
+$(document).ready(function($) {
+  new MS.App.init();
+});
+</script>
+</body>
+</html>
