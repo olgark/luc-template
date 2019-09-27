@@ -55,14 +55,10 @@
 	</div>
 <script>
 var MS = {};
-
 MS.App = (function() {
-
   var ESCAPE_CODE = 27;
-
-  var navButton = $('#menu-button'),
-      navMenu = $('#global-nav');
-
+  var navButton = $('#menu-button-mobile'),
+      navMenu = $('#side-nav');
   var navLinks = navMenu.find('a');
 
   function initApp() {
@@ -98,7 +94,6 @@ MS.App = (function() {
     navMenu.attr('aria-hidden', 'true');
     navLinks.attr('tabIndex', '-1');
   }
-
   return {
     init: function(){
       initApp();

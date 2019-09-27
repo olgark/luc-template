@@ -277,6 +277,7 @@ i.fa.fa-search {
 	padding: 0;
 	width: 100%;
 	height: auto;
+	border-radius: 0 10px 10px 0;
 }
 
 #search-overlay form .form-group:focus,
@@ -303,12 +304,21 @@ i.fa.fa-search {
   width: 80%;
   height: 70px;
 	font-family: 'Antenna', sans-serif;
-  font-size: 1.75em;
+  font-size: 1.5em;
 	text-transform: none;
   border: 0;
 	border-radius: 10px 0 0 10px;
 	background: $gray-light;
 	transition: 0.1s linear all;
+	@include tablet-landscape {
+		height: 50px;
+		font-size: 1.15em;
+	}
+	@include phone-landscape {
+		width: 65%;
+		height: 40px;
+		font-size: 1em;
+	}
 }
 
 #search-overlay form input#global-search-input:hover {
@@ -339,9 +349,20 @@ i.fa.fa-search {
 			color: darken($gray-light, 10%);
 			background-color: darken($maroon-dark, 5%);
 		}
+	@include tablet-landscape {
+		height: 50px;
+		font-size: 1.15em;
+	}
+	@include phone-landscape {
+		width: 35%;
+		height: 40px;
+		font-size: 1em;
+	}
 }
 
 #search-label { font-size: .015em; }
+
+/* SEARCH BUTTON */
 
 footer span#SideNavOpen,
 footer span#search-button-wrapper {
@@ -377,6 +398,16 @@ footer #search-button i.fa.fa-search {
 	width: 25%;
 	height: 25%;
 	color: darken($gray-light,10%);
+}
+
+footer span#brand {
+  float: right;
+	width: 250px;
+  background: none;
+  img {
+    float: right;
+    opacity: .8;
+  }
 }
 
 nav#main,
