@@ -1,3 +1,16 @@
+img {
+  display: block;
+}
+
+#content-number.grid-wrapper,
+#content-cards.grid-wrapper {
+  background: none;
+}
+
+#content-cards.grid-wrapper {
+  grid-gap: 30px;
+}
+
 .content-panel-label {
   padding: 20px 0;
   color: $gray;
@@ -12,42 +25,125 @@
   padding: 60px 0;
 }
 
-#lead img {
+/* lead */
+
+#content-lead img {
   display: block;
+  object-fit: cover;
   margin: 0;
   padding: 0;
   width: 100%;
   height: auto;
+  z-index: 0;
 }
 
-/* image-text-text */
+/* image-overlay */
 
-#image-text-image img {
-  display: flex;
-  flex: 1;
-  object-fit: cover;
-  left: -50%;
-  right: -50%;
+#content-image-overlay {
+  position: relative;
+}
+
+#content-image-overlay .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 100px;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  font-size: 150%;
+  background-color: $bg-overlay-dark;
+  @include phone-landscape {
+    position: relative;
+    padding: 60px;
+    font-size: 100%;
+    background-color: $bg-overlay-extra-dark;
+  }
 }
 
-#image-text-text.grid-item {
+.overlay h1,
+.overlay h2,
+.overlay h3,
+.overlay h4,
+.overlay h5,
+.overlay h6,
+.overlay blockquote,
+.overlay cite,
+.overlay p {
+  color: $gray-light;
+}
+
+/* image-text */
+
+#content-image-text {
+  min-height: 550px;
+}
+
+#content-image-text-image {
+  position: relative;
+  overflow: hidden;
+}
+
+#content-image-text-image img {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  @include phone-landscape {
+    position: relative;
+  }
+}
+
+#content-image-text-text.grid-item {
   padding: 60px;
 }
 
-#image-text-text p:last-child {
+#content-image-text-text p:last-child {
   margin: 0;
 }
 
 /* blockquote */
 
-#blockquote blockquote {
+#content-blockquote {
+  font-size: 125%;
+}
+
+#content-blockquote blockquote {
   margin: 0 0 10px 0;
   width: 100%;
 }
 
-#blockquote cite {
+#content-blockquote cite {
   margin: 0;
   width: 100%;
+}
+
+/* cards */
+
+#content-cards {
+  img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.card {
+	background: $gray-extra-light;
+}
+
+.cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.card-content {
+	padding: 1.4em;
+  background: $gray-light;
 }
