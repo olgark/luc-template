@@ -34,18 +34,9 @@
 				@@include('./partials/framework/luc-template-social-media-bar.html')
 			</article>
 		</aside>
-		<div id="main-content-wrapper" class="container">
-			<article id="main-article-wrapper">
-				<h3>Main <span style="font-family: 'Antenna Light', sans-serif; font-size: .525em; text-transform: uppercase;">9 columns</span></h3>
-				@@include('./partials/main-content-text.html')
-			</article>
-			<aside id="main-aside-wrapper">
-				<article>
-					<h3 >Aside <span> <span style="font-family: 'Antenna Light', sans-serif; font-size: .525em; text-transform: uppercase;">3 columns</span></h3>
-					@@include('./partials/main-content-aside.html')
-				</article>
-			</aside>
-		</div>
+		<article id="main-content-wrapper-full-width">
+			@@include('./partials/main-content-content-panels.html')
+		</article>
 	</main>
 	<footer>
 		@@include('./partials/framework/luc-template-footer.html')
@@ -53,62 +44,5 @@
 	<!-- inject:js -->
 	<!-- endinject -->
 	</div>
-<script>
-var MS = {};
-
-MS.App = (function() {
-
-  var ESCAPE_CODE = 27;
-
-  var navButton = $('#menu-button'),
-      navMenu = $('#global-nav');
-
-  var navLinks = navMenu.find('a');
-
-  function initApp() {
-    navMenu.on('keydown', handleKeydown);
-    navButton.on('click', handleClick);
-    disableNavLinks();
-  }
-  function handleKeydown(event) {
-    if (event.keyCode === ESCAPE_CODE) {
-      document.body.classList.toggle('active');
-      disableNavLinks();
-      navButton.focus();
-    }
-  }
-  function handleClick(event) {
-    if (document.body.classList.contains('active')) {
-      document.body.classList.remove('active');
-      disableNavLinks();
-    }
-    else {
-      document.body.classList.add('active');
-      enableNavLinks();
-      navLinks.eq(0).focus();
-    }
-  }
-  function enableNavLinks() {
-    navButton.attr('aria-label', 'Menu expanded');
-    navMenu.removeAttr('aria-hidden');
-    navLinks.removeAttr('tabIndex');
-  }
-  function disableNavLinks() {
-    navButton.attr('aria-label', 'Menu collapsed');
-    navMenu.attr('aria-hidden', 'true');
-    navLinks.attr('tabIndex', '-1');
-  }
-
-  return {
-    init: function(){
-      initApp();
-    }
-  }
-})();
-
-$(document).ready(function($) {
-  new MS.App.init();
-});
-</script>
 </body>
 </html>

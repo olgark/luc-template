@@ -45,7 +45,12 @@
   background: $gray-extra-light;
 }
 
+.grid-wrapper-no-gap {
+  grid-gap: 0px;
+}
+
 .grid-item {
+  margin: 0;
   padding: 15px;
   font-size: 1em;
   font-family: 'Antenna', 'Arial', sans-serif;
@@ -106,4 +111,24 @@
 
 .col-span-12 {
   grid-column: span 12;
+}
+
+/* MAIN-WRAPPER - CONTENT - PANELS */
+
+#main-content-wrapper-full-width {
+  margin: 170px auto 60px;
+  width: 100%;
+  overflow: hidden;
+  .grid-item {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: 'Antenna', 'Arial', sans-serif;
+    color: #272727;
+    height: auto;
+    background-color: none;
+    img {
+      margin: 0;
+    }
+  }
 }
